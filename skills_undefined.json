@@ -1,0 +1,121 @@
+{
+  "collect_drops": {
+    "description": "근처에 떨어진 아이템을 찾아 실제 인벤토리에 들어올 때까지 회수한다. (네이티브)",
+    "code": "// native",
+    "isNative": true,
+    "successCount": 0,
+    "failCount": 0
+  },
+  "self_review": {
+    "description": "최근 실패/비효율/위험 행동을 점검하고 자기개선 정책을 요약한다. (네이티브)",
+    "code": "// native",
+    "isNative": true,
+    "successCount": 0,
+    "failCount": 0
+  },
+  "propose_patch": {
+    "description": "반복되는 이상 행동을 바탕으로 patch_proposals 폴더에 패치 제안서를 만든다. (네이티브)",
+    "code": "// native",
+    "isNative": true,
+    "successCount": 0,
+    "failCount": 0
+  },
+  "build_blueprint": {
+    "description": "target에 건물 이름(예: 대장간, 감시탑, 농장)을 넣으면 3D 설계도를 구상해 건설한다. (네이티브)",
+    "code": "// native",
+    "isNative": true,
+    "successCount": 0,
+    "failCount": 0
+  },
+  "manage_project": {
+    "description": "target에 장기 프로젝트 이름(예: 철기 시대 진입)을 넣으면 하위 단계로 쪼개 추적한다. (네이티브)",
+    "code": "// native",
+    "isNative": true,
+    "successCount": 0,
+    "failCount": 0
+  },
+  "smart_store": {
+    "description": "가방의 여분 아이템을 여러 상자에 나눠 보관한다. (네이티브)",
+    "code": "// native",
+    "isNative": true,
+    "successCount": 0,
+    "failCount": 0
+  },
+  "check_status": {
+    "description": "위협도, 자원 부족, 문명 발전 단계를 종합 점검한다. (네이티브)",
+    "code": "// native",
+    "isNative": true,
+    "successCount": 0,
+    "failCount": 0
+  },
+  "hunt": {
+    "description": "근처 동물(소/돼지/양/닭/토끼)을 추적해 사냥한다. 배가 고플 때 유용하다. (네이티브)",
+    "code": "// native",
+    "isNative": true,
+    "successCount": 0,
+    "failCount": 0
+  },
+  "equip_armor": {
+    "description": "가진 방어구를 실제로 몸에 착용한다. (네이티브)",
+    "code": "// native",
+    "isNative": true,
+    "successCount": 0,
+    "failCount": 0
+  },
+  "shoot_bow": {
+    "description": "활과 화살로 원거리에서 몬스터를 처치한다. 크리퍼에 특히 안전하다. (네이티브)",
+    "code": "// native",
+    "isNative": true,
+    "successCount": 0,
+    "failCount": 0
+  },
+  "start_farm": {
+    "description": "괭이와 씨앗으로 물 근처에 밭을 갈고 심는다. (네이티브)",
+    "code": "// native",
+    "isNative": true,
+    "successCount": 0,
+    "failCount": 0
+  },
+  "harvest_farm": {
+    "description": "다 자란 농작물을 수확한다. (네이티브)",
+    "code": "// native",
+    "isNative": true,
+    "successCount": 0,
+    "failCount": 0
+  },
+  "breed_animals": {
+    "description": "동물에게 먹이를 줘 번식을 유도한다. (네이티브)",
+    "code": "// native",
+    "isNative": true,
+    "successCount": 0,
+    "failCount": 0
+  },
+  "go_to_poi": {
+    "description": "기억해둔 장소(label)로 이동한다. (네이티브)",
+    "code": "// native",
+    "isNative": true,
+    "successCount": 0,
+    "failCount": 0
+  },
+  "build_nether_portal": {
+    "description": "흑요석 10개와 부싯돌이 있으면 다른 차원으로 가는 문을 만든다. (네이티브)",
+    "code": "// native",
+    "isNative": true,
+    "successCount": 0,
+    "failCount": 0
+  },
+  "clean_inventory": {
+    "description": "가방의 흔한 잡동사니를 정리한다. (네이티브)",
+    "code": "// native",
+    "isNative": true,
+    "successCount": 0,
+    "failCount": 0
+  },
+  "toss_item": {
+    "description": "특정 아이템(target)을 가방에서 버린다. (네이티브)",
+    "code": "// native",
+    "isNative": true,
+    "successCount": 0,
+    "failCount": 0
+  }
+}

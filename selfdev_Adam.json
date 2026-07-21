@@ -1,0 +1,1729 @@
+{
+  "version": 1,
+  "rules": {
+    "dropSweepMaxDistance": 24,
+    "dropSweepRounds": 16,
+    "digPickupRadius": 10,
+    "digPickupRounds": 2,
+    "quickPickupRadius": 4,
+    "quickPickupCooldownMs": 6000,
+    "dangerRadius": 8,
+    "eatBeforeLongWorkFoodBelow": 18,
+    "eatAfterWorkFoodBelow": 10
+  },
+  "counters": {
+    "hungry_no_food": 161,
+    "drops_left_after_work": 177,
+    "dig_drop_not_collected": 116,
+    "hungry_while_working": 16
+  },
+  "observations": [
+    {
+      "at": "2026-07-17T02:13:33.365Z",
+      "type": "hungry_no_food",
+      "details": {
+        "food": 11,
+        "threshold": 18
+      }
+    },
+    {
+      "at": "2026-07-17T02:13:33.373Z",
+      "type": "hungry_no_food",
+      "details": {
+        "food": 11,
+        "threshold": 18
+      }
+    },
+    {
+      "at": "2026-07-17T02:13:33.374Z",
+      "type": "hungry_while_working",
+      "details": {
+        "action": "gather_wood",
+        "food": 11,
+        "threshold": 18,
+        "adjustedRules": {
+          "eatBeforeLongWorkFoodBelow": [
+            18,
+            18
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T02:13:52.325Z",
+      "type": "drops_left_after_work",
+      "details": {
+        "reason": "dig:spruce_log",
+        "maxDistance": 10,
+        "rounds": 2,
+        "remaining": 1,
+        "visited": 1,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T02:13:52.326Z",
+      "type": "drops_left_after_work",
+      "details": {
+        "reason": "dig:spruce_leaves",
+        "maxDistance": 10,
+        "rounds": 2,
+        "remaining": 1,
+        "visited": 1,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T02:14:49.632Z",
+      "type": "hungry_no_food",
+      "details": {
+        "food": 11,
+        "threshold": 18
+      }
+    },
+    {
+      "at": "2026-07-17T02:14:58.464Z",
+      "type": "drops_left_after_work",
+      "details": {
+        "reason": "dig:spruce_leaves",
+        "maxDistance": 10,
+        "rounds": 2,
+        "remaining": 1,
+        "visited": 1,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T02:15:38.316Z",
+      "type": "hungry_no_food",
+      "details": {
+        "food": 10,
+        "threshold": 18
+      }
+    },
+    {
+      "at": "2026-07-17T02:15:39.933Z",
+      "type": "drops_left_after_work",
+      "details": {
+        "reason": "quick_pickup_before_think",
+        "maxDistance": 4,
+        "rounds": 2,
+        "remaining": 2,
+        "visited": 2,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T02:15:39.968Z",
+      "type": "drops_left_after_work",
+      "details": {
+        "reason": "dig:spruce_leaves",
+        "maxDistance": 10,
+        "rounds": 2,
+        "remaining": 2,
+        "visited": 2,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T02:15:39.969Z",
+      "type": "dig_drop_not_collected",
+      "details": {
+        "blockName": "spruce_leaves",
+        "sweepText": "근처 드랍 2개가 아직 남아 있다.",
+        "nearbyDrops": 2,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T02:16:26.030Z",
+      "type": "hungry_no_food",
+      "details": {
+        "food": 10,
+        "threshold": 18
+      }
+    },
+    {
+      "at": "2026-07-17T02:16:31.944Z",
+      "type": "drops_left_after_work",
+      "details": {
+        "reason": "quick_pickup_before_think",
+        "maxDistance": 4,
+        "rounds": 2,
+        "remaining": 2,
+        "visited": 2,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T02:17:18.768Z",
+      "type": "hungry_no_food",
+      "details": {
+        "food": 10,
+        "threshold": 18
+      }
+    },
+    {
+      "at": "2026-07-17T02:17:24.681Z",
+      "type": "drops_left_after_work",
+      "details": {
+        "reason": "quick_pickup_before_think",
+        "maxDistance": 4,
+        "rounds": 2,
+        "remaining": 2,
+        "visited": 2,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T02:18:10.487Z",
+      "type": "hungry_no_food",
+      "details": {
+        "food": 10,
+        "threshold": 18
+      }
+    },
+    {
+      "at": "2026-07-17T02:18:16.396Z",
+      "type": "drops_left_after_work",
+      "details": {
+        "reason": "quick_pickup_before_think",
+        "maxDistance": 4,
+        "rounds": 2,
+        "remaining": 2,
+        "visited": 2,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T02:19:01.990Z",
+      "type": "hungry_no_food",
+      "details": {
+        "food": 10,
+        "threshold": 18
+      }
+    },
+    {
+      "at": "2026-07-17T02:19:07.899Z",
+      "type": "drops_left_after_work",
+      "details": {
+        "reason": "quick_pickup_before_think",
+        "maxDistance": 4,
+        "rounds": 2,
+        "remaining": 2,
+        "visited": 2,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T02:19:07.904Z",
+      "type": "hungry_no_food",
+      "details": {
+        "food": 9,
+        "threshold": 18
+      }
+    },
+    {
+      "at": "2026-07-17T02:19:07.904Z",
+      "type": "hungry_while_working",
+      "details": {
+        "action": "gather_wood",
+        "food": 9,
+        "threshold": 18,
+        "adjustedRules": {
+          "eatBeforeLongWorkFoodBelow": [
+            18,
+            18
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T02:19:12.993Z",
+      "type": "drops_left_after_work",
+      "details": {
+        "reason": "dig:spruce_log",
+        "maxDistance": 10,
+        "rounds": 2,
+        "remaining": 3,
+        "visited": 3,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T02:19:12.994Z",
+      "type": "dig_drop_not_collected",
+      "details": {
+        "blockName": "spruce_log",
+        "sweepText": "근처 드랍 3개가 아직 남아 있다.",
+        "nearbyDrops": 3,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T02:19:12.996Z",
+      "type": "drops_left_after_work",
+      "details": {
+        "reason": "dig:spruce_leaves",
+        "maxDistance": 10,
+        "rounds": 2,
+        "remaining": 3,
+        "visited": 3,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T02:19:12.996Z",
+      "type": "dig_drop_not_collected",
+      "details": {
+        "blockName": "spruce_leaves",
+        "sweepText": "근처 드랍 3개가 아직 남아 있다.",
+        "nearbyDrops": 3,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T02:19:24.008Z",
+      "type": "drops_left_after_work",
+      "details": {
+        "reason": "dig:spruce_log",
+        "maxDistance": 10,
+        "rounds": 2,
+        "remaining": 3,
+        "visited": 3,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T02:19:24.009Z",
+      "type": "dig_drop_not_collected",
+      "details": {
+        "blockName": "spruce_log",
+        "sweepText": "근처 드랍 3개가 아직 남아 있다.",
+        "nearbyDrops": 3,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T02:19:24.010Z",
+      "type": "drops_left_after_work",
+      "details": {
+        "reason": "dig:spruce_leaves",
+        "maxDistance": 10,
+        "rounds": 2,
+        "remaining": 3,
+        "visited": 3,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T02:19:24.010Z",
+      "type": "dig_drop_not_collected",
+      "details": {
+        "blockName": "spruce_leaves",
+        "sweepText": "근처 드랍 3개가 아직 남아 있다.",
+        "nearbyDrops": 3,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T02:19:29.444Z",
+      "type": "drops_left_after_work",
+      "details": {
+        "reason": "dig:spruce_leaves",
+        "maxDistance": 10,
+        "rounds": 2,
+        "remaining": 2,
+        "visited": 2,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T02:19:31.690Z",
+      "type": "drops_left_after_work",
+      "details": {
+        "reason": "dig:spruce_leaves",
+        "maxDistance": 10,
+        "rounds": 2,
+        "remaining": 2,
+        "visited": 2,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T02:19:31.692Z",
+      "type": "dig_drop_not_collected",
+      "details": {
+        "blockName": "spruce_leaves",
+        "sweepText": "근처 드랍 2개가 아직 남아 있다.",
+        "nearbyDrops": 2,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T02:19:36.899Z",
+      "type": "drops_left_after_work",
+      "details": {
+        "reason": "dig:spruce_log",
+        "maxDistance": 10,
+        "rounds": 2,
+        "remaining": 3,
+        "visited": 3,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T02:19:36.900Z",
+      "type": "dig_drop_not_collected",
+      "details": {
+        "blockName": "spruce_log",
+        "sweepText": "근처 드랍 3개가 아직 남아 있다.",
+        "nearbyDrops": 3,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T02:19:36.901Z",
+      "type": "drops_left_after_work",
+      "details": {
+        "reason": "dig:spruce_leaves",
+        "maxDistance": 10,
+        "rounds": 2,
+        "remaining": 3,
+        "visited": 3,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T02:19:36.901Z",
+      "type": "dig_drop_not_collected",
+      "details": {
+        "blockName": "spruce_leaves",
+        "sweepText": "근처 드랍 3개가 아직 남아 있다.",
+        "nearbyDrops": 3,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T02:20:19.855Z",
+      "type": "drops_left_after_work",
+      "details": {
+        "reason": "dig:spruce_log",
+        "maxDistance": 10,
+        "rounds": 2,
+        "remaining": 1,
+        "visited": 1,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T02:20:31.349Z",
+      "type": "drops_left_after_work",
+      "details": {
+        "reason": "dig:spruce_log",
+        "maxDistance": 10,
+        "rounds": 2,
+        "remaining": 4,
+        "visited": 4,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T02:20:31.349Z",
+      "type": "dig_drop_not_collected",
+      "details": {
+        "blockName": "spruce_log",
+        "sweepText": "근처 드랍 4개가 아직 남아 있다.",
+        "nearbyDrops": 1,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T02:20:31.350Z",
+      "type": "drops_left_after_work",
+      "details": {
+        "reason": "dig:spruce_leaves",
+        "maxDistance": 10,
+        "rounds": 2,
+        "remaining": 4,
+        "visited": 4,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T02:20:31.351Z",
+      "type": "dig_drop_not_collected",
+      "details": {
+        "blockName": "spruce_leaves",
+        "sweepText": "근처 드랍 4개가 아직 남아 있다.",
+        "nearbyDrops": 1,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T02:20:34.400Z",
+      "type": "hungry_no_food",
+      "details": {
+        "food": 8,
+        "threshold": 18
+      }
+    },
+    {
+      "at": "2026-07-17T02:20:34.414Z",
+      "type": "drops_left_after_work",
+      "details": {
+        "reason": "dig:spruce_leaves",
+        "maxDistance": 10,
+        "rounds": 2,
+        "remaining": 3,
+        "visited": 3,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T02:20:34.415Z",
+      "type": "dig_drop_not_collected",
+      "details": {
+        "blockName": "spruce_leaves",
+        "sweepText": "근처 드랍 3개가 아직 남아 있다.",
+        "nearbyDrops": 1,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T02:21:20.023Z",
+      "type": "hungry_no_food",
+      "details": {
+        "food": 8,
+        "threshold": 18
+      }
+    },
+    {
+      "at": "2026-07-17T02:22:05.564Z",
+      "type": "hungry_no_food",
+      "details": {
+        "food": 8,
+        "threshold": 18
+      }
+    },
+    {
+      "at": "2026-07-17T02:22:53.348Z",
+      "type": "hungry_no_food",
+      "details": {
+        "food": 8,
+        "threshold": 18
+      }
+    },
+    {
+      "at": "2026-07-17T02:23:46.332Z",
+      "type": "hungry_no_food",
+      "details": {
+        "food": 8,
+        "threshold": 18
+      }
+    },
+    {
+      "at": "2026-07-17T02:24:32.135Z",
+      "type": "hungry_no_food",
+      "details": {
+        "food": 8,
+        "threshold": 18
+      }
+    },
+    {
+      "at": "2026-07-17T02:25:18.123Z",
+      "type": "hungry_no_food",
+      "details": {
+        "food": 8,
+        "threshold": 18
+      }
+    },
+    {
+      "at": "2026-07-17T02:26:04.134Z",
+      "type": "hungry_no_food",
+      "details": {
+        "food": 8,
+        "threshold": 18
+      }
+    },
+    {
+      "at": "2026-07-17T02:26:49.827Z",
+      "type": "hungry_no_food",
+      "details": {
+        "food": 8,
+        "threshold": 18
+      }
+    },
+    {
+      "at": "2026-07-17T02:27:35.958Z",
+      "type": "hungry_no_food",
+      "details": {
+        "food": 8,
+        "threshold": 18
+      }
+    },
+    {
+      "at": "2026-07-17T02:28:21.777Z",
+      "type": "hungry_no_food",
+      "details": {
+        "food": 8,
+        "threshold": 18
+      }
+    },
+    {
+      "at": "2026-07-17T02:29:07.498Z",
+      "type": "hungry_no_food",
+      "details": {
+        "food": 8,
+        "threshold": 18
+      }
+    },
+    {
+      "at": "2026-07-17T02:29:53.483Z",
+      "type": "hungry_no_food",
+      "details": {
+        "food": 8,
+        "threshold": 18
+      }
+    },
+    {
+      "at": "2026-07-17T02:30:40.079Z",
+      "type": "hungry_no_food",
+      "details": {
+        "food": 8,
+        "threshold": 18
+      }
+    },
+    {
+      "at": "2026-07-17T02:31:26.375Z",
+      "type": "hungry_no_food",
+      "details": {
+        "food": 8,
+        "threshold": 18
+      }
+    },
+    {
+      "at": "2026-07-17T02:32:12.216Z",
+      "type": "hungry_no_food",
+      "details": {
+        "food": 8,
+        "threshold": 18
+      }
+    },
+    {
+      "at": "2026-07-17T02:32:58.217Z",
+      "type": "hungry_no_food",
+      "details": {
+        "food": 8,
+        "threshold": 18
+      }
+    },
+    {
+      "at": "2026-07-17T02:33:44.084Z",
+      "type": "hungry_no_food",
+      "details": {
+        "food": 7,
+        "threshold": 18
+      }
+    },
+    {
+      "at": "2026-07-17T02:34:30.123Z",
+      "type": "hungry_no_food",
+      "details": {
+        "food": 4,
+        "threshold": 18
+      }
+    },
+    {
+      "at": "2026-07-17T02:35:15.724Z",
+      "type": "hungry_no_food",
+      "details": {
+        "food": 2,
+        "threshold": 18
+      }
+    },
+    {
+      "at": "2026-07-17T06:34:24.975Z",
+      "type": "hungry_no_food",
+      "details": {
+        "food": 2,
+        "threshold": 18
+      }
+    },
+    {
+      "at": "2026-07-17T06:50:16.522Z",
+      "type": "hungry_no_food",
+      "details": {
+        "food": 2,
+        "threshold": 18
+      }
+    },
+    {
+      "at": "2026-07-17T06:51:03.264Z",
+      "type": "hungry_no_food",
+      "details": {
+        "food": 2,
+        "threshold": 18
+      }
+    },
+    {
+      "at": "2026-07-17T06:51:50.343Z",
+      "type": "hungry_no_food",
+      "details": {
+        "food": 2,
+        "threshold": 18
+      }
+    },
+    {
+      "at": "2026-07-17T08:33:37.016Z",
+      "type": "drops_left_after_work",
+      "details": {
+        "reason": "dig:spruce_log",
+        "maxDistance": 10,
+        "rounds": 2,
+        "remaining": 1,
+        "visited": 1,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T08:33:37.017Z",
+      "type": "dig_drop_not_collected",
+      "details": {
+        "blockName": "spruce_log",
+        "sweepText": "근처 드랍 1개가 아직 남아 있다.",
+        "nearbyDrops": 1,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T08:33:49.496Z",
+      "type": "drops_left_after_work",
+      "details": {
+        "reason": "dig:spruce_log",
+        "maxDistance": 10,
+        "rounds": 2,
+        "remaining": 1,
+        "visited": 1,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T08:33:49.496Z",
+      "type": "dig_drop_not_collected",
+      "details": {
+        "blockName": "spruce_log",
+        "sweepText": "근처 드랍 1개가 아직 남아 있다.",
+        "nearbyDrops": 1,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T08:35:21.039Z",
+      "type": "drops_left_after_work",
+      "details": {
+        "reason": "dig:spruce_log",
+        "maxDistance": 10,
+        "rounds": 2,
+        "remaining": 1,
+        "visited": 1,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T08:35:21.045Z",
+      "type": "dig_drop_not_collected",
+      "details": {
+        "blockName": "spruce_log",
+        "sweepText": "근처 드랍 1개가 아직 남아 있다.",
+        "nearbyDrops": 1,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T08:35:27.762Z",
+      "type": "drops_left_after_work",
+      "details": {
+        "reason": "dig:spruce_log",
+        "maxDistance": 10,
+        "rounds": 2,
+        "remaining": 1,
+        "visited": 1,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T08:35:27.763Z",
+      "type": "dig_drop_not_collected",
+      "details": {
+        "blockName": "spruce_log",
+        "sweepText": "근처 드랍 1개가 아직 남아 있다.",
+        "nearbyDrops": 1,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T08:35:34.479Z",
+      "type": "drops_left_after_work",
+      "details": {
+        "reason": "dig:spruce_log",
+        "maxDistance": 10,
+        "rounds": 2,
+        "remaining": 1,
+        "visited": 1,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T08:35:34.482Z",
+      "type": "dig_drop_not_collected",
+      "details": {
+        "blockName": "spruce_log",
+        "sweepText": "근처 드랍 1개가 아직 남아 있다.",
+        "nearbyDrops": 1,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T08:35:41.373Z",
+      "type": "drops_left_after_work",
+      "details": {
+        "reason": "dig:spruce_log",
+        "maxDistance": 10,
+        "rounds": 2,
+        "remaining": 1,
+        "visited": 1,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T08:35:41.376Z",
+      "type": "dig_drop_not_collected",
+      "details": {
+        "blockName": "spruce_log",
+        "sweepText": "근처 드랍 1개가 아직 남아 있다.",
+        "nearbyDrops": 1,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T08:35:57.245Z",
+      "type": "drops_left_after_work",
+      "details": {
+        "reason": "dig:spruce_log",
+        "maxDistance": 10,
+        "rounds": 2,
+        "remaining": 1,
+        "visited": 1,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T08:35:57.248Z",
+      "type": "dig_drop_not_collected",
+      "details": {
+        "blockName": "spruce_log",
+        "sweepText": "근처 드랍 1개가 아직 남아 있다.",
+        "nearbyDrops": 1,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T08:36:13.340Z",
+      "type": "drops_left_after_work",
+      "details": {
+        "reason": "dig:spruce_log",
+        "maxDistance": 10,
+        "rounds": 2,
+        "remaining": 1,
+        "visited": 1,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T08:36:13.343Z",
+      "type": "dig_drop_not_collected",
+      "details": {
+        "blockName": "spruce_log",
+        "sweepText": "근처 드랍 1개가 아직 남아 있다.",
+        "nearbyDrops": 1,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T08:36:29.349Z",
+      "type": "drops_left_after_work",
+      "details": {
+        "reason": "dig:spruce_log",
+        "maxDistance": 10,
+        "rounds": 2,
+        "remaining": 1,
+        "visited": 1,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T08:36:29.364Z",
+      "type": "dig_drop_not_collected",
+      "details": {
+        "blockName": "spruce_log",
+        "sweepText": "근처 드랍 1개가 아직 남아 있다.",
+        "nearbyDrops": 1,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T08:36:45.173Z",
+      "type": "drops_left_after_work",
+      "details": {
+        "reason": "dig:spruce_log",
+        "maxDistance": 10,
+        "rounds": 2,
+        "remaining": 1,
+        "visited": 1,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T08:36:45.177Z",
+      "type": "dig_drop_not_collected",
+      "details": {
+        "blockName": "spruce_log",
+        "sweepText": "근처 드랍 1개가 아직 남아 있다.",
+        "nearbyDrops": 1,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T08:37:01.015Z",
+      "type": "drops_left_after_work",
+      "details": {
+        "reason": "dig:spruce_log",
+        "maxDistance": 10,
+        "rounds": 2,
+        "remaining": 1,
+        "visited": 1,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T08:37:01.022Z",
+      "type": "dig_drop_not_collected",
+      "details": {
+        "blockName": "spruce_log",
+        "sweepText": "근처 드랍 1개가 아직 남아 있다.",
+        "nearbyDrops": 1,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T08:37:17.217Z",
+      "type": "drops_left_after_work",
+      "details": {
+        "reason": "dig:spruce_log",
+        "maxDistance": 10,
+        "rounds": 2,
+        "remaining": 1,
+        "visited": 1,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T08:37:17.224Z",
+      "type": "dig_drop_not_collected",
+      "details": {
+        "blockName": "spruce_log",
+        "sweepText": "근처 드랍 1개가 아직 남아 있다.",
+        "nearbyDrops": 1,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T08:37:32.963Z",
+      "type": "drops_left_after_work",
+      "details": {
+        "reason": "dig:spruce_log",
+        "maxDistance": 10,
+        "rounds": 2,
+        "remaining": 1,
+        "visited": 1,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T08:37:32.968Z",
+      "type": "dig_drop_not_collected",
+      "details": {
+        "blockName": "spruce_log",
+        "sweepText": "근처 드랍 1개가 아직 남아 있다.",
+        "nearbyDrops": 1,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T08:37:48.704Z",
+      "type": "drops_left_after_work",
+      "details": {
+        "reason": "dig:spruce_log",
+        "maxDistance": 10,
+        "rounds": 2,
+        "remaining": 1,
+        "visited": 1,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T08:37:48.708Z",
+      "type": "dig_drop_not_collected",
+      "details": {
+        "blockName": "spruce_log",
+        "sweepText": "근처 드랍 1개가 아직 남아 있다.",
+        "nearbyDrops": 1,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T08:37:52.389Z",
+      "type": "drops_left_after_work",
+      "details": {
+        "reason": "after_action:gather_wood",
+        "maxDistance": 24,
+        "rounds": 16,
+        "remaining": 1,
+        "visited": 1,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T08:37:52.403Z",
+      "type": "drops_left_after_work",
+      "details": {
+        "action": "gather_wood",
+        "result": "spruce_log 등 나무를 연속으로 12개 베어냈다.",
+        "nearbyDrops": 1,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T16:11:37.608Z",
+      "type": "drops_left_after_work",
+      "details": {
+        "reason": "manual_collect_drops",
+        "maxDistance": 24,
+        "rounds": 16,
+        "remaining": 2,
+        "visited": 2,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T16:13:03.376Z",
+      "type": "drops_left_after_work",
+      "details": {
+        "reason": "dig:spruce_leaves",
+        "maxDistance": 10,
+        "rounds": 2,
+        "remaining": 1,
+        "visited": 1,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-07-17T16:13:03.381Z",
+      "type": "dig_drop_not_collected",
+      "details": {
+        "blockName": "spruce_leaves",
+        "sweepText": "근처 드랍 1개가 아직 남아 있다.",
+        "nearbyDrops": 1,
+        "adjustedRules": {
+          "dropSweepMaxDistance": [
+            24,
+            24
+          ],
+          "dropSweepRounds": [
+            16,
+            16
+          ]
+        }
+      }
+    }
+  ],
+  "proposals": [
+    {
+      "at": "2026-07-17T02:20:34.401Z",
+      "type": "hungry_no_food",
+      "file": "patch_proposals/2026-07-17T02-20-34-400Z_Adam_hungry_no_food.md"
+    },
+    {
+      "at": "2026-07-17T02:20:34.414Z",
+      "type": "drops_left_after_work",
+      "file": "patch_proposals/2026-07-17T02-20-34-414Z_Adam_drops_left_after_work.md"
+    },
+    {
+      "at": "2026-07-17T02:22:53.348Z",
+      "type": "hungry_no_food",
+      "file": "patch_proposals/2026-07-17T02-22-53-348Z_Adam_hungry_no_food.md"
+    },
+    {
+      "at": "2026-07-17T02:25:18.123Z",
+      "type": "hungry_no_food",
+      "file": "patch_proposals/2026-07-17T02-25-18-123Z_Adam_hungry_no_food.md"
+    },
+    {
+      "at": "2026-07-17T02:27:35.958Z",
+      "type": "hungry_no_food",
+      "file": "patch_proposals/2026-07-17T02-27-35-958Z_Adam_hungry_no_food.md"
+    },
+    {
+      "at": "2026-07-17T02:29:53.483Z",
+      "type": "hungry_no_food",
+      "file": "patch_proposals/2026-07-17T02-29-53-483Z_Adam_hungry_no_food.md"
+    },
+    {
+      "at": "2026-07-17T02:32:12.218Z",
+      "type": "hungry_no_food",
+      "file": "patch_proposals/2026-07-17T02-32-12-217Z_Adam_hungry_no_food.md"
+    },
+    {
+      "at": "2026-07-17T02:34:30.125Z",
+      "type": "hungry_no_food",
+      "file": "patch_proposals/2026-07-17T02-34-30-124Z_Adam_hungry_no_food.md"
+    },
+    {
+      "at": "2026-07-17T06:50:16.523Z",
+      "type": "hungry_no_food",
+      "file": "patch_proposals/2026-07-17T06-50-16-522Z_Adam_hungry_no_food.md"
+    },
+    {
+      "at": "2026-07-17T08:33:37.019Z",
+      "type": "dig_drop_not_collected",
+      "file": "patch_proposals/2026-07-17T08-33-37-018Z_Adam_dig_drop_not_collected.md"
+    },
+    {
+      "at": "2026-07-17T08:35:21.043Z",
+      "type": "drops_left_after_work",
+      "file": "patch_proposals/2026-07-17T08-35-21-042Z_Adam_drops_left_after_work.md"
+    },
+    {
+      "at": "2026-07-17T08:35:27.764Z",
+      "type": "dig_drop_not_collected",
+      "file": "patch_proposals/2026-07-17T08-35-27-763Z_Adam_dig_drop_not_collected.md"
+    },
+    {
+      "at": "2026-07-17T08:35:41.374Z",
+      "type": "drops_left_after_work",
+      "file": "patch_proposals/2026-07-17T08-35-41-373Z_Adam_drops_left_after_work.md"
+    },
+    {
+      "at": "2026-07-17T08:35:57.249Z",
+      "type": "dig_drop_not_collected",
+      "file": "patch_proposals/2026-07-17T08-35-57-248Z_Adam_dig_drop_not_collected.md"
+    },
+    {
+      "at": "2026-07-17T08:36:29.360Z",
+      "type": "drops_left_after_work",
+      "file": "patch_proposals/2026-07-17T08-36-29-352Z_Adam_drops_left_after_work.md"
+    },
+    {
+      "at": "2026-07-17T08:36:45.179Z",
+      "type": "dig_drop_not_collected",
+      "file": "patch_proposals/2026-07-17T08-36-45-178Z_Adam_dig_drop_not_collected.md"
+    },
+    {
+      "at": "2026-07-17T08:37:17.221Z",
+      "type": "drops_left_after_work",
+      "file": "patch_proposals/2026-07-17T08-37-17-219Z_Adam_drops_left_after_work.md"
+    },
+    {
+      "at": "2026-07-17T08:37:32.971Z",
+      "type": "dig_drop_not_collected",
+      "file": "patch_proposals/2026-07-17T08-37-32-970Z_Adam_dig_drop_not_collected.md"
+    },
+    {
+      "at": "2026-07-17T08:37:52.392Z",
+      "type": "drops_left_after_work",
+      "file": "patch_proposals/2026-07-17T08-37-52-390Z_Adam_drops_left_after_work.md"
+    },
+    {
+      "at": "2026-07-17T16:13:03.380Z",
+      "type": "drops_left_after_work",
+      "file": "patch_proposals/2026-07-17T16-13-03-378Z_Adam_drops_left_after_work.md"
+    }
+  ]
+}

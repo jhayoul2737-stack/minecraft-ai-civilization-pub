@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-07-21T01:48:16.123Z",
+  "target": "citizen.cjs",
+  "backup": "backups/citizen.before-v35.2026-07-21T01-48-16-130Z.cjs",
+  "supportFiles": {},
+  "env": {},
+  "patch": {
+    "liveLoopHooked": true,
+    "createCitizenExportFound": true,
+    "hasV34ExportBridge": true,
+    "hasV35ExportBridge": false
+  },
+  "checks": [
+    {
+      "file": "citizen.cjs",
+      "ok": true,
+      "out": ""
+    },
+    {
+      "file": "piano_v3/index.cjs",
+      "ok": true,
+      "out": ""
+    },
+    {
+      "file": "piano_v3/bridge.cjs",
+      "ok": true,
+      "out": ""
+    },
+    {
+      "file": "piano_v3/tests/bridge_test.cjs",
+      "ok": true,
+      "out": ""
+    }
+  ]
+}

@@ -1,0 +1,2729 @@
+
+===== openai/client init around line 7 =====
+    1 | /* __ADAM_PIANO_V36_DEPS_HELPER__ */
+    2 | function __adamPianoGetDepsV36() {
+    3 |   const __get = (name) => {
+    4 |     try { return eval(name); } catch (_) { return null; }
+    5 |   };
+    6 |   const __isFn = (v) => typeof v === 'function';
+    7 |   const __isOpenAI = (v) => !!(
+    8 |     v &&
+    9 |     typeof v === 'object' &&
+   10 |     (
+   11 |       (v.chat && v.chat.completions && typeof v.chat.completions.create === 'function') ||
+   12 |       (v.responses && typeof v.responses.create === 'function') ||
+   13 |       (v.embeddings && typeof v.embeddings.create === 'function')
+   14 |     )
+   15 |   );
+   16 |   const __firstFn = (...names) => {
+   17 |     for (const name of names) {
+   18 |       const v = __get(name);
+   19 |       if (__isFn(v)) return v;
+   20 |     }
+   21 |     return null;
+   22 |   };
+   23 |   const __firstOpenAI = (...names) => {
+   24 |     for (const name of names) {
+   25 |       const v = __get(name);
+   26 |       if (__isOpenAI(v)) return v;
+   27 |     }
+   28 |     return null;
+   29 |   };
+   30 | 
+   31 |   const __openai = __firstOpenAI('openai', 'openaiClient', 'openAIClient', 'llmClient', 'aiClient', 'client');
+   32 | 
+
+===== openai/client init around line 23 =====
+    1 | /* __ADAM_PIANO_V36_DEPS_HELPER__ */
+    2 | function __adamPianoGetDepsV36() {
+    3 |   const __get = (name) => {
+    4 |     try { return eval(name); } catch (_) { return null; }
+    5 |   };
+    6 |   const __isFn = (v) => typeof v === 'function';
+    7 |   const __isOpenAI = (v) => !!(
+    8 |     v &&
+    9 |     typeof v === 'object' &&
+   10 |     (
+   11 |       (v.chat && v.chat.completions && typeof v.chat.completions.create === 'function') ||
+   12 |       (v.responses && typeof v.responses.create === 'function') ||
+   13 |       (v.embeddings && typeof v.embeddings.create === 'function')
+   14 |     )
+   15 |   );
+   16 |   const __firstFn = (...names) => {
+   17 |     for (const name of names) {
+   18 |       const v = __get(name);
+   19 |       if (__isFn(v)) return v;
+   20 |     }
+   21 |     return null;
+   22 |   };
+   23 |   const __firstOpenAI = (...names) => {
+   24 |     for (const name of names) {
+   25 |       const v = __get(name);
+   26 |       if (__isOpenAI(v)) return v;
+   27 |     }
+   28 |     return null;
+   29 |   };
+   30 | 
+   31 |   const __openai = __firstOpenAI('openai', 'openaiClient', 'openAIClient', 'llmClient', 'aiClient', 'client');
+   32 | 
+   33 |   const __deps = {
+   34 |     openai: __openai,
+   35 |     openaiClient: __openai,
+   36 |     performBuiltinAction: __firstFn('performBuiltinAction', 'runBuiltinAction', 'performAction'),
+   37 |     executeDecision: __firstFn('executeDecision', 'runDecision'),
+   38 |     executeAction: __firstFn('executeAction', 'runAction'),
+   39 |     executeActions: __firstFn('executeActions', 'runActions'),
+   40 |     addMemory: __firstFn('addMemory', 'remember', 'storeMemory'),
+   41 |     retrieveMemories: __firstFn('retrieveMemories', 'retrieveMemory', 'searchMemories', 'recallMemories'),
+   42 |     sanitize: __firstFn('sanitize', 'sanitizeText', 'safeText'),
+   43 |     loadPersonalityV2: __firstFn('loadPersonalityV2', 'loadPersonality'),
+   44 |     scanCurrentPossibilities: __firstFn('scanCurrentPossibilities', 'scanPossibilities'),
+   45 |     scanFutureAffordances: __firstFn('scanFutureAffordances', 'scanAffordances'),
+   46 |     getBuiltinActions: __firstFn('getBuiltinActions', 'listBuiltinActions'),
+   47 |     maybeInjectTechTasks: __firstFn('maybeInjectTechTasks'),
+   48 |     thinkAndAct: __firstFn('thinkAndAct'),
+
+===== openai/client init around line 31 =====
+    6 |   const __isFn = (v) => typeof v === 'function';
+    7 |   const __isOpenAI = (v) => !!(
+    8 |     v &&
+    9 |     typeof v === 'object' &&
+   10 |     (
+   11 |       (v.chat && v.chat.completions && typeof v.chat.completions.create === 'function') ||
+   12 |       (v.responses && typeof v.responses.create === 'function') ||
+   13 |       (v.embeddings && typeof v.embeddings.create === 'function')
+   14 |     )
+   15 |   );
+   16 |   const __firstFn = (...names) => {
+   17 |     for (const name of names) {
+   18 |       const v = __get(name);
+   19 |       if (__isFn(v)) return v;
+   20 |     }
+   21 |     return null;
+   22 |   };
+   23 |   const __firstOpenAI = (...names) => {
+   24 |     for (const name of names) {
+   25 |       const v = __get(name);
+   26 |       if (__isOpenAI(v)) return v;
+   27 |     }
+   28 |     return null;
+   29 |   };
+   30 | 
+   31 |   const __openai = __firstOpenAI('openai', 'openaiClient', 'openAIClient', 'llmClient', 'aiClient', 'client');
+   32 | 
+   33 |   const __deps = {
+   34 |     openai: __openai,
+   35 |     openaiClient: __openai,
+   36 |     performBuiltinAction: __firstFn('performBuiltinAction', 'runBuiltinAction', 'performAction'),
+   37 |     executeDecision: __firstFn('executeDecision', 'runDecision'),
+   38 |     executeAction: __firstFn('executeAction', 'runAction'),
+   39 |     executeActions: __firstFn('executeActions', 'runActions'),
+   40 |     addMemory: __firstFn('addMemory', 'remember', 'storeMemory'),
+   41 |     retrieveMemories: __firstFn('retrieveMemories', 'retrieveMemory', 'searchMemories', 'recallMemories'),
+   42 |     sanitize: __firstFn('sanitize', 'sanitizeText', 'safeText'),
+   43 |     loadPersonalityV2: __firstFn('loadPersonalityV2', 'loadPersonality'),
+   44 |     scanCurrentPossibilities: __firstFn('scanCurrentPossibilities', 'scanPossibilities'),
+   45 |     scanFutureAffordances: __firstFn('scanFutureAffordances', 'scanAffordances'),
+   46 |     getBuiltinActions: __firstFn('getBuiltinActions', 'listBuiltinActions'),
+   47 |     maybeInjectTechTasks: __firstFn('maybeInjectTechTasks'),
+   48 |     thinkAndAct: __firstFn('thinkAndAct'),
+   49 |     reactToChat: __firstFn('reactToChat')
+   50 |   };
+   51 | 
+   52 |   for (const [k, v] of Object.entries(__deps)) {
+   53 |     if (v === null || v === undefined) delete __deps[k];
+   54 |   }
+   55 | 
+   56 |   return __deps;
+
+===== openai/client init around line 111 =====
+   86 |   }
+   87 | }
+   88 | 
+   89 | 
+   90 | /* __ADAM_SAFE_TEXT_FOR_MEMORY_V1__ */
+   91 | function __adamSafeTextForMemory(value) {
+   92 |   if (typeof value === "string") return value;
+   93 |   if (value === undefined || value === null) return "";
+   94 |   try {
+   95 |     if (value instanceof Error) return value.stack || value.message || String(value);
+   96 |   } catch (_) {}
+   97 |   try {
+   98 |     return JSON.stringify(value);
+   99 |   } catch (_) {
+  100 |     try {
+  101 |       return String(value);
+  102 |     } catch (_) {
+  103 |       return "";
+  104 |     }
+  105 |   }
+  106 | }
+  107 | 
+  108 | const mineflayer = require('mineflayer');
+  109 | const { pathfinder, Movements, goals } = require('mineflayer-pathfinder');
+  110 | const mcDataLoader = require('minecraft-data');
+  111 | const OpenAI = require('openai');
+  112 | const fs = require('fs');
+  113 | const { Vec3 } = require('vec3');
+  114 | const vm = require('vm');
+  115 | require('dotenv').config();
+  116 | 
+  117 | const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+  118 | 
+  119 | const EMBED_MODEL = 'text-embedding-3-small';
+  120 | const EMBED_DIMENSIONS = 256;      // 용량 절약, 의미 검색엔 충분
+  121 | const MAIN_MODEL = 'gpt-4o-mini';  // 매 사이클 사고 (저비용)
+  122 | const DEEP_MODEL = 'gpt-4o';       // 반성+계획 전용 (저빈도, 고품질)
+  123 | const REFLECT_EVERY_N_CYCLES = 20; // 45초 × 20 = 약 15분마다
+  124 | 
+  125 | const ITEM_ALIASES = {
+  126 |   'workbench': 'crafting_table', 'work bench': 'crafting_table',
+  127 |   'crafting table': 'crafting_table', 'work_bench': 'crafting_table',
+  128 |   'wooden axe': 'wooden_axe', 'wood axe': 'wooden_axe',
+  129 |   'wooden pickaxe': 'wooden_pickaxe', 'wood pickaxe': 'wooden_pickaxe',
+  130 |   'stone axe': 'stone_axe', 'stone pickaxe': 'stone_pickaxe',
+  131 |   'wooden sword': 'wooden_sword', 'stone sword': 'stone_sword',
+  132 |   'iron axe': 'iron_axe', 'iron pickaxe': 'iron_pickaxe', 'iron sword': 'iron_sword',
+  133 | };
+  134 | function resolveItemName(raw) {
+  135 |   if (!raw) return null;
+  136 |   const lower = raw.toLowerCase().trim();
+
+===== openai/client init around line 117 =====
+   92 |   if (typeof value === "string") return value;
+   93 |   if (value === undefined || value === null) return "";
+   94 |   try {
+   95 |     if (value instanceof Error) return value.stack || value.message || String(value);
+   96 |   } catch (_) {}
+   97 |   try {
+   98 |     return JSON.stringify(value);
+   99 |   } catch (_) {
+  100 |     try {
+  101 |       return String(value);
+  102 |     } catch (_) {
+  103 |       return "";
+  104 |     }
+  105 |   }
+  106 | }
+  107 | 
+  108 | const mineflayer = require('mineflayer');
+  109 | const { pathfinder, Movements, goals } = require('mineflayer-pathfinder');
+  110 | const mcDataLoader = require('minecraft-data');
+  111 | const OpenAI = require('openai');
+  112 | const fs = require('fs');
+  113 | const { Vec3 } = require('vec3');
+  114 | const vm = require('vm');
+  115 | require('dotenv').config();
+  116 | 
+  117 | const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+  118 | 
+  119 | const EMBED_MODEL = 'text-embedding-3-small';
+  120 | const EMBED_DIMENSIONS = 256;      // 용량 절약, 의미 검색엔 충분
+  121 | const MAIN_MODEL = 'gpt-4o-mini';  // 매 사이클 사고 (저비용)
+  122 | const DEEP_MODEL = 'gpt-4o';       // 반성+계획 전용 (저빈도, 고품질)
+  123 | const REFLECT_EVERY_N_CYCLES = 20; // 45초 × 20 = 약 15분마다
+  124 | 
+  125 | const ITEM_ALIASES = {
+  126 |   'workbench': 'crafting_table', 'work bench': 'crafting_table',
+  127 |   'crafting table': 'crafting_table', 'work_bench': 'crafting_table',
+  128 |   'wooden axe': 'wooden_axe', 'wood axe': 'wooden_axe',
+  129 |   'wooden pickaxe': 'wooden_pickaxe', 'wood pickaxe': 'wooden_pickaxe',
+  130 |   'stone axe': 'stone_axe', 'stone pickaxe': 'stone_pickaxe',
+  131 |   'wooden sword': 'wooden_sword', 'stone sword': 'stone_sword',
+  132 |   'iron axe': 'iron_axe', 'iron pickaxe': 'iron_pickaxe', 'iron sword': 'iron_sword',
+  133 | };
+  134 | function resolveItemName(raw) {
+  135 |   if (!raw) return null;
+  136 |   const lower = raw.toLowerCase().trim();
+  137 |   return ITEM_ALIASES[lower] || lower.replace(/\s+/g, '_');
+  138 | }
+  139 | 
+  140 | const SMELT_MAP = {
+  141 |   'iron_ingot': ['raw_iron', 'iron_ore'],
+  142 |   'gold_ingot': ['raw_gold', 'gold_ore'],
+
+===== openai/client init around line 482 =====
+  457 |   try {
+  458 |     if (bot.food < 14) {
+  459 |       const food = bot.inventory.items().find(i => ['bread','apple','beef','porkchop','chicken','carrot','potato','cooked'].some(f => i.name.includes(f)));
+  460 |       if (food) { await bot.equip(food, 'hand'); await bot.consume(); console.log(`🍖 [반사신경] ${food.name} 섭취`); }
+  461 |     }
+  462 |     const danger = bot.nearestEntity(e => e.type === 'mob' && ['zombie','skeleton','creeper','spider'].includes(e.name) && bot.entity.position.distanceTo(e.position) < 6);
+  463 |     if (danger) {
+  464 |       console.log(`⚠️ [반사신경] ${danger.name} 발견! 즉시 대응`);
+  465 |       await equipBestTool(bot, 'combat');
+  466 |       try { bot.attack(danger); } catch {}
+  467 |     }
+  468 |   } catch {}
+  469 | }
+  470 | 
+  471 | async function liveLoop(bot, self) {
+  472 |   /* __ADAM_PIANO_V36_LIVELOOP_HOOK__ */
+  473 |   try {
+  474 |     const __pianoBridge = require('./piano_v3/bridge.cjs');
+  475 |     const __pianoModule = require('./piano_v3/index.cjs');
+  476 | 
+  477 |     const __pianoDeps = (() => {
+  478 |       const __get = (name) => {
+  479 |         try { return eval(name); } catch (_) { return null; }
+  480 |       };
+  481 |       const __isFn = (v) => typeof v === 'function';
+  482 |       const __isOpenAI = (v) => !!(
+  483 |         v &&
+  484 |         typeof v === 'object' &&
+  485 |         (
+  486 |           (v.chat && v.chat.completions && typeof v.chat.completions.create === 'function') ||
+  487 |           (v.responses && typeof v.responses.create === 'function') ||
+  488 |           (v.embeddings && typeof v.embeddings.create === 'function')
+  489 |         )
+  490 |       );
+  491 |       const __first = (...names) => {
+  492 |         for (const name of names) {
+  493 |           const v = __get(name);
+  494 |           if (v !== null && v !== undefined) return v;
+  495 |         }
+  496 |         return null;
+  497 |       };
+  498 |       const __firstFn = (...names) => {
+  499 |         for (const name of names) {
+  500 |           const v = __get(name);
+  501 |           if (__isFn(v)) return v;
+  502 |         }
+  503 |         return null;
+  504 |       };
+  505 |       const __firstOpenAI = (...names) => {
+  506 |         for (const name of names) {
+  507 |           const v = __get(name);
+
+===== openai/client init around line 505 =====
+  480 |       };
+  481 |       const __isFn = (v) => typeof v === 'function';
+  482 |       const __isOpenAI = (v) => !!(
+  483 |         v &&
+  484 |         typeof v === 'object' &&
+  485 |         (
+  486 |           (v.chat && v.chat.completions && typeof v.chat.completions.create === 'function') ||
+  487 |           (v.responses && typeof v.responses.create === 'function') ||
+  488 |           (v.embeddings && typeof v.embeddings.create === 'function')
+  489 |         )
+  490 |       );
+  491 |       const __first = (...names) => {
+  492 |         for (const name of names) {
+  493 |           const v = __get(name);
+  494 |           if (v !== null && v !== undefined) return v;
+  495 |         }
+  496 |         return null;
+  497 |       };
+  498 |       const __firstFn = (...names) => {
+  499 |         for (const name of names) {
+  500 |           const v = __get(name);
+  501 |           if (__isFn(v)) return v;
+  502 |         }
+  503 |         return null;
+  504 |       };
+  505 |       const __firstOpenAI = (...names) => {
+  506 |         for (const name of names) {
+  507 |           const v = __get(name);
+  508 |           if (__isOpenAI(v)) return v;
+  509 |         }
+  510 |         return null;
+  511 |       };
+  512 |       const __openai = __firstOpenAI(
+  513 |         'openai',
+  514 |         'openaiClient',
+  515 |         'openAIClient',
+  516 |         'llmClient',
+  517 |         'aiClient',
+  518 |         'client'
+  519 |       );
+  520 |       const __deps = {
+  521 |         openai: __openai,
+  522 |         openaiClient: __openai,
+  523 |         performBuiltinAction: __firstFn('performBuiltinAction', 'runBuiltinAction', 'performAction'),
+  524 |         executeDecision: __firstFn('executeDecision', 'runDecision'),
+  525 |         executeAction: __firstFn('executeAction', 'runAction'),
+  526 |         executeActions: __firstFn('executeActions', 'runActions'),
+  527 |         addMemory: __firstFn('addMemory', 'remember', 'storeMemory'),
+  528 |         remember: __firstFn('remember', 'addMemory', 'storeMemory'),
+  529 |         retrieveMemories: __firstFn('retrieveMemories', 'retrieveMemory', 'searchMemories', 'recallMemories'),
+  530 |         retrieveMemory: __firstFn('retrieveMemory', 'retrieveMemories', 'searchMemories'),
+
+===== openai/client init around line 512 =====
+  487 |           (v.responses && typeof v.responses.create === 'function') ||
+  488 |           (v.embeddings && typeof v.embeddings.create === 'function')
+  489 |         )
+  490 |       );
+  491 |       const __first = (...names) => {
+  492 |         for (const name of names) {
+  493 |           const v = __get(name);
+  494 |           if (v !== null && v !== undefined) return v;
+  495 |         }
+  496 |         return null;
+  497 |       };
+  498 |       const __firstFn = (...names) => {
+  499 |         for (const name of names) {
+  500 |           const v = __get(name);
+  501 |           if (__isFn(v)) return v;
+  502 |         }
+  503 |         return null;
+  504 |       };
+  505 |       const __firstOpenAI = (...names) => {
+  506 |         for (const name of names) {
+  507 |           const v = __get(name);
+  508 |           if (__isOpenAI(v)) return v;
+  509 |         }
+  510 |         return null;
+  511 |       };
+  512 |       const __openai = __firstOpenAI(
+  513 |         'openai',
+  514 |         'openaiClient',
+  515 |         'openAIClient',
+  516 |         'llmClient',
+  517 |         'aiClient',
+  518 |         'client'
+  519 |       );
+  520 |       const __deps = {
+  521 |         openai: __openai,
+  522 |         openaiClient: __openai,
+  523 |         performBuiltinAction: __firstFn('performBuiltinAction', 'runBuiltinAction', 'performAction'),
+  524 |         executeDecision: __firstFn('executeDecision', 'runDecision'),
+  525 |         executeAction: __firstFn('executeAction', 'runAction'),
+  526 |         executeActions: __firstFn('executeActions', 'runActions'),
+  527 |         addMemory: __firstFn('addMemory', 'remember', 'storeMemory'),
+  528 |         remember: __firstFn('remember', 'addMemory', 'storeMemory'),
+  529 |         retrieveMemories: __firstFn('retrieveMemories', 'retrieveMemory', 'searchMemories', 'recallMemories'),
+  530 |         retrieveMemory: __firstFn('retrieveMemory', 'retrieveMemories', 'searchMemories'),
+  531 |         searchMemories: __firstFn('searchMemories', 'retrieveMemories', 'retrieveMemory'),
+  532 |         sanitize: __firstFn('sanitize', 'sanitizeText', 'safeText'),
+  533 |         loadPersonalityV2: __firstFn('loadPersonalityV2', 'loadPersonality'),
+  534 |         loadPersonality: __firstFn('loadPersonality', 'loadPersonalityV2'),
+  535 |         scanCurrentPossibilities: __firstFn('scanCurrentPossibilities', 'scanPossibilities'),
+  536 |         scanFutureAffordances: __firstFn('scanFutureAffordances', 'scanAffordances'),
+  537 |         getBuiltinActions: __firstFn('getBuiltinActions', 'listBuiltinActions'),
+
+===== createCitizen export/definition around line 10111 =====
+10086 |       try {
+10087 |         const rt = require('./piano_v3').install({
+10088 |           bot,
+10089 |           self,
+10090 |           deps: getDeps()
+10091 |         });
+10092 | 
+10093 |         self.__pianoRuntime = rt;
+10094 |         bot.__pianoRuntime = rt;
+10095 | 
+10096 |         if (process.env.ADAM_ENABLE_LEGACY_GLOBAL !== '1') {
+10097 |           try { delete globalThis.AdamPiano; } catch {}
+10098 |         }
+10099 | 
+10100 |         console.log('🎼 [PIANO V3.3] runtime attached:', reason, 'bot=' + (bot && bot.username));
+10101 |       } catch (e) {
+10102 |         console.error('❌ [PIANO V3.3] runtime attach failed:', e && e.stack ? e.stack : e);
+10103 |       }
+10104 |     }
+10105 | 
+10106 |     setTimeout(attempt, 0);
+10107 |   }
+10108 | 
+10109 |   if (
+10110 |     module.exports &&
+10111 |     typeof module.exports.createCitizen === 'function' &&
+10112 |     !module.exports.createCitizen.__pianoV33Wrapped
+10113 |   ) {
+10114 |     const originalCreateCitizen = module.exports.createCitizen;
+10115 | 
+10116 |     const wrappedCreateCitizen = function pianoV33CreateCitizenWrapper(opts) {
+10117 |       const bot = originalCreateCitizen.apply(this, arguments);
+10118 |       attachWhenReady(bot, opts || {}, 'module.exports.createCitizen');
+10119 |       return bot;
+10120 |     };
+10121 | 
+10122 |     wrappedCreateCitizen.__pianoV33Wrapped = true;
+10123 |     module.exports.createCitizen = wrappedCreateCitizen;
+10124 | 
+10125 |     console.log('🎼 [PIANO V3.3] createCitizen export wrapper installed');
+10126 |   } else {
+10127 |     console.warn('⚠️ [PIANO V3.3] module.exports.createCitizen missing. Export keys:', Object.keys(module.exports || {}));
+10128 |   }
+10129 | })();
+10130 | 
+10131 | 
+10132 | 
+10133 | 
+10134 | /* __ADAM_PIANO_V36_EXPORT_BRIDGE__ */
+10135 | ;(() => {
+10136 |   try {
+
+===== createCitizen export/definition around line 10112 =====
+10087 |         const rt = require('./piano_v3').install({
+10088 |           bot,
+10089 |           self,
+10090 |           deps: getDeps()
+10091 |         });
+10092 | 
+10093 |         self.__pianoRuntime = rt;
+10094 |         bot.__pianoRuntime = rt;
+10095 | 
+10096 |         if (process.env.ADAM_ENABLE_LEGACY_GLOBAL !== '1') {
+10097 |           try { delete globalThis.AdamPiano; } catch {}
+10098 |         }
+10099 | 
+10100 |         console.log('🎼 [PIANO V3.3] runtime attached:', reason, 'bot=' + (bot && bot.username));
+10101 |       } catch (e) {
+10102 |         console.error('❌ [PIANO V3.3] runtime attach failed:', e && e.stack ? e.stack : e);
+10103 |       }
+10104 |     }
+10105 | 
+10106 |     setTimeout(attempt, 0);
+10107 |   }
+10108 | 
+10109 |   if (
+10110 |     module.exports &&
+10111 |     typeof module.exports.createCitizen === 'function' &&
+10112 |     !module.exports.createCitizen.__pianoV33Wrapped
+10113 |   ) {
+10114 |     const originalCreateCitizen = module.exports.createCitizen;
+10115 | 
+10116 |     const wrappedCreateCitizen = function pianoV33CreateCitizenWrapper(opts) {
+10117 |       const bot = originalCreateCitizen.apply(this, arguments);
+10118 |       attachWhenReady(bot, opts || {}, 'module.exports.createCitizen');
+10119 |       return bot;
+10120 |     };
+10121 | 
+10122 |     wrappedCreateCitizen.__pianoV33Wrapped = true;
+10123 |     module.exports.createCitizen = wrappedCreateCitizen;
+10124 | 
+10125 |     console.log('🎼 [PIANO V3.3] createCitizen export wrapper installed');
+10126 |   } else {
+10127 |     console.warn('⚠️ [PIANO V3.3] module.exports.createCitizen missing. Export keys:', Object.keys(module.exports || {}));
+10128 |   }
+10129 | })();
+10130 | 
+10131 | 
+10132 | 
+10133 | 
+10134 | /* __ADAM_PIANO_V36_EXPORT_BRIDGE__ */
+10135 | ;(() => {
+10136 |   try {
+10137 |     const { wrapCreateCitizenExport } = require('./piano_v3/bridge.cjs');
+
+===== createCitizen export/definition around line 10114 =====
+10089 |           self,
+10090 |           deps: getDeps()
+10091 |         });
+10092 | 
+10093 |         self.__pianoRuntime = rt;
+10094 |         bot.__pianoRuntime = rt;
+10095 | 
+10096 |         if (process.env.ADAM_ENABLE_LEGACY_GLOBAL !== '1') {
+10097 |           try { delete globalThis.AdamPiano; } catch {}
+10098 |         }
+10099 | 
+10100 |         console.log('🎼 [PIANO V3.3] runtime attached:', reason, 'bot=' + (bot && bot.username));
+10101 |       } catch (e) {
+10102 |         console.error('❌ [PIANO V3.3] runtime attach failed:', e && e.stack ? e.stack : e);
+10103 |       }
+10104 |     }
+10105 | 
+10106 |     setTimeout(attempt, 0);
+10107 |   }
+10108 | 
+10109 |   if (
+10110 |     module.exports &&
+10111 |     typeof module.exports.createCitizen === 'function' &&
+10112 |     !module.exports.createCitizen.__pianoV33Wrapped
+10113 |   ) {
+10114 |     const originalCreateCitizen = module.exports.createCitizen;
+10115 | 
+10116 |     const wrappedCreateCitizen = function pianoV33CreateCitizenWrapper(opts) {
+10117 |       const bot = originalCreateCitizen.apply(this, arguments);
+10118 |       attachWhenReady(bot, opts || {}, 'module.exports.createCitizen');
+10119 |       return bot;
+10120 |     };
+10121 | 
+10122 |     wrappedCreateCitizen.__pianoV33Wrapped = true;
+10123 |     module.exports.createCitizen = wrappedCreateCitizen;
+10124 | 
+10125 |     console.log('🎼 [PIANO V3.3] createCitizen export wrapper installed');
+10126 |   } else {
+10127 |     console.warn('⚠️ [PIANO V3.3] module.exports.createCitizen missing. Export keys:', Object.keys(module.exports || {}));
+10128 |   }
+10129 | })();
+10130 | 
+10131 | 
+10132 | 
+10133 | 
+10134 | /* __ADAM_PIANO_V36_EXPORT_BRIDGE__ */
+10135 | ;(() => {
+10136 |   try {
+10137 |     const { wrapCreateCitizenExport } = require('./piano_v3/bridge.cjs');
+10138 |     const piano = require('./piano_v3/index.cjs');
+10139 | 
+
+===== createCitizen export/definition around line 10118 =====
+10093 |         self.__pianoRuntime = rt;
+10094 |         bot.__pianoRuntime = rt;
+10095 | 
+10096 |         if (process.env.ADAM_ENABLE_LEGACY_GLOBAL !== '1') {
+10097 |           try { delete globalThis.AdamPiano; } catch {}
+10098 |         }
+10099 | 
+10100 |         console.log('🎼 [PIANO V3.3] runtime attached:', reason, 'bot=' + (bot && bot.username));
+10101 |       } catch (e) {
+10102 |         console.error('❌ [PIANO V3.3] runtime attach failed:', e && e.stack ? e.stack : e);
+10103 |       }
+10104 |     }
+10105 | 
+10106 |     setTimeout(attempt, 0);
+10107 |   }
+10108 | 
+10109 |   if (
+10110 |     module.exports &&
+10111 |     typeof module.exports.createCitizen === 'function' &&
+10112 |     !module.exports.createCitizen.__pianoV33Wrapped
+10113 |   ) {
+10114 |     const originalCreateCitizen = module.exports.createCitizen;
+10115 | 
+10116 |     const wrappedCreateCitizen = function pianoV33CreateCitizenWrapper(opts) {
+10117 |       const bot = originalCreateCitizen.apply(this, arguments);
+10118 |       attachWhenReady(bot, opts || {}, 'module.exports.createCitizen');
+10119 |       return bot;
+10120 |     };
+10121 | 
+10122 |     wrappedCreateCitizen.__pianoV33Wrapped = true;
+10123 |     module.exports.createCitizen = wrappedCreateCitizen;
+10124 | 
+10125 |     console.log('🎼 [PIANO V3.3] createCitizen export wrapper installed');
+10126 |   } else {
+10127 |     console.warn('⚠️ [PIANO V3.3] module.exports.createCitizen missing. Export keys:', Object.keys(module.exports || {}));
+10128 |   }
+10129 | })();
+10130 | 
+10131 | 
+10132 | 
+10133 | 
+10134 | /* __ADAM_PIANO_V36_EXPORT_BRIDGE__ */
+10135 | ;(() => {
+10136 |   try {
+10137 |     const { wrapCreateCitizenExport } = require('./piano_v3/bridge.cjs');
+10138 |     const piano = require('./piano_v3/index.cjs');
+10139 | 
+10140 |     if (module.exports && typeof module.exports.createCitizen === 'function') {
+10141 |       module.exports.createCitizen = wrapCreateCitizenExport(module.exports.createCitizen, {
+10142 |         piano,
+10143 |         source: 'citizen-export-v36',
+
+===== createCitizen export/definition around line 10123 =====
+10098 |         }
+10099 | 
+10100 |         console.log('🎼 [PIANO V3.3] runtime attached:', reason, 'bot=' + (bot && bot.username));
+10101 |       } catch (e) {
+10102 |         console.error('❌ [PIANO V3.3] runtime attach failed:', e && e.stack ? e.stack : e);
+10103 |       }
+10104 |     }
+10105 | 
+10106 |     setTimeout(attempt, 0);
+10107 |   }
+10108 | 
+10109 |   if (
+10110 |     module.exports &&
+10111 |     typeof module.exports.createCitizen === 'function' &&
+10112 |     !module.exports.createCitizen.__pianoV33Wrapped
+10113 |   ) {
+10114 |     const originalCreateCitizen = module.exports.createCitizen;
+10115 | 
+10116 |     const wrappedCreateCitizen = function pianoV33CreateCitizenWrapper(opts) {
+10117 |       const bot = originalCreateCitizen.apply(this, arguments);
+10118 |       attachWhenReady(bot, opts || {}, 'module.exports.createCitizen');
+10119 |       return bot;
+10120 |     };
+10121 | 
+10122 |     wrappedCreateCitizen.__pianoV33Wrapped = true;
+10123 |     module.exports.createCitizen = wrappedCreateCitizen;
+10124 | 
+10125 |     console.log('🎼 [PIANO V3.3] createCitizen export wrapper installed');
+10126 |   } else {
+10127 |     console.warn('⚠️ [PIANO V3.3] module.exports.createCitizen missing. Export keys:', Object.keys(module.exports || {}));
+10128 |   }
+10129 | })();
+10130 | 
+10131 | 
+10132 | 
+10133 | 
+10134 | /* __ADAM_PIANO_V36_EXPORT_BRIDGE__ */
+10135 | ;(() => {
+10136 |   try {
+10137 |     const { wrapCreateCitizenExport } = require('./piano_v3/bridge.cjs');
+10138 |     const piano = require('./piano_v3/index.cjs');
+10139 | 
+10140 |     if (module.exports && typeof module.exports.createCitizen === 'function') {
+10141 |       module.exports.createCitizen = wrapCreateCitizenExport(module.exports.createCitizen, {
+10142 |         piano,
+10143 |         source: 'citizen-export-v36',
+10144 |         logger: console,
+10145 |         deferIfDepsMissing: true,
+10146 |         getDeps: () => {
+10147 |           try {
+10148 |             return typeof __adamPianoGetDepsV36 === 'function' ? __adamPianoGetDepsV36() : {};
+
+===== createCitizen export/definition around line 10127 =====
+10102 |         console.error('❌ [PIANO V3.3] runtime attach failed:', e && e.stack ? e.stack : e);
+10103 |       }
+10104 |     }
+10105 | 
+10106 |     setTimeout(attempt, 0);
+10107 |   }
+10108 | 
+10109 |   if (
+10110 |     module.exports &&
+10111 |     typeof module.exports.createCitizen === 'function' &&
+10112 |     !module.exports.createCitizen.__pianoV33Wrapped
+10113 |   ) {
+10114 |     const originalCreateCitizen = module.exports.createCitizen;
+10115 | 
+10116 |     const wrappedCreateCitizen = function pianoV33CreateCitizenWrapper(opts) {
+10117 |       const bot = originalCreateCitizen.apply(this, arguments);
+10118 |       attachWhenReady(bot, opts || {}, 'module.exports.createCitizen');
+10119 |       return bot;
+10120 |     };
+10121 | 
+10122 |     wrappedCreateCitizen.__pianoV33Wrapped = true;
+10123 |     module.exports.createCitizen = wrappedCreateCitizen;
+10124 | 
+10125 |     console.log('🎼 [PIANO V3.3] createCitizen export wrapper installed');
+10126 |   } else {
+10127 |     console.warn('⚠️ [PIANO V3.3] module.exports.createCitizen missing. Export keys:', Object.keys(module.exports || {}));
+10128 |   }
+10129 | })();
+10130 | 
+10131 | 
+10132 | 
+10133 | 
+10134 | /* __ADAM_PIANO_V36_EXPORT_BRIDGE__ */
+10135 | ;(() => {
+10136 |   try {
+10137 |     const { wrapCreateCitizenExport } = require('./piano_v3/bridge.cjs');
+10138 |     const piano = require('./piano_v3/index.cjs');
+10139 | 
+10140 |     if (module.exports && typeof module.exports.createCitizen === 'function') {
+10141 |       module.exports.createCitizen = wrapCreateCitizenExport(module.exports.createCitizen, {
+10142 |         piano,
+10143 |         source: 'citizen-export-v36',
+10144 |         logger: console,
+10145 |         deferIfDepsMissing: true,
+10146 |         getDeps: () => {
+10147 |           try {
+10148 |             return typeof __adamPianoGetDepsV36 === 'function' ? __adamPianoGetDepsV36() : {};
+10149 |           } catch (_) {
+10150 |             return {};
+10151 |           }
+10152 |         }
+
+===== createCitizen export/definition around line 10140 =====
+10115 | 
+10116 |     const wrappedCreateCitizen = function pianoV33CreateCitizenWrapper(opts) {
+10117 |       const bot = originalCreateCitizen.apply(this, arguments);
+10118 |       attachWhenReady(bot, opts || {}, 'module.exports.createCitizen');
+10119 |       return bot;
+10120 |     };
+10121 | 
+10122 |     wrappedCreateCitizen.__pianoV33Wrapped = true;
+10123 |     module.exports.createCitizen = wrappedCreateCitizen;
+10124 | 
+10125 |     console.log('🎼 [PIANO V3.3] createCitizen export wrapper installed');
+10126 |   } else {
+10127 |     console.warn('⚠️ [PIANO V3.3] module.exports.createCitizen missing. Export keys:', Object.keys(module.exports || {}));
+10128 |   }
+10129 | })();
+10130 | 
+10131 | 
+10132 | 
+10133 | 
+10134 | /* __ADAM_PIANO_V36_EXPORT_BRIDGE__ */
+10135 | ;(() => {
+10136 |   try {
+10137 |     const { wrapCreateCitizenExport } = require('./piano_v3/bridge.cjs');
+10138 |     const piano = require('./piano_v3/index.cjs');
+10139 | 
+10140 |     if (module.exports && typeof module.exports.createCitizen === 'function') {
+10141 |       module.exports.createCitizen = wrapCreateCitizenExport(module.exports.createCitizen, {
+10142 |         piano,
+10143 |         source: 'citizen-export-v36',
+10144 |         logger: console,
+10145 |         deferIfDepsMissing: true,
+10146 |         getDeps: () => {
+10147 |           try {
+10148 |             return typeof __adamPianoGetDepsV36 === 'function' ? __adamPianoGetDepsV36() : {};
+10149 |           } catch (_) {
+10150 |             return {};
+10151 |           }
+10152 |         }
+10153 |       });
+10154 |       console.log('[PIANO V3.6] createCitizen export bridge installed');
+10155 |     } else {
+10156 |       console.warn('[PIANO V3.6] module.exports.createCitizen not found at bridge install time');
+10157 |     }
+10158 | 
+10159 |     if (process.env.ADAM_ENABLE_LEGACY_GLOBAL !== '1') {
+10160 |       try { delete globalThis.AdamPiano; } catch (_) { try { globalThis.AdamPiano = undefined; } catch (_) {} }
+10161 |     }
+10162 |   } catch (e) {
+10163 |     console.error('[PIANO V3.6] createCitizen export bridge failed:', e && e.stack ? e.stack : e);
+10164 |   }
+10165 | })();
+
+===== createCitizen export/definition around line 10141 =====
+10116 |     const wrappedCreateCitizen = function pianoV33CreateCitizenWrapper(opts) {
+10117 |       const bot = originalCreateCitizen.apply(this, arguments);
+10118 |       attachWhenReady(bot, opts || {}, 'module.exports.createCitizen');
+10119 |       return bot;
+10120 |     };
+10121 | 
+10122 |     wrappedCreateCitizen.__pianoV33Wrapped = true;
+10123 |     module.exports.createCitizen = wrappedCreateCitizen;
+10124 | 
+10125 |     console.log('🎼 [PIANO V3.3] createCitizen export wrapper installed');
+10126 |   } else {
+10127 |     console.warn('⚠️ [PIANO V3.3] module.exports.createCitizen missing. Export keys:', Object.keys(module.exports || {}));
+10128 |   }
+10129 | })();
+10130 | 
+10131 | 
+10132 | 
+10133 | 
+10134 | /* __ADAM_PIANO_V36_EXPORT_BRIDGE__ */
+10135 | ;(() => {
+10136 |   try {
+10137 |     const { wrapCreateCitizenExport } = require('./piano_v3/bridge.cjs');
+10138 |     const piano = require('./piano_v3/index.cjs');
+10139 | 
+10140 |     if (module.exports && typeof module.exports.createCitizen === 'function') {
+10141 |       module.exports.createCitizen = wrapCreateCitizenExport(module.exports.createCitizen, {
+10142 |         piano,
+10143 |         source: 'citizen-export-v36',
+10144 |         logger: console,
+10145 |         deferIfDepsMissing: true,
+10146 |         getDeps: () => {
+10147 |           try {
+10148 |             return typeof __adamPianoGetDepsV36 === 'function' ? __adamPianoGetDepsV36() : {};
+10149 |           } catch (_) {
+10150 |             return {};
+10151 |           }
+10152 |         }
+10153 |       });
+10154 |       console.log('[PIANO V3.6] createCitizen export bridge installed');
+10155 |     } else {
+10156 |       console.warn('[PIANO V3.6] module.exports.createCitizen not found at bridge install time');
+10157 |     }
+10158 | 
+10159 |     if (process.env.ADAM_ENABLE_LEGACY_GLOBAL !== '1') {
+10160 |       try { delete globalThis.AdamPiano; } catch (_) { try { globalThis.AdamPiano = undefined; } catch (_) {} }
+10161 |     }
+10162 |   } catch (e) {
+10163 |     console.error('[PIANO V3.6] createCitizen export bridge failed:', e && e.stack ? e.stack : e);
+10164 |   }
+10165 | })();
+10166 | 
+
+===== liveLoop around line 421 =====
+  396 |   // 외부 브릿지/자가성장 모듈이 self를 못 받았을 때 쓸 안전한 참조.
+  397 |   globalThis.__ADAM_LAST_SELF__ = self;
+  398 |   globalThis.__ADAM_LAST_BOT__ = bot;
+  399 |   /* __ADAM_GLOBAL_BOT_BRIDGE_V1__ */
+  400 |   globalThis.bot = bot;
+  401 |   globalThis.self = self;
+  402 | 
+  403 |   globalThis.__ADAM_CITIZENS__ = globalThis.__ADAM_CITIZENS__ || {};
+  404 |   globalThis.__ADAM_CITIZENS__[name] = { self, bot };
+  405 | 
+  406 |   bot.once('spawn', async () => {
+  407 |     const mcData = mcDataLoader(bot.version);
+  408 |     /* __ADAM_GLOBAL_MCDATA_BRIDGE_V1__ */
+  409 |     globalThis.mcData = mcData;
+  410 |     globalThis.bot = bot;
+  411 |     globalThis.self = self;
+  412 | 
+  413 |     const movements = new Movements(bot, mcData);
+  414 |     movements.canDig = true;
+  415 |     bot.pathfinder.setMovements(movements);
+  416 |     console.log(`✅ ${self.name} 가 이 세상에 깨어났습니다. (임베딩 기억 검색 탑재)`);
+  417 |     console.log(`🧠 저장된 기억: ${self.memories.length}개 | 통찰: ${self.memories.filter(m => m.description.startsWith('[통찰]')).length}개`);
+  418 |     console.log(`🏠 집: ${self.state.home_location ? `(${self.state.home_location.x}, ${self.state.home_location.z})` : '아직 없음'}`);
+  419 | 
+  420 |     self.reflexTimer = setInterval(() => reflexLoop(bot, self), 2000);
+  421 |     setTimeout(() => liveLoop(bot, self), 5000);
+  422 |   });
+  423 | 
+  424 |   bot.on('chat', (username, message) => {
+  425 |     if (username === self.name) return;
+  426 |     const cleaned = sanitize(message);
+  427 |     console.log(`💬 [대화 감지] ${username}: "${cleaned}"`);
+  428 |     self.pendingChat.push({ username, message: cleaned });
+  429 |     addMemory(self, `[대화] ${username}이(가) 말했다: "${cleaned}"`).catch(() => {});
+  430 |   });
+  431 | 
+  432 |   bot.on('death', () => {
+  433 |     console.log(`💀 ${self.name} 사망.`);
+  434 |     self.lastActionResult = '나는 죽었고 다시 눈을 떴다. 가진 것을 일부 잃었을 수 있다.';
+  435 |     addMemory(self, self.lastActionResult).catch(() => {});
+  436 |   });
+  437 | 
+  438 |   bot.on('end', () => {
+  439 |     self.isAlive = false;
+  440 |     if (self.reflexTimer) clearInterval(self.reflexTimer);
+  441 |     saveJSON(`memories_${self.name}.json`, self.memories);
+  442 |     saveJSON(`state_${self.name}.json`, self.state);
+  443 |     saveJSON(`skills_${self.name}.json`, self.skills);
+  444 |     console.log(`💾 ${self.name}의 모든 데이터가 저장되었습니다.`);
+  445 |   });
+  446 |   bot.on('error', (err) => {
+
+===== liveLoop around line 471 =====
+  446 |   bot.on('error', (err) => {
+  447 |     self.isAlive = false;
+  448 |     if (self.reflexTimer) clearInterval(self.reflexTimer);
+  449 |     console.error(`❌ ${self.name} 연결 에러:`, err.message);
+  450 |   });
+  451 | 
+  452 |   return bot;
+  453 | }
+  454 | 
+  455 | async function reflexLoop(bot, self) {
+  456 |   if (!bot.entity || !self.isAlive) return;
+  457 |   try {
+  458 |     if (bot.food < 14) {
+  459 |       const food = bot.inventory.items().find(i => ['bread','apple','beef','porkchop','chicken','carrot','potato','cooked'].some(f => i.name.includes(f)));
+  460 |       if (food) { await bot.equip(food, 'hand'); await bot.consume(); console.log(`🍖 [반사신경] ${food.name} 섭취`); }
+  461 |     }
+  462 |     const danger = bot.nearestEntity(e => e.type === 'mob' && ['zombie','skeleton','creeper','spider'].includes(e.name) && bot.entity.position.distanceTo(e.position) < 6);
+  463 |     if (danger) {
+  464 |       console.log(`⚠️ [반사신경] ${danger.name} 발견! 즉시 대응`);
+  465 |       await equipBestTool(bot, 'combat');
+  466 |       try { bot.attack(danger); } catch {}
+  467 |     }
+  468 |   } catch {}
+  469 | }
+  470 | 
+  471 | async function liveLoop(bot, self) {
+  472 |   /* __ADAM_PIANO_V36_LIVELOOP_HOOK__ */
+  473 |   try {
+  474 |     const __pianoBridge = require('./piano_v3/bridge.cjs');
+  475 |     const __pianoModule = require('./piano_v3/index.cjs');
+  476 | 
+  477 |     const __pianoDeps = (() => {
+  478 |       const __get = (name) => {
+  479 |         try { return eval(name); } catch (_) { return null; }
+  480 |       };
+  481 |       const __isFn = (v) => typeof v === 'function';
+  482 |       const __isOpenAI = (v) => !!(
+  483 |         v &&
+  484 |         typeof v === 'object' &&
+  485 |         (
+  486 |           (v.chat && v.chat.completions && typeof v.chat.completions.create === 'function') ||
+  487 |           (v.responses && typeof v.responses.create === 'function') ||
+  488 |           (v.embeddings && typeof v.embeddings.create === 'function')
+  489 |         )
+  490 |       );
+  491 |       const __first = (...names) => {
+  492 |         for (const name of names) {
+  493 |           const v = __get(name);
+  494 |           if (v !== null && v !== undefined) return v;
+  495 |         }
+  496 |         return null;
+
+===== liveLoop around line 1752 =====
+ 1727 | const _reflexLoop_base = reflexLoop;
+ 1728 | reflexLoop = async function (bot, self) {
+ 1729 |   await _reflexLoop_base(bot, self); // 배고픔 자동 섭취 + 기존 몬스터 대응 그대로 유지
+ 1730 |   try {
+ 1731 |     if (!bot.entity) return;
+ 1732 |     const perc = self.perception;
+ 1733 |     if (perc?.urgentFlag === 'LAVA_NEARBY' && perc.lava?.pos) {
+ 1734 |       const pos = bot.entity.position;
+ 1735 |       const lp = perc.lava.pos;
+ 1736 |       bot.pathfinder.setGoal(new goals.GoalXZ(pos.x + (pos.x - lp.x) * 2, pos.z + (pos.z - lp.z) * 2));
+ 1737 |       console.log('🔥 [Reflex] 용암 근접 감지 → 즉시 반대 방향 이동');
+ 1738 |     }
+ 1739 |     const creeper = bot.nearestEntity(e => e.name === 'creeper' && bot.entity.position.distanceTo(e.position) < 5);
+ 1740 |     if (creeper) {
+ 1741 |       const pos = bot.entity.position;
+ 1742 |       bot.pathfinder.setGoal(new goals.GoalXZ(pos.x + (pos.x - creeper.position.x) * 3, pos.z + (pos.z - creeper.position.z) * 3));
+ 1743 |       console.log('💨 [Reflex] 크리퍼 근접 → 후퇴');
+ 1744 |     }
+ 1745 |   } catch (e) { /* 반사신경은 절대 죽으면 안 됨 */ }
+ 1746 | };
+ 1747 | // ════════════════════════════════════════════════════════════════════════
+ 1748 | // [ADD-ON N] Perception Loop를 독립적으로 시작 — 기존 메인 루프는 절대 중복시키지 않음
+ 1749 | // ════════════════════════════════════════════════════════════════════════
+ 1750 | 
+ 1751 | const _liveLoop_base = liveLoop;
+ 1752 | liveLoop = async function (bot, self) {
+ 1753 |   if (!self.__perceptionStarted) {
+ 1754 |     self.__perceptionStarted = true;
+ 1755 |     perceptionLoop(bot, self).catch(e => console.error('⚠️ [Perception] 종료:', e.message));
+ 1756 |     attachStructuredDeathLogger(bot, self);
+ 1757 |     console.log('🔍 [Perception] 독립 인식 루프 시작 (12초 주기, API 비용 없음)');
+ 1758 |   }
+ 1759 |   return _liveLoop_base(bot, self); // 기존 while 루프(45초 사이클, thinkAndAct/reactToChat)는 손대지 않음
+ 1760 | };
+ 1761 | 
+ 1762 | console.log('🚀 [PATCH F~N] PIANO식 병렬 감각 모듈 + Action Awareness + Goal 힌트 + 성격 분리 로드 완료');
+ 1763 | // ════════════════════════════════════════════════════════════════════════
+ 1764 | // [ADD-ON O] 연속 채집 코어 — 한 블록만 캐고 멈추던 문제 해결
+ 1765 | // 위협/배고픔/체력 임계치를 매 블록마다 체크해서 안전을 확보한다.
+ 1766 | // ════════════════════════════════════════════════════════════════════════
+ 1767 | 
+ 1768 | async function continuousGather(bot, self, targetNames, maxCount = 12, reachRadius = 6) {
+ 1769 |   let gathered = 0;
+ 1770 |   let lastName = '';
+ 1771 | 
+ 1772 |   while (gathered < maxCount) {
+ 1773 |     if (!bot.entity || !self.isAlive) break;
+ 1774 | 
+ 1775 |     // 안전 우선 — Part H(Perception)의 위협 플래그를 그대로 재사용
+ 1776 |     if (self.perception?.urgentFlag) { console.log(`⚠️ [연속채집 중단] 위험 감지: ${self.perception.urgentFlag}`); break; }
+ 1777 |     if (bot.food < 6) { console.log('🍖 [연속채집 중단] 배고픔 임계'); break; }
+
+===== liveLoop around line 2160 =====
+ 2135 |   if (!isEmergency && self.state.taskQueue.length === 0) {
+ 2136 |     maybeInjectTechTasks(bot, self);
+ 2137 |     if (self.state.taskQueue.length === 0) maybeInjectShelterUpgrade(bot, self);
+ 2138 |   }
+ 2139 | 
+ 2140 |   const queuedTask = !isEmergency ? peekTaskQueue(self) : null;
+ 2141 |   if (queuedTask) {
+ 2142 |     console.log(`📋 [CC-큐] '${self.state.taskQueueMeta?.goalName}' → 실행: ${queuedTask.action}${queuedTask.target ? `(${queuedTask.target})` : ''}`);
+ 2143 |     const resultText = await executeWithAwareness(bot, self, queuedTask); // 이전 라운드 Part J 재사용
+ 2144 |     self.lastActionResult = `[큐] ${resultText}`;
+ 2145 |     console.log(`📝 [큐 결과] ${self.lastActionResult}`);
+ 2146 |     await addMemory(self, self.lastActionResult);
+ 2147 |     if (!looksLikeFailure(resultText)) shiftTaskQueue(self);
+ 2148 |     else bumpRetryAndMaybeClear(self);
+ 2149 |     return; // GPT를 호출하지 않고 이번 사이클을 끝냄 → 비용 0원
+ 2150 |   }
+ 2151 | 
+ 2152 |   if (isEmergency) console.log(`🚨 [CC] 긴급 상황(${priority.reason}) — 큐 보류, 즉시 자유 판단으로 전환`);
+ 2153 |   return _thinkAndAct_beforeQueue(bot, self); // 큐가 없을 때만 기존 자유 판단 전체 실행
+ 2154 | };
+ 2155 | // ════════════════════════════════════════════════════════════════════════
+ 2156 | // [ADD-ON Y] 기술/집 평가 루프를 시작 — Part N의 래핑 패턴을 그대로 재사용
+ 2157 | // ════════════════════════════════════════════════════════════════════════
+ 2158 | 
+ 2159 | const _liveLoop_beforeTechEval = liveLoop; // 이전 라운드에서 이미 한 번 래핑된 버전
+ 2160 | liveLoop = async function (bot, self) {
+ 2161 |   if (!self.__techEvalStarted) {
+ 2162 |     self.__techEvalStarted = true;
+ 2163 |     techHomeEvalLoop(bot, self).catch(e => console.error('⚠️ [기술/집 평가] 종료:', e.message));
+ 2164 |     console.log('⚙️ [기술/집 평가] 독립 루프 시작 (20초 주기, API 비용 없음)');
+ 2165 |   }
+ 2166 |   return _liveLoop_beforeTechEval(bot, self);
+ 2167 | };
+ 2168 | 
+ 2169 | console.log('🚀 [PATCH S~Y] 기술 트리 + 집 품질 평가(독립 루프) + 태스크 큐(GPT 우회 실행) + Goal Hints 연동 완료');
+ 2170 | // ════════════════════════════════════════════════════════════════════════
+ 2171 | // [ADD-ON Z] 지속 전투 루프 — "한 번 치고 끝"이 아니라 위협이 사라지거나
+ 2172 | // 위험해질 때까지 지속되는 전투. 방어구 유무에 따라 도주 임계치를 다르게 잡는다.
+ 2173 | // ════════════════════════════════════════════════════════════════════════
+ 2174 | 
+ 2175 | const HOSTILE_MOBS = ['zombie','skeleton','creeper','spider','witch','enderman','phantom','drowned','husk','stray'];
+ 2176 | const PASSIVE_MOBS = ['cow','pig','sheep','chicken','rabbit'];
+ 2177 | const COMBAT_ENGAGE_RADIUS = 10;
+ 2178 | const COMBAT_FLEE_HEALTH = 7;
+ 2179 | const COMBAT_EAT_BEFORE_FIGHT_FOOD = 15;
+ 2180 | 
+ 2181 | async function combatLoop(bot, self) {
+ 2182 |   if (self.__inCombat) return;
+ 2183 |   const pos = bot.entity?.position;
+ 2184 |   if (!pos) return;
+ 2185 | 
+
+===== liveLoop around line 2366 =====
+ 2341 |   '밤이 되면 위험한 존재들이 나타난다. 미리 안전한 곳을 확보해두면 편하다.',
+ 2342 |   '배가 고프면 힘이 빠지고 회복이 멈춘다. 먹을 것을 챙겨두는 게 좋다.',
+ 2343 |   '동물을 사냥하면 고기를 얻을 수 있고, 화로에 구우면 더 든든하다.',
+ 2344 |   '상자에 물건을 보관해두면 죽어도 잃지 않는다. 귀한 물건일수록 몸에 지니지 않는 게 안전하다.',
+ 2345 |   '화로와 철광석이 있으면 훨씬 강한 도구를 만들 수 있다.',
+ 2346 |   '집에 침대가 있으면 밤을 건너뛸 수 있다.',
+ 2347 |   '크리퍼는 가까이 다가오면 폭발한다. 멀리서 처리하거나 거리를 두는 게 안전하다.',
+ 2348 |   '작업대 없이는 만들 수 있는 게 매우 제한적이다. 하나 만들어 갖고 다니면 편하다.',
+ 2349 |   '갑옷이 있으면 전투에서 훨씬 오래 버틸 수 있다.',
+ 2350 | ];
+ 2351 | 
+ 2352 | async function seedCommonSense(self) {
+ 2353 |   if (self.state.commonSenseSeeded) return;
+ 2354 |   console.log('🌱 [상식 시딩] 생존 상식을 기억에 심는 중 (강제 규칙 아님, 참고용)...');
+ 2355 |   for (const sense of COMMON_SENSE_ITEMS) {
+ 2356 |     const entry = await addMemory(self, `[상식] ${sense}`);
+ 2357 |     entry.importance = 7; // 경험 기억보다는 낮게 — 절대 법칙이 아니라 참고 상식
+ 2358 |   }
+ 2359 |   saveJSON(`memories_${self.name}.json`, self.memories);
+ 2360 |   self.state.commonSenseSeeded = true;
+ 2361 |   saveJSON(`state_${self.name}.json`, self.state);
+ 2362 |   console.log(`✅ [상식 시딩] ${COMMON_SENSE_ITEMS.length}개 완료`);
+ 2363 | }
+ 2364 | 
+ 2365 | const _liveLoop_beforeCommonSense = liveLoop;
+ 2366 | liveLoop = async function (bot, self) {
+ 2367 |   self.__botRef = bot; // Goal Hints의 check 함수가 인벤토리를 참조할 수 있게 함
+ 2368 |   if (!self.__commonSenseSeedStarted) {
+ 2369 |     self.__commonSenseSeedStarted = true;
+ 2370 |     await seedCommonSense(self).catch(e => console.warn('⚠️ 상식 시딩 실패:', e.message));
+ 2371 |   }
+ 2372 |   return _liveLoop_beforeCommonSense(bot, self);
+ 2373 | };
+ 2374 | // ════════════════════════════════════════════════════════════════════════
+ 2375 | // [ADD-ON AF] self.__botRef(Part AE에서 저장)를 통해 인벤토리를 참조하는
+ 2376 | // 안전한 방식으로 힌트를 추가한다. 모두 "참고만" 하는 힌트일 뿐 강제가 아니다.
+ 2377 | // ════════════════════════════════════════════════════════════════════════
+ 2378 | 
+ 2379 | GOAL_RULES.push(
+ 2380 |   {
+ 2381 |     id: 'no_armor_hint',
+ 2382 |     check: (p, self) => {
+ 2383 |       const bot = self.__botRef;
+ 2384 |       if (!bot) return false;
+ 2385 |       const hasArmor = bot.inventory.items().some(i => /(helmet|chestplate|leggings|boots)/.test(i.name));
+ 2386 |       return !hasArmor && (p?.monsters?.length > 0);
+ 2387 |     },
+ 2388 |     hint: () => '갑옷 없이 몬스터와 마주하고 있다. 방어구가 있으면 훨씬 안전하게 싸울 수 있다.',
+ 2389 |     priority: 58,
+ 2390 |   },
+ 2391 |   {
+
+===== liveLoop around line 3007 =====
+ 2982 | // [ADD-ON AS] 네이티브 등록 + 리스너 시작 — 기존 패턴 재사용
+ 2983 | // ════════════════════════════════════════════════════════════════════════
+ 2984 | 
+ 2985 | const _ensureNativeActionsDiscoverable_beforeAG = ensureNativeActionsDiscoverable;
+ 2986 | ensureNativeActionsDiscoverable = function (self) {
+ 2987 |   _ensureNativeActionsDiscoverable_beforeAG(self);
+ 2988 |   const newNatives = {
+ 2989 |     equip_armor: '가진 방어구를 실제로 몸에 착용한다. (네이티브)',
+ 2990 |     shoot_bow: '활과 화살로 원거리에서 몬스터를 처치한다. 크리퍼에 특히 안전하다. (네이티브)',
+ 2991 |     start_farm: '괭이와 씨앗으로 물 근처에 밭을 갈고 심는다. (네이티브)',
+ 2992 |     harvest_farm: '다 자란 농작물을 수확한다. (네이티브)',
+ 2993 |     breed_animals: '동물에게 먹이를 줘 번식을 유도한다. (네이티브)',
+ 2994 |     go_to_poi: '기억해둔 장소(label)로 이동한다. (네이티브)',
+ 2995 |     build_nether_portal: '흑요석 10개와 부싯돌이 있으면 다른 차원으로 가는 문을 만든다. (네이티브)',
+ 2996 |     clean_inventory: '가방의 흔한 잡동사니를 정리한다. (네이티브)',
+ 2997 |     toss_item: '특정 아이템(target)을 가방에서 버린다. (네이티브)',
+ 2998 |   };
+ 2999 |   let changed = false;
+ 3000 |   for (const [name, desc] of Object.entries(newNatives)) {
+ 3001 |     if (!self.skills[name]) { self.skills[name] = { description: desc, code: '// native', isNative: true, successCount: 0, failCount: 0 }; changed = true; }
+ 3002 |   }
+ 3003 |   if (changed) { saveJSON(`skills_${self.name}.json`, self.skills); console.log('🧩 [네이티브 등록] equip_armor/shoot_bow/start_farm/harvest_farm/breed_animals/go_to_poi/build_nether_portal/clean_inventory/toss_item'); }
+ 3004 | };
+ 3005 | 
+ 3006 | const _liveLoop_beforeAG = liveLoop;
+ 3007 | liveLoop = async function (bot, self) {
+ 3008 |   if (!self.__ag_started) {
+ 3009 |     self.__ag_started = true;
+ 3010 |     attachFallTracker(bot, self);
+ 3011 |     attachDamageInterrupt(bot, self);
+ 3012 |     attachDimensionListener(bot, self);
+ 3013 |     console.log('🎭 [PATCH AG~AS] 성격 수치화(±20%) + 가능성/미래어포던스 스캐너 + 인터럽트(신중함 40% 반영) + 방어구/활/농사/사육/이동/포탈/정리 로드 완료');
+ 3014 |   }
+ 3015 |   return _liveLoop_beforeAG(bot, self);
+ 3016 | };
+ 3017 | 
+ 3018 | // ════════════════════════════════════════════════════════════════════════
+ 3019 | // [STABLE SURVIVAL PATCH V5]
+ 3020 | // - native skill이 vm으로 실행되는 문제 수정
+ 3021 | // - survival-hotfix.js 분리 패치 실패 문제를 citizen.cjs 내부 패치로 통합
+ 3022 | // - 배고픔 자동 섭취, 위험 시 작업 중단, 지속 전투
+ 3023 | // - 맨손/낮은 곡괭이로 돌/광물 캐는 문제 방지
+ 3024 | // - 나무/돌/철 순서 상식 보강
+ 3025 | // - build_shelter 성공 시 자동 집 등록
+ 3026 | // - go_home / go_to_poi GoalNear 사용
+ 3027 | // ════════════════════════════════════════════════════════════════════════
+ 3028 | 
+ 3029 | ;(() => {
+ 3030 |   if (globalThis.__ADAM_STABLE_SURVIVAL_PATCH_V5__) {
+ 3031 |     console.log('🛡️ [STABLE PATCH V5] 이미 로드됨');
+ 3032 |     return;
+
+===== thinkAndAct/reactToChat around line 48 =====
+   23 |   const __firstOpenAI = (...names) => {
+   24 |     for (const name of names) {
+   25 |       const v = __get(name);
+   26 |       if (__isOpenAI(v)) return v;
+   27 |     }
+   28 |     return null;
+   29 |   };
+   30 | 
+   31 |   const __openai = __firstOpenAI('openai', 'openaiClient', 'openAIClient', 'llmClient', 'aiClient', 'client');
+   32 | 
+   33 |   const __deps = {
+   34 |     openai: __openai,
+   35 |     openaiClient: __openai,
+   36 |     performBuiltinAction: __firstFn('performBuiltinAction', 'runBuiltinAction', 'performAction'),
+   37 |     executeDecision: __firstFn('executeDecision', 'runDecision'),
+   38 |     executeAction: __firstFn('executeAction', 'runAction'),
+   39 |     executeActions: __firstFn('executeActions', 'runActions'),
+   40 |     addMemory: __firstFn('addMemory', 'remember', 'storeMemory'),
+   41 |     retrieveMemories: __firstFn('retrieveMemories', 'retrieveMemory', 'searchMemories', 'recallMemories'),
+   42 |     sanitize: __firstFn('sanitize', 'sanitizeText', 'safeText'),
+   43 |     loadPersonalityV2: __firstFn('loadPersonalityV2', 'loadPersonality'),
+   44 |     scanCurrentPossibilities: __firstFn('scanCurrentPossibilities', 'scanPossibilities'),
+   45 |     scanFutureAffordances: __firstFn('scanFutureAffordances', 'scanAffordances'),
+   46 |     getBuiltinActions: __firstFn('getBuiltinActions', 'listBuiltinActions'),
+   47 |     maybeInjectTechTasks: __firstFn('maybeInjectTechTasks'),
+   48 |     thinkAndAct: __firstFn('thinkAndAct'),
+   49 |     reactToChat: __firstFn('reactToChat')
+   50 |   };
+   51 | 
+   52 |   for (const [k, v] of Object.entries(__deps)) {
+   53 |     if (v === null || v === undefined) delete __deps[k];
+   54 |   }
+   55 | 
+   56 |   return __deps;
+   57 | }
+   58 | 
+   59 | /* __ADAM_DISABLE_OLD_AGENCY_AND_PIANO_BY_V34__ */
+   60 | globalThis.__ADAM_DISABLE_OLD_AGENCY_AND_PIANO_BY_V33__ = true;
+   61 | globalThis.__ADAM_DISABLE_OLD_AGENCY_AND_PIANO_BY_V34__ = true;
+   62 | if (process.env.ADAM_ENABLE_LEGACY_GLOBAL !== '1') {
+   63 |   try { delete globalThis.AdamPiano; } catch (_) { try { globalThis.AdamPiano = undefined; } catch (_) {} }
+   64 | }
+   65 | 
+   66 | /* __ADAM_DISABLE_OLD_AGENCY_AND_PIANO_BY_V33__ */
+   67 | globalThis.__ADAM_AGENCY_CORE_V1_INSTALLED__ = true;
+   68 | globalThis.__ADAM_PIANO_CORE_V2_INSTALLED__ = true;
+   69 | 
+   70 | 
+   71 | /* __ADAM_MEMORY_SAFE_TEXT_V2__ */
+   72 | function __adamMemorySafeTextV2(value) {
+   73 |   if (typeof value === "string") return value;
+
+===== thinkAndAct/reactToChat around line 49 =====
+   24 |     for (const name of names) {
+   25 |       const v = __get(name);
+   26 |       if (__isOpenAI(v)) return v;
+   27 |     }
+   28 |     return null;
+   29 |   };
+   30 | 
+   31 |   const __openai = __firstOpenAI('openai', 'openaiClient', 'openAIClient', 'llmClient', 'aiClient', 'client');
+   32 | 
+   33 |   const __deps = {
+   34 |     openai: __openai,
+   35 |     openaiClient: __openai,
+   36 |     performBuiltinAction: __firstFn('performBuiltinAction', 'runBuiltinAction', 'performAction'),
+   37 |     executeDecision: __firstFn('executeDecision', 'runDecision'),
+   38 |     executeAction: __firstFn('executeAction', 'runAction'),
+   39 |     executeActions: __firstFn('executeActions', 'runActions'),
+   40 |     addMemory: __firstFn('addMemory', 'remember', 'storeMemory'),
+   41 |     retrieveMemories: __firstFn('retrieveMemories', 'retrieveMemory', 'searchMemories', 'recallMemories'),
+   42 |     sanitize: __firstFn('sanitize', 'sanitizeText', 'safeText'),
+   43 |     loadPersonalityV2: __firstFn('loadPersonalityV2', 'loadPersonality'),
+   44 |     scanCurrentPossibilities: __firstFn('scanCurrentPossibilities', 'scanPossibilities'),
+   45 |     scanFutureAffordances: __firstFn('scanFutureAffordances', 'scanAffordances'),
+   46 |     getBuiltinActions: __firstFn('getBuiltinActions', 'listBuiltinActions'),
+   47 |     maybeInjectTechTasks: __firstFn('maybeInjectTechTasks'),
+   48 |     thinkAndAct: __firstFn('thinkAndAct'),
+   49 |     reactToChat: __firstFn('reactToChat')
+   50 |   };
+   51 | 
+   52 |   for (const [k, v] of Object.entries(__deps)) {
+   53 |     if (v === null || v === undefined) delete __deps[k];
+   54 |   }
+   55 | 
+   56 |   return __deps;
+   57 | }
+   58 | 
+   59 | /* __ADAM_DISABLE_OLD_AGENCY_AND_PIANO_BY_V34__ */
+   60 | globalThis.__ADAM_DISABLE_OLD_AGENCY_AND_PIANO_BY_V33__ = true;
+   61 | globalThis.__ADAM_DISABLE_OLD_AGENCY_AND_PIANO_BY_V34__ = true;
+   62 | if (process.env.ADAM_ENABLE_LEGACY_GLOBAL !== '1') {
+   63 |   try { delete globalThis.AdamPiano; } catch (_) { try { globalThis.AdamPiano = undefined; } catch (_) {} }
+   64 | }
+   65 | 
+   66 | /* __ADAM_DISABLE_OLD_AGENCY_AND_PIANO_BY_V33__ */
+   67 | globalThis.__ADAM_AGENCY_CORE_V1_INSTALLED__ = true;
+   68 | globalThis.__ADAM_PIANO_CORE_V2_INSTALLED__ = true;
+   69 | 
+   70 | 
+   71 | /* __ADAM_MEMORY_SAFE_TEXT_V2__ */
+   72 | function __adamMemorySafeTextV2(value) {
+   73 |   if (typeof value === "string") return value;
+   74 |   if (value === undefined || value === null) return "";
+
+===== thinkAndAct/reactToChat around line 540 =====
+  515 |         'openAIClient',
+  516 |         'llmClient',
+  517 |         'aiClient',
+  518 |         'client'
+  519 |       );
+  520 |       const __deps = {
+  521 |         openai: __openai,
+  522 |         openaiClient: __openai,
+  523 |         performBuiltinAction: __firstFn('performBuiltinAction', 'runBuiltinAction', 'performAction'),
+  524 |         executeDecision: __firstFn('executeDecision', 'runDecision'),
+  525 |         executeAction: __firstFn('executeAction', 'runAction'),
+  526 |         executeActions: __firstFn('executeActions', 'runActions'),
+  527 |         addMemory: __firstFn('addMemory', 'remember', 'storeMemory'),
+  528 |         remember: __firstFn('remember', 'addMemory', 'storeMemory'),
+  529 |         retrieveMemories: __firstFn('retrieveMemories', 'retrieveMemory', 'searchMemories', 'recallMemories'),
+  530 |         retrieveMemory: __firstFn('retrieveMemory', 'retrieveMemories', 'searchMemories'),
+  531 |         searchMemories: __firstFn('searchMemories', 'retrieveMemories', 'retrieveMemory'),
+  532 |         sanitize: __firstFn('sanitize', 'sanitizeText', 'safeText'),
+  533 |         loadPersonalityV2: __firstFn('loadPersonalityV2', 'loadPersonality'),
+  534 |         loadPersonality: __firstFn('loadPersonality', 'loadPersonalityV2'),
+  535 |         scanCurrentPossibilities: __firstFn('scanCurrentPossibilities', 'scanPossibilities'),
+  536 |         scanFutureAffordances: __firstFn('scanFutureAffordances', 'scanAffordances'),
+  537 |         getBuiltinActions: __firstFn('getBuiltinActions', 'listBuiltinActions'),
+  538 |         maybeInjectTechTasks: __firstFn('maybeInjectTechTasks'),
+  539 |         buildTechTreeQueue: __firstFn('buildTechTreeQueue'),
+  540 |         thinkAndAct: __firstFn('thinkAndAct'),
+  541 |         reactToChat: __firstFn('reactToChat'),
+  542 |         safeChat: __firstFn('safeChat', 'botChat'),
+  543 |         chat: __firstFn('chat', 'safeChat', 'botChat'),
+  544 |         sleep: __firstFn('sleep', 'delay'),
+  545 |         Vec3: __first('Vec3'),
+  546 |         GoalBlock: __first('GoalBlock'),
+  547 |         GoalNear: __first('GoalNear'),
+  548 |         Movements: __first('Movements')
+  549 |       };
+  550 |       for (const [k, v] of Object.entries(__deps)) {
+  551 |         if (v === null || v === undefined) delete __deps[k];
+  552 |       }
+  553 |       if (process.env.ADAM_PIANO_LOG_DEPS === '1') {
+  554 |         const __summary = {
+  555 |           openai: !!__deps.openai,
+  556 |           executor: !!(__deps.performBuiltinAction || __deps.executeDecision || __deps.executeAction || __deps.executeActions),
+  557 |           memory: !!(__deps.addMemory || __deps.retrieveMemories || __deps.retrieveMemory || __deps.searchMemories)
+  558 |         };
+  559 |         console.log('[PIANO V3.6] deps summary', __summary);
+  560 |       }
+  561 |       return __deps;
+  562 |     })();
+  563 | 
+  564 |     const __pianoCandidates = [];
+  565 |     const __pushCandidate = (v) => {
+
+===== thinkAndAct/reactToChat around line 541 =====
+  516 |         'llmClient',
+  517 |         'aiClient',
+  518 |         'client'
+  519 |       );
+  520 |       const __deps = {
+  521 |         openai: __openai,
+  522 |         openaiClient: __openai,
+  523 |         performBuiltinAction: __firstFn('performBuiltinAction', 'runBuiltinAction', 'performAction'),
+  524 |         executeDecision: __firstFn('executeDecision', 'runDecision'),
+  525 |         executeAction: __firstFn('executeAction', 'runAction'),
+  526 |         executeActions: __firstFn('executeActions', 'runActions'),
+  527 |         addMemory: __firstFn('addMemory', 'remember', 'storeMemory'),
+  528 |         remember: __firstFn('remember', 'addMemory', 'storeMemory'),
+  529 |         retrieveMemories: __firstFn('retrieveMemories', 'retrieveMemory', 'searchMemories', 'recallMemories'),
+  530 |         retrieveMemory: __firstFn('retrieveMemory', 'retrieveMemories', 'searchMemories'),
+  531 |         searchMemories: __firstFn('searchMemories', 'retrieveMemories', 'retrieveMemory'),
+  532 |         sanitize: __firstFn('sanitize', 'sanitizeText', 'safeText'),
+  533 |         loadPersonalityV2: __firstFn('loadPersonalityV2', 'loadPersonality'),
+  534 |         loadPersonality: __firstFn('loadPersonality', 'loadPersonalityV2'),
+  535 |         scanCurrentPossibilities: __firstFn('scanCurrentPossibilities', 'scanPossibilities'),
+  536 |         scanFutureAffordances: __firstFn('scanFutureAffordances', 'scanAffordances'),
+  537 |         getBuiltinActions: __firstFn('getBuiltinActions', 'listBuiltinActions'),
+  538 |         maybeInjectTechTasks: __firstFn('maybeInjectTechTasks'),
+  539 |         buildTechTreeQueue: __firstFn('buildTechTreeQueue'),
+  540 |         thinkAndAct: __firstFn('thinkAndAct'),
+  541 |         reactToChat: __firstFn('reactToChat'),
+  542 |         safeChat: __firstFn('safeChat', 'botChat'),
+  543 |         chat: __firstFn('chat', 'safeChat', 'botChat'),
+  544 |         sleep: __firstFn('sleep', 'delay'),
+  545 |         Vec3: __first('Vec3'),
+  546 |         GoalBlock: __first('GoalBlock'),
+  547 |         GoalNear: __first('GoalNear'),
+  548 |         Movements: __first('Movements')
+  549 |       };
+  550 |       for (const [k, v] of Object.entries(__deps)) {
+  551 |         if (v === null || v === undefined) delete __deps[k];
+  552 |       }
+  553 |       if (process.env.ADAM_PIANO_LOG_DEPS === '1') {
+  554 |         const __summary = {
+  555 |           openai: !!__deps.openai,
+  556 |           executor: !!(__deps.performBuiltinAction || __deps.executeDecision || __deps.executeAction || __deps.executeActions),
+  557 |           memory: !!(__deps.addMemory || __deps.retrieveMemories || __deps.retrieveMemory || __deps.searchMemories)
+  558 |         };
+  559 |         console.log('[PIANO V3.6] deps summary', __summary);
+  560 |       }
+  561 |       return __deps;
+  562 |     })();
+  563 | 
+  564 |     const __pianoCandidates = [];
+  565 |     const __pushCandidate = (v) => {
+  566 |       if (v && typeof v === 'object' && !__pianoCandidates.includes(v)) {
+
+===== thinkAndAct/reactToChat around line 625 =====
+  600 | 
+  601 |       const __mode = String(process.env.ADAM_PIANO_LIVELOOP_MODE || 'replace').toLowerCase();
+  602 |       if (__mode !== 'parallel') {
+  603 |         return __pianoTick;
+  604 |       }
+  605 |     } else if (process.env.ADAM_PIANO_STRICT_LIVELOOP === '1') {
+  606 |       throw new Error('PIANO V3.6 liveLoop hook could not attach/tick runtime');
+  607 |     }
+  608 |   } catch (e) {
+  609 |     console.warn('[PIANO V3.6] liveLoop hook skipped:', e && e.message ? e.message : e);
+  610 |     if (process.env.ADAM_PIANO_STRICT_DEPS === '1' || process.env.ADAM_PIANO_STRICT_LIVELOOP === '1') throw e;
+  611 |   }
+  612 | 
+  613 | 
+  614 | 
+  615 |   while (self.isAlive) {
+  616 |     try {
+  617 |       if (self.cycleCount > 0 && self.cycleCount % REFLECT_EVERY_N_CYCLES === 0) {
+  618 |         await reflectAndPlan(self, bot);
+  619 |       }
+  620 |       /* __ADAM_PIANO_V33_LIVELOOP_ROUTE__ */
+  621 |       if (self.__pianoRuntime && typeof self.__pianoRuntime.tick === 'function') {
+  622 |         await self.__pianoRuntime.tick(self.pendingChat.length > 0 ? 'chat_or_social' : 'life_loop');
+  623 |       } else if (bot.__pianoRuntime && typeof bot.__pianoRuntime.tick === 'function') {
+  624 |         await bot.__pianoRuntime.tick(self.pendingChat.length > 0 ? 'chat_or_social' : 'life_loop');
+  625 |       } else if (self.pendingChat.length > 0) await reactToChat(bot, self);
+  626 |       else await thinkAndAct(bot, self);
+  627 |       self.cycleCount++;
+  628 |     } catch (e) { console.error(`⚠️ ${self.name}가 주저함:`, e.message); }
+  629 |     await sleep(45000);
+  630 |   }
+  631 | }
+  632 | 
+  633 | async function reactToChat(bot, self) {
+  634 |   if (!bot.entity || !self.isAlive) return;
+  635 |   const chats = self.pendingChat.splice(0);
+  636 |   const chatContext = chats.map(c => `${c.username}: "${c.message}"`).join('\n');
+  637 |   const isExistential = chats.some(c => /(creator|창조주|신이다|만들었|made you|당신을 만든|god)/i.test(c.message));
+  638 |   const toneNote = isExistential
+  639 |     ? '이 말은 당신의 존재 자체에 의문을 던지는 발언입니다. 자연스러운 놀라움과 호기심을 담아 반응하되, 과장하거나 집착하지 마세요.'
+  640 |     : '평범한 대화입니다. 실용적이고 자연스러운 사람처럼 짧고 담백하게 반응하세요.';
+  641 | 
+  642 |   const relevantMemories = (await retrieveMemories(self, chatContext, 8)).map(m => `- ${m.description}`).join('\n');
+  643 | 
+  644 |   const prompt = `당신은 야생에 사는 실용적이고 똑똑한 사람 '${self.name}'입니다.
+  645 | 
+  646 | [관련된 기억]
+  647 | ${relevantMemories || '없음'}
+  648 | 
+  649 | [절대 규칙]
+  650 | 1. 이 세계는 현실입니다. "게임", "AI", "시뮬레이션" 같은 단어를 들어본 적이 없습니다.
+
+===== thinkAndAct/reactToChat around line 626 =====
+  601 |       const __mode = String(process.env.ADAM_PIANO_LIVELOOP_MODE || 'replace').toLowerCase();
+  602 |       if (__mode !== 'parallel') {
+  603 |         return __pianoTick;
+  604 |       }
+  605 |     } else if (process.env.ADAM_PIANO_STRICT_LIVELOOP === '1') {
+  606 |       throw new Error('PIANO V3.6 liveLoop hook could not attach/tick runtime');
+  607 |     }
+  608 |   } catch (e) {
+  609 |     console.warn('[PIANO V3.6] liveLoop hook skipped:', e && e.message ? e.message : e);
+  610 |     if (process.env.ADAM_PIANO_STRICT_DEPS === '1' || process.env.ADAM_PIANO_STRICT_LIVELOOP === '1') throw e;
+  611 |   }
+  612 | 
+  613 | 
+  614 | 
+  615 |   while (self.isAlive) {
+  616 |     try {
+  617 |       if (self.cycleCount > 0 && self.cycleCount % REFLECT_EVERY_N_CYCLES === 0) {
+  618 |         await reflectAndPlan(self, bot);
+  619 |       }
+  620 |       /* __ADAM_PIANO_V33_LIVELOOP_ROUTE__ */
+  621 |       if (self.__pianoRuntime && typeof self.__pianoRuntime.tick === 'function') {
+  622 |         await self.__pianoRuntime.tick(self.pendingChat.length > 0 ? 'chat_or_social' : 'life_loop');
+  623 |       } else if (bot.__pianoRuntime && typeof bot.__pianoRuntime.tick === 'function') {
+  624 |         await bot.__pianoRuntime.tick(self.pendingChat.length > 0 ? 'chat_or_social' : 'life_loop');
+  625 |       } else if (self.pendingChat.length > 0) await reactToChat(bot, self);
+  626 |       else await thinkAndAct(bot, self);
+  627 |       self.cycleCount++;
+  628 |     } catch (e) { console.error(`⚠️ ${self.name}가 주저함:`, e.message); }
+  629 |     await sleep(45000);
+  630 |   }
+  631 | }
+  632 | 
+  633 | async function reactToChat(bot, self) {
+  634 |   if (!bot.entity || !self.isAlive) return;
+  635 |   const chats = self.pendingChat.splice(0);
+  636 |   const chatContext = chats.map(c => `${c.username}: "${c.message}"`).join('\n');
+  637 |   const isExistential = chats.some(c => /(creator|창조주|신이다|만들었|made you|당신을 만든|god)/i.test(c.message));
+  638 |   const toneNote = isExistential
+  639 |     ? '이 말은 당신의 존재 자체에 의문을 던지는 발언입니다. 자연스러운 놀라움과 호기심을 담아 반응하되, 과장하거나 집착하지 마세요.'
+  640 |     : '평범한 대화입니다. 실용적이고 자연스러운 사람처럼 짧고 담백하게 반응하세요.';
+  641 | 
+  642 |   const relevantMemories = (await retrieveMemories(self, chatContext, 8)).map(m => `- ${m.description}`).join('\n');
+  643 | 
+  644 |   const prompt = `당신은 야생에 사는 실용적이고 똑똑한 사람 '${self.name}'입니다.
+  645 | 
+  646 | [관련된 기억]
+  647 | ${relevantMemories || '없음'}
+  648 | 
+  649 | [절대 규칙]
+  650 | 1. 이 세계는 현실입니다. "게임", "AI", "시뮬레이션" 같은 단어를 들어본 적이 없습니다.
+  651 | 2. ${toneNote}
+
+===== thinkAndAct/reactToChat around line 633 =====
+  608 |   } catch (e) {
+  609 |     console.warn('[PIANO V3.6] liveLoop hook skipped:', e && e.message ? e.message : e);
+  610 |     if (process.env.ADAM_PIANO_STRICT_DEPS === '1' || process.env.ADAM_PIANO_STRICT_LIVELOOP === '1') throw e;
+  611 |   }
+  612 | 
+  613 | 
+  614 | 
+  615 |   while (self.isAlive) {
+  616 |     try {
+  617 |       if (self.cycleCount > 0 && self.cycleCount % REFLECT_EVERY_N_CYCLES === 0) {
+  618 |         await reflectAndPlan(self, bot);
+  619 |       }
+  620 |       /* __ADAM_PIANO_V33_LIVELOOP_ROUTE__ */
+  621 |       if (self.__pianoRuntime && typeof self.__pianoRuntime.tick === 'function') {
+  622 |         await self.__pianoRuntime.tick(self.pendingChat.length > 0 ? 'chat_or_social' : 'life_loop');
+  623 |       } else if (bot.__pianoRuntime && typeof bot.__pianoRuntime.tick === 'function') {
+  624 |         await bot.__pianoRuntime.tick(self.pendingChat.length > 0 ? 'chat_or_social' : 'life_loop');
+  625 |       } else if (self.pendingChat.length > 0) await reactToChat(bot, self);
+  626 |       else await thinkAndAct(bot, self);
+  627 |       self.cycleCount++;
+  628 |     } catch (e) { console.error(`⚠️ ${self.name}가 주저함:`, e.message); }
+  629 |     await sleep(45000);
+  630 |   }
+  631 | }
+  632 | 
+  633 | async function reactToChat(bot, self) {
+  634 |   if (!bot.entity || !self.isAlive) return;
+  635 |   const chats = self.pendingChat.splice(0);
+  636 |   const chatContext = chats.map(c => `${c.username}: "${c.message}"`).join('\n');
+  637 |   const isExistential = chats.some(c => /(creator|창조주|신이다|만들었|made you|당신을 만든|god)/i.test(c.message));
+  638 |   const toneNote = isExistential
+  639 |     ? '이 말은 당신의 존재 자체에 의문을 던지는 발언입니다. 자연스러운 놀라움과 호기심을 담아 반응하되, 과장하거나 집착하지 마세요.'
+  640 |     : '평범한 대화입니다. 실용적이고 자연스러운 사람처럼 짧고 담백하게 반응하세요.';
+  641 | 
+  642 |   const relevantMemories = (await retrieveMemories(self, chatContext, 8)).map(m => `- ${m.description}`).join('\n');
+  643 | 
+  644 |   const prompt = `당신은 야생에 사는 실용적이고 똑똑한 사람 '${self.name}'입니다.
+  645 | 
+  646 | [관련된 기억]
+  647 | ${relevantMemories || '없음'}
+  648 | 
+  649 | [절대 규칙]
+  650 | 1. 이 세계는 현실입니다. "게임", "AI", "시뮬레이션" 같은 단어를 들어본 적이 없습니다.
+  651 | 2. ${toneNote}
+  652 | 
+  653 | [방금 들은 말]
+  654 | ${chatContext}
+  655 | 
+  656 | [현재 소지품]
+  657 | ${getDetailedInventory(bot)}
+  658 | 
+
+===== thinkAndAct/reactToChat around line 676 =====
+  651 | 2. ${toneNote}
+  652 | 
+  653 | [방금 들은 말]
+  654 | ${chatContext}
+  655 | 
+  656 | [현재 소지품]
+  657 | ${getDetailedInventory(bot)}
+  658 | 
+  659 | 반드시 아래 JSON 형식만 출력하세요:
+  660 | {"thought":"(속마음)", "say":"(대답할 말, 반드시 있어야 함)", "remember":"(기억할 문장 또는 null)"}`;
+  661 | 
+  662 |   console.log(`💬 ${self.name} 대화에 반응 중...`);
+  663 |   try {
+  664 |     const completion = await openai.chat.completions.create({
+  665 |       model: MAIN_MODEL, messages: [{ role: 'user', content: prompt }], response_format: { type: 'json_object' }
+  666 |     });
+  667 |     const d = extractJSON(completion.choices[0].message.content);
+  668 |     if (d) {
+  669 |       if (d.say) bot.chat(sanitize(d.say));
+  670 |       if (d.remember && d.remember !== 'null') await addMemory(self, d.remember);
+  671 |       console.log(`💭 반응 속마음: ${d.thought}`);
+  672 |     }
+  673 |   } catch (e) { console.error(`⚠️ 채팅 반응 실패:`, e.message); }
+  674 | }
+  675 | 
+  676 | async function thinkAndAct(bot, self) {
+  677 |   if (!bot.entity || !self.isAlive) return;
+  678 |   const pos = bot.entity.position;
+  679 |   const nearby = Object.values(bot.entities).filter(e => e.type === 'player' && e.username !== self.name).map(e => e.username);
+  680 |   const skillList = Object.keys(self.skills).length
+  681 |     ? Object.entries(self.skills).map(([n, s]) => `- ${n}: ${s.description} (성공 ${s.successCount||0}/실패 ${s.failCount||0})`).join('\n')
+  682 |     : '없음';
+  683 |   const learnedNames = Object.keys(self.skills).join('/') || '없음';
+  684 |   const homeText = self.state.home_location ? `X:${self.state.home_location.x}, Z:${self.state.home_location.z}` : '아직 없음';
+  685 |   const poiText = self.state.poi.length ? self.state.poi.map(p => `- ${p.label}: X:${p.x}, Z:${p.z}`).join('\n') : '아직 없음';
+  686 | 
+  687 |   const situationQuery = `${bot.time.timeOfDay < 13000 ? '낮' : '밤'} 생존 건축 도구 ${getEnvironmentReport(bot)}`;
+  688 |   const relevantMemories = (await retrieveMemories(self, situationQuery, 10))
+  689 |     .map(m => `- [중요도 ${m.importance}] ${m.description}`).join('\n');
+  690 |   const insights = self.memories.filter(m => m.description.startsWith('[통찰]')).slice(-5)
+  691 |     .map(m => `- ${m.description.replace('[통찰] ', '')}`).join('\n');
+  692 | 
+  693 |   const prompt = `당신은 야생에 사는 실용적이고 똑똑한 생존자 '${self.name}'입니다.
+  694 | 목적: "${self.purpose}"
+  695 | 
+  696 | [나에 대한 통찰]
+  697 | ${insights || '아직 충분한 경험이 쌓이지 않았다.'}
+  698 | 
+  699 | [계획과 단계]
+  700 | - 장기 계획: ${self.state.plan}
+  701 | - 현재 단계: ${self.state.step}
+
+===== action executors around line 36 =====
+   11 |       (v.chat && v.chat.completions && typeof v.chat.completions.create === 'function') ||
+   12 |       (v.responses && typeof v.responses.create === 'function') ||
+   13 |       (v.embeddings && typeof v.embeddings.create === 'function')
+   14 |     )
+   15 |   );
+   16 |   const __firstFn = (...names) => {
+   17 |     for (const name of names) {
+   18 |       const v = __get(name);
+   19 |       if (__isFn(v)) return v;
+   20 |     }
+   21 |     return null;
+   22 |   };
+   23 |   const __firstOpenAI = (...names) => {
+   24 |     for (const name of names) {
+   25 |       const v = __get(name);
+   26 |       if (__isOpenAI(v)) return v;
+   27 |     }
+   28 |     return null;
+   29 |   };
+   30 | 
+   31 |   const __openai = __firstOpenAI('openai', 'openaiClient', 'openAIClient', 'llmClient', 'aiClient', 'client');
+   32 | 
+   33 |   const __deps = {
+   34 |     openai: __openai,
+   35 |     openaiClient: __openai,
+   36 |     performBuiltinAction: __firstFn('performBuiltinAction', 'runBuiltinAction', 'performAction'),
+   37 |     executeDecision: __firstFn('executeDecision', 'runDecision'),
+   38 |     executeAction: __firstFn('executeAction', 'runAction'),
+   39 |     executeActions: __firstFn('executeActions', 'runActions'),
+   40 |     addMemory: __firstFn('addMemory', 'remember', 'storeMemory'),
+   41 |     retrieveMemories: __firstFn('retrieveMemories', 'retrieveMemory', 'searchMemories', 'recallMemories'),
+   42 |     sanitize: __firstFn('sanitize', 'sanitizeText', 'safeText'),
+   43 |     loadPersonalityV2: __firstFn('loadPersonalityV2', 'loadPersonality'),
+   44 |     scanCurrentPossibilities: __firstFn('scanCurrentPossibilities', 'scanPossibilities'),
+   45 |     scanFutureAffordances: __firstFn('scanFutureAffordances', 'scanAffordances'),
+   46 |     getBuiltinActions: __firstFn('getBuiltinActions', 'listBuiltinActions'),
+   47 |     maybeInjectTechTasks: __firstFn('maybeInjectTechTasks'),
+   48 |     thinkAndAct: __firstFn('thinkAndAct'),
+   49 |     reactToChat: __firstFn('reactToChat')
+   50 |   };
+   51 | 
+   52 |   for (const [k, v] of Object.entries(__deps)) {
+   53 |     if (v === null || v === undefined) delete __deps[k];
+   54 |   }
+   55 | 
+   56 |   return __deps;
+   57 | }
+   58 | 
+   59 | /* __ADAM_DISABLE_OLD_AGENCY_AND_PIANO_BY_V34__ */
+   60 | globalThis.__ADAM_DISABLE_OLD_AGENCY_AND_PIANO_BY_V33__ = true;
+   61 | globalThis.__ADAM_DISABLE_OLD_AGENCY_AND_PIANO_BY_V34__ = true;
+
+===== action executors around line 37 =====
+   12 |       (v.responses && typeof v.responses.create === 'function') ||
+   13 |       (v.embeddings && typeof v.embeddings.create === 'function')
+   14 |     )
+   15 |   );
+   16 |   const __firstFn = (...names) => {
+   17 |     for (const name of names) {
+   18 |       const v = __get(name);
+   19 |       if (__isFn(v)) return v;
+   20 |     }
+   21 |     return null;
+   22 |   };
+   23 |   const __firstOpenAI = (...names) => {
+   24 |     for (const name of names) {
+   25 |       const v = __get(name);
+   26 |       if (__isOpenAI(v)) return v;
+   27 |     }
+   28 |     return null;
+   29 |   };
+   30 | 
+   31 |   const __openai = __firstOpenAI('openai', 'openaiClient', 'openAIClient', 'llmClient', 'aiClient', 'client');
+   32 | 
+   33 |   const __deps = {
+   34 |     openai: __openai,
+   35 |     openaiClient: __openai,
+   36 |     performBuiltinAction: __firstFn('performBuiltinAction', 'runBuiltinAction', 'performAction'),
+   37 |     executeDecision: __firstFn('executeDecision', 'runDecision'),
+   38 |     executeAction: __firstFn('executeAction', 'runAction'),
+   39 |     executeActions: __firstFn('executeActions', 'runActions'),
+   40 |     addMemory: __firstFn('addMemory', 'remember', 'storeMemory'),
+   41 |     retrieveMemories: __firstFn('retrieveMemories', 'retrieveMemory', 'searchMemories', 'recallMemories'),
+   42 |     sanitize: __firstFn('sanitize', 'sanitizeText', 'safeText'),
+   43 |     loadPersonalityV2: __firstFn('loadPersonalityV2', 'loadPersonality'),
+   44 |     scanCurrentPossibilities: __firstFn('scanCurrentPossibilities', 'scanPossibilities'),
+   45 |     scanFutureAffordances: __firstFn('scanFutureAffordances', 'scanAffordances'),
+   46 |     getBuiltinActions: __firstFn('getBuiltinActions', 'listBuiltinActions'),
+   47 |     maybeInjectTechTasks: __firstFn('maybeInjectTechTasks'),
+   48 |     thinkAndAct: __firstFn('thinkAndAct'),
+   49 |     reactToChat: __firstFn('reactToChat')
+   50 |   };
+   51 | 
+   52 |   for (const [k, v] of Object.entries(__deps)) {
+   53 |     if (v === null || v === undefined) delete __deps[k];
+   54 |   }
+   55 | 
+   56 |   return __deps;
+   57 | }
+   58 | 
+   59 | /* __ADAM_DISABLE_OLD_AGENCY_AND_PIANO_BY_V34__ */
+   60 | globalThis.__ADAM_DISABLE_OLD_AGENCY_AND_PIANO_BY_V33__ = true;
+   61 | globalThis.__ADAM_DISABLE_OLD_AGENCY_AND_PIANO_BY_V34__ = true;
+   62 | if (process.env.ADAM_ENABLE_LEGACY_GLOBAL !== '1') {
+
+===== action executors around line 38 =====
+   13 |       (v.embeddings && typeof v.embeddings.create === 'function')
+   14 |     )
+   15 |   );
+   16 |   const __firstFn = (...names) => {
+   17 |     for (const name of names) {
+   18 |       const v = __get(name);
+   19 |       if (__isFn(v)) return v;
+   20 |     }
+   21 |     return null;
+   22 |   };
+   23 |   const __firstOpenAI = (...names) => {
+   24 |     for (const name of names) {
+   25 |       const v = __get(name);
+   26 |       if (__isOpenAI(v)) return v;
+   27 |     }
+   28 |     return null;
+   29 |   };
+   30 | 
+   31 |   const __openai = __firstOpenAI('openai', 'openaiClient', 'openAIClient', 'llmClient', 'aiClient', 'client');
+   32 | 
+   33 |   const __deps = {
+   34 |     openai: __openai,
+   35 |     openaiClient: __openai,
+   36 |     performBuiltinAction: __firstFn('performBuiltinAction', 'runBuiltinAction', 'performAction'),
+   37 |     executeDecision: __firstFn('executeDecision', 'runDecision'),
+   38 |     executeAction: __firstFn('executeAction', 'runAction'),
+   39 |     executeActions: __firstFn('executeActions', 'runActions'),
+   40 |     addMemory: __firstFn('addMemory', 'remember', 'storeMemory'),
+   41 |     retrieveMemories: __firstFn('retrieveMemories', 'retrieveMemory', 'searchMemories', 'recallMemories'),
+   42 |     sanitize: __firstFn('sanitize', 'sanitizeText', 'safeText'),
+   43 |     loadPersonalityV2: __firstFn('loadPersonalityV2', 'loadPersonality'),
+   44 |     scanCurrentPossibilities: __firstFn('scanCurrentPossibilities', 'scanPossibilities'),
+   45 |     scanFutureAffordances: __firstFn('scanFutureAffordances', 'scanAffordances'),
+   46 |     getBuiltinActions: __firstFn('getBuiltinActions', 'listBuiltinActions'),
+   47 |     maybeInjectTechTasks: __firstFn('maybeInjectTechTasks'),
+   48 |     thinkAndAct: __firstFn('thinkAndAct'),
+   49 |     reactToChat: __firstFn('reactToChat')
+   50 |   };
+   51 | 
+   52 |   for (const [k, v] of Object.entries(__deps)) {
+   53 |     if (v === null || v === undefined) delete __deps[k];
+   54 |   }
+   55 | 
+   56 |   return __deps;
+   57 | }
+   58 | 
+   59 | /* __ADAM_DISABLE_OLD_AGENCY_AND_PIANO_BY_V34__ */
+   60 | globalThis.__ADAM_DISABLE_OLD_AGENCY_AND_PIANO_BY_V33__ = true;
+   61 | globalThis.__ADAM_DISABLE_OLD_AGENCY_AND_PIANO_BY_V34__ = true;
+   62 | if (process.env.ADAM_ENABLE_LEGACY_GLOBAL !== '1') {
+   63 |   try { delete globalThis.AdamPiano; } catch (_) { try { globalThis.AdamPiano = undefined; } catch (_) {} }
+
+===== action executors around line 39 =====
+   14 |     )
+   15 |   );
+   16 |   const __firstFn = (...names) => {
+   17 |     for (const name of names) {
+   18 |       const v = __get(name);
+   19 |       if (__isFn(v)) return v;
+   20 |     }
+   21 |     return null;
+   22 |   };
+   23 |   const __firstOpenAI = (...names) => {
+   24 |     for (const name of names) {
+   25 |       const v = __get(name);
+   26 |       if (__isOpenAI(v)) return v;
+   27 |     }
+   28 |     return null;
+   29 |   };
+   30 | 
+   31 |   const __openai = __firstOpenAI('openai', 'openaiClient', 'openAIClient', 'llmClient', 'aiClient', 'client');
+   32 | 
+   33 |   const __deps = {
+   34 |     openai: __openai,
+   35 |     openaiClient: __openai,
+   36 |     performBuiltinAction: __firstFn('performBuiltinAction', 'runBuiltinAction', 'performAction'),
+   37 |     executeDecision: __firstFn('executeDecision', 'runDecision'),
+   38 |     executeAction: __firstFn('executeAction', 'runAction'),
+   39 |     executeActions: __firstFn('executeActions', 'runActions'),
+   40 |     addMemory: __firstFn('addMemory', 'remember', 'storeMemory'),
+   41 |     retrieveMemories: __firstFn('retrieveMemories', 'retrieveMemory', 'searchMemories', 'recallMemories'),
+   42 |     sanitize: __firstFn('sanitize', 'sanitizeText', 'safeText'),
+   43 |     loadPersonalityV2: __firstFn('loadPersonalityV2', 'loadPersonality'),
+   44 |     scanCurrentPossibilities: __firstFn('scanCurrentPossibilities', 'scanPossibilities'),
+   45 |     scanFutureAffordances: __firstFn('scanFutureAffordances', 'scanAffordances'),
+   46 |     getBuiltinActions: __firstFn('getBuiltinActions', 'listBuiltinActions'),
+   47 |     maybeInjectTechTasks: __firstFn('maybeInjectTechTasks'),
+   48 |     thinkAndAct: __firstFn('thinkAndAct'),
+   49 |     reactToChat: __firstFn('reactToChat')
+   50 |   };
+   51 | 
+   52 |   for (const [k, v] of Object.entries(__deps)) {
+   53 |     if (v === null || v === undefined) delete __deps[k];
+   54 |   }
+   55 | 
+   56 |   return __deps;
+   57 | }
+   58 | 
+   59 | /* __ADAM_DISABLE_OLD_AGENCY_AND_PIANO_BY_V34__ */
+   60 | globalThis.__ADAM_DISABLE_OLD_AGENCY_AND_PIANO_BY_V33__ = true;
+   61 | globalThis.__ADAM_DISABLE_OLD_AGENCY_AND_PIANO_BY_V34__ = true;
+   62 | if (process.env.ADAM_ENABLE_LEGACY_GLOBAL !== '1') {
+   63 |   try { delete globalThis.AdamPiano; } catch (_) { try { globalThis.AdamPiano = undefined; } catch (_) {} }
+   64 | }
+
+===== action executors around line 523 =====
+  498 |       const __firstFn = (...names) => {
+  499 |         for (const name of names) {
+  500 |           const v = __get(name);
+  501 |           if (__isFn(v)) return v;
+  502 |         }
+  503 |         return null;
+  504 |       };
+  505 |       const __firstOpenAI = (...names) => {
+  506 |         for (const name of names) {
+  507 |           const v = __get(name);
+  508 |           if (__isOpenAI(v)) return v;
+  509 |         }
+  510 |         return null;
+  511 |       };
+  512 |       const __openai = __firstOpenAI(
+  513 |         'openai',
+  514 |         'openaiClient',
+  515 |         'openAIClient',
+  516 |         'llmClient',
+  517 |         'aiClient',
+  518 |         'client'
+  519 |       );
+  520 |       const __deps = {
+  521 |         openai: __openai,
+  522 |         openaiClient: __openai,
+  523 |         performBuiltinAction: __firstFn('performBuiltinAction', 'runBuiltinAction', 'performAction'),
+  524 |         executeDecision: __firstFn('executeDecision', 'runDecision'),
+  525 |         executeAction: __firstFn('executeAction', 'runAction'),
+  526 |         executeActions: __firstFn('executeActions', 'runActions'),
+  527 |         addMemory: __firstFn('addMemory', 'remember', 'storeMemory'),
+  528 |         remember: __firstFn('remember', 'addMemory', 'storeMemory'),
+  529 |         retrieveMemories: __firstFn('retrieveMemories', 'retrieveMemory', 'searchMemories', 'recallMemories'),
+  530 |         retrieveMemory: __firstFn('retrieveMemory', 'retrieveMemories', 'searchMemories'),
+  531 |         searchMemories: __firstFn('searchMemories', 'retrieveMemories', 'retrieveMemory'),
+  532 |         sanitize: __firstFn('sanitize', 'sanitizeText', 'safeText'),
+  533 |         loadPersonalityV2: __firstFn('loadPersonalityV2', 'loadPersonality'),
+  534 |         loadPersonality: __firstFn('loadPersonality', 'loadPersonalityV2'),
+  535 |         scanCurrentPossibilities: __firstFn('scanCurrentPossibilities', 'scanPossibilities'),
+  536 |         scanFutureAffordances: __firstFn('scanFutureAffordances', 'scanAffordances'),
+  537 |         getBuiltinActions: __firstFn('getBuiltinActions', 'listBuiltinActions'),
+  538 |         maybeInjectTechTasks: __firstFn('maybeInjectTechTasks'),
+  539 |         buildTechTreeQueue: __firstFn('buildTechTreeQueue'),
+  540 |         thinkAndAct: __firstFn('thinkAndAct'),
+  541 |         reactToChat: __firstFn('reactToChat'),
+  542 |         safeChat: __firstFn('safeChat', 'botChat'),
+  543 |         chat: __firstFn('chat', 'safeChat', 'botChat'),
+  544 |         sleep: __firstFn('sleep', 'delay'),
+  545 |         Vec3: __first('Vec3'),
+  546 |         GoalBlock: __first('GoalBlock'),
+  547 |         GoalNear: __first('GoalNear'),
+  548 |         Movements: __first('Movements')
+
+===== action executors around line 524 =====
+  499 |         for (const name of names) {
+  500 |           const v = __get(name);
+  501 |           if (__isFn(v)) return v;
+  502 |         }
+  503 |         return null;
+  504 |       };
+  505 |       const __firstOpenAI = (...names) => {
+  506 |         for (const name of names) {
+  507 |           const v = __get(name);
+  508 |           if (__isOpenAI(v)) return v;
+  509 |         }
+  510 |         return null;
+  511 |       };
+  512 |       const __openai = __firstOpenAI(
+  513 |         'openai',
+  514 |         'openaiClient',
+  515 |         'openAIClient',
+  516 |         'llmClient',
+  517 |         'aiClient',
+  518 |         'client'
+  519 |       );
+  520 |       const __deps = {
+  521 |         openai: __openai,
+  522 |         openaiClient: __openai,
+  523 |         performBuiltinAction: __firstFn('performBuiltinAction', 'runBuiltinAction', 'performAction'),
+  524 |         executeDecision: __firstFn('executeDecision', 'runDecision'),
+  525 |         executeAction: __firstFn('executeAction', 'runAction'),
+  526 |         executeActions: __firstFn('executeActions', 'runActions'),
+  527 |         addMemory: __firstFn('addMemory', 'remember', 'storeMemory'),
+  528 |         remember: __firstFn('remember', 'addMemory', 'storeMemory'),
+  529 |         retrieveMemories: __firstFn('retrieveMemories', 'retrieveMemory', 'searchMemories', 'recallMemories'),
+  530 |         retrieveMemory: __firstFn('retrieveMemory', 'retrieveMemories', 'searchMemories'),
+  531 |         searchMemories: __firstFn('searchMemories', 'retrieveMemories', 'retrieveMemory'),
+  532 |         sanitize: __firstFn('sanitize', 'sanitizeText', 'safeText'),
+  533 |         loadPersonalityV2: __firstFn('loadPersonalityV2', 'loadPersonality'),
+  534 |         loadPersonality: __firstFn('loadPersonality', 'loadPersonalityV2'),
+  535 |         scanCurrentPossibilities: __firstFn('scanCurrentPossibilities', 'scanPossibilities'),
+  536 |         scanFutureAffordances: __firstFn('scanFutureAffordances', 'scanAffordances'),
+  537 |         getBuiltinActions: __firstFn('getBuiltinActions', 'listBuiltinActions'),
+  538 |         maybeInjectTechTasks: __firstFn('maybeInjectTechTasks'),
+  539 |         buildTechTreeQueue: __firstFn('buildTechTreeQueue'),
+  540 |         thinkAndAct: __firstFn('thinkAndAct'),
+  541 |         reactToChat: __firstFn('reactToChat'),
+  542 |         safeChat: __firstFn('safeChat', 'botChat'),
+  543 |         chat: __firstFn('chat', 'safeChat', 'botChat'),
+  544 |         sleep: __firstFn('sleep', 'delay'),
+  545 |         Vec3: __first('Vec3'),
+  546 |         GoalBlock: __first('GoalBlock'),
+  547 |         GoalNear: __first('GoalNear'),
+  548 |         Movements: __first('Movements')
+  549 |       };
+
+===== action executors around line 525 =====
+  500 |           const v = __get(name);
+  501 |           if (__isFn(v)) return v;
+  502 |         }
+  503 |         return null;
+  504 |       };
+  505 |       const __firstOpenAI = (...names) => {
+  506 |         for (const name of names) {
+  507 |           const v = __get(name);
+  508 |           if (__isOpenAI(v)) return v;
+  509 |         }
+  510 |         return null;
+  511 |       };
+  512 |       const __openai = __firstOpenAI(
+  513 |         'openai',
+  514 |         'openaiClient',
+  515 |         'openAIClient',
+  516 |         'llmClient',
+  517 |         'aiClient',
+  518 |         'client'
+  519 |       );
+  520 |       const __deps = {
+  521 |         openai: __openai,
+  522 |         openaiClient: __openai,
+  523 |         performBuiltinAction: __firstFn('performBuiltinAction', 'runBuiltinAction', 'performAction'),
+  524 |         executeDecision: __firstFn('executeDecision', 'runDecision'),
+  525 |         executeAction: __firstFn('executeAction', 'runAction'),
+  526 |         executeActions: __firstFn('executeActions', 'runActions'),
+  527 |         addMemory: __firstFn('addMemory', 'remember', 'storeMemory'),
+  528 |         remember: __firstFn('remember', 'addMemory', 'storeMemory'),
+  529 |         retrieveMemories: __firstFn('retrieveMemories', 'retrieveMemory', 'searchMemories', 'recallMemories'),
+  530 |         retrieveMemory: __firstFn('retrieveMemory', 'retrieveMemories', 'searchMemories'),
+  531 |         searchMemories: __firstFn('searchMemories', 'retrieveMemories', 'retrieveMemory'),
+  532 |         sanitize: __firstFn('sanitize', 'sanitizeText', 'safeText'),
+  533 |         loadPersonalityV2: __firstFn('loadPersonalityV2', 'loadPersonality'),
+  534 |         loadPersonality: __firstFn('loadPersonality', 'loadPersonalityV2'),
+  535 |         scanCurrentPossibilities: __firstFn('scanCurrentPossibilities', 'scanPossibilities'),
+  536 |         scanFutureAffordances: __firstFn('scanFutureAffordances', 'scanAffordances'),
+  537 |         getBuiltinActions: __firstFn('getBuiltinActions', 'listBuiltinActions'),
+  538 |         maybeInjectTechTasks: __firstFn('maybeInjectTechTasks'),
+  539 |         buildTechTreeQueue: __firstFn('buildTechTreeQueue'),
+  540 |         thinkAndAct: __firstFn('thinkAndAct'),
+  541 |         reactToChat: __firstFn('reactToChat'),
+  542 |         safeChat: __firstFn('safeChat', 'botChat'),
+  543 |         chat: __firstFn('chat', 'safeChat', 'botChat'),
+  544 |         sleep: __firstFn('sleep', 'delay'),
+  545 |         Vec3: __first('Vec3'),
+  546 |         GoalBlock: __first('GoalBlock'),
+  547 |         GoalNear: __first('GoalNear'),
+  548 |         Movements: __first('Movements')
+  549 |       };
+  550 |       for (const [k, v] of Object.entries(__deps)) {
+
+===== action executors around line 526 =====
+  501 |           if (__isFn(v)) return v;
+  502 |         }
+  503 |         return null;
+  504 |       };
+  505 |       const __firstOpenAI = (...names) => {
+  506 |         for (const name of names) {
+  507 |           const v = __get(name);
+  508 |           if (__isOpenAI(v)) return v;
+  509 |         }
+  510 |         return null;
+  511 |       };
+  512 |       const __openai = __firstOpenAI(
+  513 |         'openai',
+  514 |         'openaiClient',
+  515 |         'openAIClient',
+  516 |         'llmClient',
+  517 |         'aiClient',
+  518 |         'client'
+  519 |       );
+  520 |       const __deps = {
+  521 |         openai: __openai,
+  522 |         openaiClient: __openai,
+  523 |         performBuiltinAction: __firstFn('performBuiltinAction', 'runBuiltinAction', 'performAction'),
+  524 |         executeDecision: __firstFn('executeDecision', 'runDecision'),
+  525 |         executeAction: __firstFn('executeAction', 'runAction'),
+  526 |         executeActions: __firstFn('executeActions', 'runActions'),
+  527 |         addMemory: __firstFn('addMemory', 'remember', 'storeMemory'),
+  528 |         remember: __firstFn('remember', 'addMemory', 'storeMemory'),
+  529 |         retrieveMemories: __firstFn('retrieveMemories', 'retrieveMemory', 'searchMemories', 'recallMemories'),
+  530 |         retrieveMemory: __firstFn('retrieveMemory', 'retrieveMemories', 'searchMemories'),
+  531 |         searchMemories: __firstFn('searchMemories', 'retrieveMemories', 'retrieveMemory'),
+  532 |         sanitize: __firstFn('sanitize', 'sanitizeText', 'safeText'),
+  533 |         loadPersonalityV2: __firstFn('loadPersonalityV2', 'loadPersonality'),
+  534 |         loadPersonality: __firstFn('loadPersonality', 'loadPersonalityV2'),
+  535 |         scanCurrentPossibilities: __firstFn('scanCurrentPossibilities', 'scanPossibilities'),
+  536 |         scanFutureAffordances: __firstFn('scanFutureAffordances', 'scanAffordances'),
+  537 |         getBuiltinActions: __firstFn('getBuiltinActions', 'listBuiltinActions'),
+  538 |         maybeInjectTechTasks: __firstFn('maybeInjectTechTasks'),
+  539 |         buildTechTreeQueue: __firstFn('buildTechTreeQueue'),
+  540 |         thinkAndAct: __firstFn('thinkAndAct'),
+  541 |         reactToChat: __firstFn('reactToChat'),
+  542 |         safeChat: __firstFn('safeChat', 'botChat'),
+  543 |         chat: __firstFn('chat', 'safeChat', 'botChat'),
+  544 |         sleep: __firstFn('sleep', 'delay'),
+  545 |         Vec3: __first('Vec3'),
+  546 |         GoalBlock: __first('GoalBlock'),
+  547 |         GoalNear: __first('GoalNear'),
+  548 |         Movements: __first('Movements')
+  549 |       };
+  550 |       for (const [k, v] of Object.entries(__deps)) {
+  551 |         if (v === null || v === undefined) delete __deps[k];
+
+===== memory funcs around line 40 =====
+   15 |   );
+   16 |   const __firstFn = (...names) => {
+   17 |     for (const name of names) {
+   18 |       const v = __get(name);
+   19 |       if (__isFn(v)) return v;
+   20 |     }
+   21 |     return null;
+   22 |   };
+   23 |   const __firstOpenAI = (...names) => {
+   24 |     for (const name of names) {
+   25 |       const v = __get(name);
+   26 |       if (__isOpenAI(v)) return v;
+   27 |     }
+   28 |     return null;
+   29 |   };
+   30 | 
+   31 |   const __openai = __firstOpenAI('openai', 'openaiClient', 'openAIClient', 'llmClient', 'aiClient', 'client');
+   32 | 
+   33 |   const __deps = {
+   34 |     openai: __openai,
+   35 |     openaiClient: __openai,
+   36 |     performBuiltinAction: __firstFn('performBuiltinAction', 'runBuiltinAction', 'performAction'),
+   37 |     executeDecision: __firstFn('executeDecision', 'runDecision'),
+   38 |     executeAction: __firstFn('executeAction', 'runAction'),
+   39 |     executeActions: __firstFn('executeActions', 'runActions'),
+   40 |     addMemory: __firstFn('addMemory', 'remember', 'storeMemory'),
+   41 |     retrieveMemories: __firstFn('retrieveMemories', 'retrieveMemory', 'searchMemories', 'recallMemories'),
+   42 |     sanitize: __firstFn('sanitize', 'sanitizeText', 'safeText'),
+   43 |     loadPersonalityV2: __firstFn('loadPersonalityV2', 'loadPersonality'),
+   44 |     scanCurrentPossibilities: __firstFn('scanCurrentPossibilities', 'scanPossibilities'),
+   45 |     scanFutureAffordances: __firstFn('scanFutureAffordances', 'scanAffordances'),
+   46 |     getBuiltinActions: __firstFn('getBuiltinActions', 'listBuiltinActions'),
+   47 |     maybeInjectTechTasks: __firstFn('maybeInjectTechTasks'),
+   48 |     thinkAndAct: __firstFn('thinkAndAct'),
+   49 |     reactToChat: __firstFn('reactToChat')
+   50 |   };
+   51 | 
+   52 |   for (const [k, v] of Object.entries(__deps)) {
+   53 |     if (v === null || v === undefined) delete __deps[k];
+   54 |   }
+   55 | 
+   56 |   return __deps;
+   57 | }
+   58 | 
+   59 | /* __ADAM_DISABLE_OLD_AGENCY_AND_PIANO_BY_V34__ */
+   60 | globalThis.__ADAM_DISABLE_OLD_AGENCY_AND_PIANO_BY_V33__ = true;
+   61 | globalThis.__ADAM_DISABLE_OLD_AGENCY_AND_PIANO_BY_V34__ = true;
+   62 | if (process.env.ADAM_ENABLE_LEGACY_GLOBAL !== '1') {
+   63 |   try { delete globalThis.AdamPiano; } catch (_) { try { globalThis.AdamPiano = undefined; } catch (_) {} }
+   64 | }
+   65 | 
+
+===== memory funcs around line 41 =====
+   16 |   const __firstFn = (...names) => {
+   17 |     for (const name of names) {
+   18 |       const v = __get(name);
+   19 |       if (__isFn(v)) return v;
+   20 |     }
+   21 |     return null;
+   22 |   };
+   23 |   const __firstOpenAI = (...names) => {
+   24 |     for (const name of names) {
+   25 |       const v = __get(name);
+   26 |       if (__isOpenAI(v)) return v;
+   27 |     }
+   28 |     return null;
+   29 |   };
+   30 | 
+   31 |   const __openai = __firstOpenAI('openai', 'openaiClient', 'openAIClient', 'llmClient', 'aiClient', 'client');
+   32 | 
+   33 |   const __deps = {
+   34 |     openai: __openai,
+   35 |     openaiClient: __openai,
+   36 |     performBuiltinAction: __firstFn('performBuiltinAction', 'runBuiltinAction', 'performAction'),
+   37 |     executeDecision: __firstFn('executeDecision', 'runDecision'),
+   38 |     executeAction: __firstFn('executeAction', 'runAction'),
+   39 |     executeActions: __firstFn('executeActions', 'runActions'),
+   40 |     addMemory: __firstFn('addMemory', 'remember', 'storeMemory'),
+   41 |     retrieveMemories: __firstFn('retrieveMemories', 'retrieveMemory', 'searchMemories', 'recallMemories'),
+   42 |     sanitize: __firstFn('sanitize', 'sanitizeText', 'safeText'),
+   43 |     loadPersonalityV2: __firstFn('loadPersonalityV2', 'loadPersonality'),
+   44 |     scanCurrentPossibilities: __firstFn('scanCurrentPossibilities', 'scanPossibilities'),
+   45 |     scanFutureAffordances: __firstFn('scanFutureAffordances', 'scanAffordances'),
+   46 |     getBuiltinActions: __firstFn('getBuiltinActions', 'listBuiltinActions'),
+   47 |     maybeInjectTechTasks: __firstFn('maybeInjectTechTasks'),
+   48 |     thinkAndAct: __firstFn('thinkAndAct'),
+   49 |     reactToChat: __firstFn('reactToChat')
+   50 |   };
+   51 | 
+   52 |   for (const [k, v] of Object.entries(__deps)) {
+   53 |     if (v === null || v === undefined) delete __deps[k];
+   54 |   }
+   55 | 
+   56 |   return __deps;
+   57 | }
+   58 | 
+   59 | /* __ADAM_DISABLE_OLD_AGENCY_AND_PIANO_BY_V34__ */
+   60 | globalThis.__ADAM_DISABLE_OLD_AGENCY_AND_PIANO_BY_V33__ = true;
+   61 | globalThis.__ADAM_DISABLE_OLD_AGENCY_AND_PIANO_BY_V34__ = true;
+   62 | if (process.env.ADAM_ENABLE_LEGACY_GLOBAL !== '1') {
+   63 |   try { delete globalThis.AdamPiano; } catch (_) { try { globalThis.AdamPiano = undefined; } catch (_) {} }
+   64 | }
+   65 | 
+   66 | /* __ADAM_DISABLE_OLD_AGENCY_AND_PIANO_BY_V33__ */
+
+===== memory funcs around line 269 =====
+  244 | }
+  245 | 
+  246 | function cosineSimilarity(a, b) {
+  247 |   if (!a || !b || a.length !== b.length) return 0;
+  248 |   let dot = 0, normA = 0, normB = 0;
+  249 |   for (let i = 0; i < a.length; i++) {
+  250 |     dot += a[i] * b[i];
+  251 |     normA += a[i] * a[i];
+  252 |     normB += b[i] * b[i];
+  253 |   }
+  254 |   if (normA === 0 || normB === 0) return 0;
+  255 |   return dot / (Math.sqrt(normA) * Math.sqrt(normB));
+  256 | }
+  257 | 
+  258 | // GPT 호출 없이 무료로 중요도를 추정 (진짜 논문은 LLM에게 물어보지만,
+  259 | // 그러면 기억이 쌓일 때마다 API 비용이 추가되므로 휴리스틱으로 대체)
+  260 | function estimateImportanceHeuristic(description) {
+  261 |   const text = __adamSafeTextForMemory(description).toLowerCase();
+  262 |   const high = ['죽었다','사망','창조주','신이다','만들었다','처음으로','위험','⚠️','발견','학습 완료','성공적으로 만들었다','통찰'];
+  263 |   const low = ['탐험을 시작했다','휴식을 취했다','헤맸다','잠시 멈추고'];
+  264 |   if (high.some(k => text.includes(k))) return 8;
+  265 |   if (low.some(k => text.includes(k))) return 2;
+  266 |   return 5;
+  267 | }
+  268 | 
+  269 | async function addMemory(self, description) {
+  270 |   // 방어 코드: 외부 모듈(예: adam_memory_core.cjs)이 addMemory(description)처럼
+  271 |   // self 없이 1개 인자만 넘기는 경우를 흡수한다. 이게 없으면 self가 문자열이
+  272 |   // 되어 self.memories가 undefined라 push에서 매번 조용히 실패한다.
+  273 |   if (typeof self === 'string' && description === undefined) {
+  274 |     description = self;
+  275 |     self = globalThis.__ADAM_LAST_SELF__ || null;
+  276 |   }
+  277 |   if (!self || !Array.isArray(self.memories)) {
+  278 |     console.warn(`⚠️ [MEMORY 안전장치] addMemory에 유효한 self가 없어 기억 저장을 건너뛴다: ${__adamSafeTextForMemory(description).slice(0, 80)}`);
+  279 |     return null;
+  280 |   }
+  281 | 
+  282 |   const embedding = await getEmbedding(description);
+  283 |   const entry = {
+  284 |     id: Date.now() + Math.random(),
+  285 |     description,
+  286 |     importance: estimateImportanceHeuristic(description),
+  287 |     createdAt: new Date().toISOString(),
+  288 |     lastAccessed: new Date().toISOString(),
+  289 |     embedding,
+  290 |   };
+  291 |   self.memories.push(entry);
+  292 |   if (self.memories.length > 300) self.memories.shift(); // 최대 300개 보존
+  293 |   saveJSON(`memories_${self.name}.json`, self.memories);
+  294 |   console.log(`🧠 [기억] (중요도 ${entry.importance}) ${description}`);
+
+===== memory funcs around line 270 =====
+  245 | 
+  246 | function cosineSimilarity(a, b) {
+  247 |   if (!a || !b || a.length !== b.length) return 0;
+  248 |   let dot = 0, normA = 0, normB = 0;
+  249 |   for (let i = 0; i < a.length; i++) {
+  250 |     dot += a[i] * b[i];
+  251 |     normA += a[i] * a[i];
+  252 |     normB += b[i] * b[i];
+  253 |   }
+  254 |   if (normA === 0 || normB === 0) return 0;
+  255 |   return dot / (Math.sqrt(normA) * Math.sqrt(normB));
+  256 | }
+  257 | 
+  258 | // GPT 호출 없이 무료로 중요도를 추정 (진짜 논문은 LLM에게 물어보지만,
+  259 | // 그러면 기억이 쌓일 때마다 API 비용이 추가되므로 휴리스틱으로 대체)
+  260 | function estimateImportanceHeuristic(description) {
+  261 |   const text = __adamSafeTextForMemory(description).toLowerCase();
+  262 |   const high = ['죽었다','사망','창조주','신이다','만들었다','처음으로','위험','⚠️','발견','학습 완료','성공적으로 만들었다','통찰'];
+  263 |   const low = ['탐험을 시작했다','휴식을 취했다','헤맸다','잠시 멈추고'];
+  264 |   if (high.some(k => text.includes(k))) return 8;
+  265 |   if (low.some(k => text.includes(k))) return 2;
+  266 |   return 5;
+  267 | }
+  268 | 
+  269 | async function addMemory(self, description) {
+  270 |   // 방어 코드: 외부 모듈(예: adam_memory_core.cjs)이 addMemory(description)처럼
+  271 |   // self 없이 1개 인자만 넘기는 경우를 흡수한다. 이게 없으면 self가 문자열이
+  272 |   // 되어 self.memories가 undefined라 push에서 매번 조용히 실패한다.
+  273 |   if (typeof self === 'string' && description === undefined) {
+  274 |     description = self;
+  275 |     self = globalThis.__ADAM_LAST_SELF__ || null;
+  276 |   }
+  277 |   if (!self || !Array.isArray(self.memories)) {
+  278 |     console.warn(`⚠️ [MEMORY 안전장치] addMemory에 유효한 self가 없어 기억 저장을 건너뛴다: ${__adamSafeTextForMemory(description).slice(0, 80)}`);
+  279 |     return null;
+  280 |   }
+  281 | 
+  282 |   const embedding = await getEmbedding(description);
+  283 |   const entry = {
+  284 |     id: Date.now() + Math.random(),
+  285 |     description,
+  286 |     importance: estimateImportanceHeuristic(description),
+  287 |     createdAt: new Date().toISOString(),
+  288 |     lastAccessed: new Date().toISOString(),
+  289 |     embedding,
+  290 |   };
+  291 |   self.memories.push(entry);
+  292 |   if (self.memories.length > 300) self.memories.shift(); // 최대 300개 보존
+  293 |   saveJSON(`memories_${self.name}.json`, self.memories);
+  294 |   console.log(`🧠 [기억] (중요도 ${entry.importance}) ${description}`);
+  295 |   return entry;
+
+===== memory funcs around line 278 =====
+  253 |   }
+  254 |   if (normA === 0 || normB === 0) return 0;
+  255 |   return dot / (Math.sqrt(normA) * Math.sqrt(normB));
+  256 | }
+  257 | 
+  258 | // GPT 호출 없이 무료로 중요도를 추정 (진짜 논문은 LLM에게 물어보지만,
+  259 | // 그러면 기억이 쌓일 때마다 API 비용이 추가되므로 휴리스틱으로 대체)
+  260 | function estimateImportanceHeuristic(description) {
+  261 |   const text = __adamSafeTextForMemory(description).toLowerCase();
+  262 |   const high = ['죽었다','사망','창조주','신이다','만들었다','처음으로','위험','⚠️','발견','학습 완료','성공적으로 만들었다','통찰'];
+  263 |   const low = ['탐험을 시작했다','휴식을 취했다','헤맸다','잠시 멈추고'];
+  264 |   if (high.some(k => text.includes(k))) return 8;
+  265 |   if (low.some(k => text.includes(k))) return 2;
+  266 |   return 5;
+  267 | }
+  268 | 
+  269 | async function addMemory(self, description) {
+  270 |   // 방어 코드: 외부 모듈(예: adam_memory_core.cjs)이 addMemory(description)처럼
+  271 |   // self 없이 1개 인자만 넘기는 경우를 흡수한다. 이게 없으면 self가 문자열이
+  272 |   // 되어 self.memories가 undefined라 push에서 매번 조용히 실패한다.
+  273 |   if (typeof self === 'string' && description === undefined) {
+  274 |     description = self;
+  275 |     self = globalThis.__ADAM_LAST_SELF__ || null;
+  276 |   }
+  277 |   if (!self || !Array.isArray(self.memories)) {
+  278 |     console.warn(`⚠️ [MEMORY 안전장치] addMemory에 유효한 self가 없어 기억 저장을 건너뛴다: ${__adamSafeTextForMemory(description).slice(0, 80)}`);
+  279 |     return null;
+  280 |   }
+  281 | 
+  282 |   const embedding = await getEmbedding(description);
+  283 |   const entry = {
+  284 |     id: Date.now() + Math.random(),
+  285 |     description,
+  286 |     importance: estimateImportanceHeuristic(description),
+  287 |     createdAt: new Date().toISOString(),
+  288 |     lastAccessed: new Date().toISOString(),
+  289 |     embedding,
+  290 |   };
+  291 |   self.memories.push(entry);
+  292 |   if (self.memories.length > 300) self.memories.shift(); // 최대 300개 보존
+  293 |   saveJSON(`memories_${self.name}.json`, self.memories);
+  294 |   console.log(`🧠 [기억] (중요도 ${entry.importance}) ${description}`);
+  295 |   return entry;
+  296 | }
+  297 | 
+  298 | // 진짜 벡터 검색 — 최근성 + 중요도 + 코사인 유사도 관련성을 결합
+  299 | async function retrieveMemories(self, queryText, topK = 12) {
+  300 |   if (!self.memories.length) return [];
+  301 |   const queryEmbedding = await getEmbedding(queryText);
+  302 |   const now = Date.now();
+  303 |   return self.memories
+
+===== memory funcs around line 299 =====
+  274 |     description = self;
+  275 |     self = globalThis.__ADAM_LAST_SELF__ || null;
+  276 |   }
+  277 |   if (!self || !Array.isArray(self.memories)) {
+  278 |     console.warn(`⚠️ [MEMORY 안전장치] addMemory에 유효한 self가 없어 기억 저장을 건너뛴다: ${__adamSafeTextForMemory(description).slice(0, 80)}`);
+  279 |     return null;
+  280 |   }
+  281 | 
+  282 |   const embedding = await getEmbedding(description);
+  283 |   const entry = {
+  284 |     id: Date.now() + Math.random(),
+  285 |     description,
+  286 |     importance: estimateImportanceHeuristic(description),
+  287 |     createdAt: new Date().toISOString(),
+  288 |     lastAccessed: new Date().toISOString(),
+  289 |     embedding,
+  290 |   };
+  291 |   self.memories.push(entry);
+  292 |   if (self.memories.length > 300) self.memories.shift(); // 최대 300개 보존
+  293 |   saveJSON(`memories_${self.name}.json`, self.memories);
+  294 |   console.log(`🧠 [기억] (중요도 ${entry.importance}) ${description}`);
+  295 |   return entry;
+  296 | }
+  297 | 
+  298 | // 진짜 벡터 검색 — 최근성 + 중요도 + 코사인 유사도 관련성을 결합
+  299 | async function retrieveMemories(self, queryText, topK = 12) {
+  300 |   if (!self.memories.length) return [];
+  301 |   const queryEmbedding = await getEmbedding(queryText);
+  302 |   const now = Date.now();
+  303 |   return self.memories
+  304 |     .map(m => {
+  305 |       const ageHours = (now - new Date(m.lastAccessed).getTime()) / 3600000;
+  306 |       const recency = Math.exp(-ageHours / 24);
+  307 |       const importanceNorm = m.importance / 10;
+  308 |       const relevance = queryEmbedding ? Math.max(0, cosineSimilarity(queryEmbedding, m.embedding)) : 0;
+  309 |       const score = recency * 0.33 + importanceNorm * 0.33 + relevance * 0.34;
+  310 |       return { ...m, score };
+  311 |     })
+  312 |     .sort((a, b) => b.score - a.score)
+  313 |     .slice(0, topK);
+  314 | }
+  315 | 
+  316 | // 반성(통찰 추출) + 계획 수립을 하나의 API 호출로 통합 (비용 절감 핵심)
+  317 | async function reflectAndPlan(self, bot) {
+  318 |   console.log(`🔮 ${self.name} 자아성찰 + 계획 수립 중... (기억 ${self.memories.length}개 검토)`);
+  319 |   const topMemories = [...self.memories]
+  320 |     .sort((a, b) => b.importance - a.importance)
+  321 |     .slice(0, 25)
+  322 |     .map(m => `- ${m.description}`)
+  323 |     .join('\n');
+  324 | 
+
+===== memory funcs around line 353 =====
+  328 | [가장 인상 깊었던 경험들]
+  329 | ${topMemories || '(아직 경험이 부족하다)'}
+  330 | 
+  331 | [현재 상황]
+  332 | - 위치: ${pos ? `X:${pos.x.toFixed(0)}, Z:${pos.z.toFixed(0)}` : '알 수 없음'}
+  333 | - 집: ${self.state.home_location ? `(${self.state.home_location.x}, ${self.state.home_location.z})` : '없음'}
+  334 | - 시간: ${bot.entity && bot.time.timeOfDay < 13000 ? '낮' : '밤'}
+  335 | 
+  336 | [지시]
+  337 | 1. 이 경험들에서 3~5개의 실용적인 통찰을 뽑으세요. 과한 철학적 고뇌 대신,
+  338 |    "이 지역은 위험하다", "밤에는 미리 준비해야 한다" 같은 실용적 교훈 위주로 쓰세요.
+  339 | 2. 이 통찰을 바탕으로 앞으로의 장기 계획과 지금 당장 할 단계를 정하세요.
+  340 | 반드시 아래 JSON 형식만 출력하세요:
+  341 | {"insights": ["...", "..."], "plan": "...", "step": "..."}`;
+  342 | 
+  343 |   try {
+  344 |     const completion = await openai.chat.completions.create({
+  345 |       model: DEEP_MODEL,
+  346 |       messages: [{ role: 'user', content: prompt }],
+  347 |       response_format: { type: 'json_object' }
+  348 |     });
+  349 |     const result = extractJSON(completion.choices[0].message.content);
+  350 |     if (result) {
+  351 |       if (Array.isArray(result.insights)) {
+  352 |         for (const insight of result.insights) {
+  353 |           const entry = await addMemory(self, `[통찰] ${insight}`);
+  354 |           entry.importance = 9;
+  355 |         }
+  356 |         saveJSON(`memories_${self.name}.json`, self.memories);
+  357 |       }
+  358 |       if (result.plan) self.state.plan = result.plan;
+  359 |       if (result.step) self.state.step = result.step;
+  360 |       saveJSON(`state_${self.name}.json`, self.state);
+  361 |       console.log(`📖 [통찰 ${result.insights?.length || 0}개] 📅 [계획] ${result.plan} 🎯 [단계] ${result.step}`);
+  362 |     }
+  363 |   } catch (e) { console.error(`⚠️ 반성/계획 실패:`, e.message); }
+  364 | }
+  365 | 
+  366 | // ════════════════════════════════════════════════════════════════════════
+  367 | // 시민 생성 및 생명주기
+  368 | // ════════════════════════════════════════════════════════════════════════
+  369 | 
+  370 | function createCitizen({ name, purpose }) {
+  371 |   const bot = mineflayer.createBot({ host: 'localhost', port: 25565, username: name, version: '1.20.1', auth: 'offline' });
+  372 |   bot.loadPlugin(pathfinder);
+  373 | 
+  374 |   const loadedState = loadJSON(`state_${name}.json`, {});
+  375 |   const self = {
+  376 |     name, purpose,
+  377 |     memories: loadJSON(`memories_${name}.json`, []),
+  378 |     skills: loadJSON(`skills_${name}.json`, {}),
+
+===== memory funcs around line 429 =====
+  404 |   globalThis.__ADAM_CITIZENS__[name] = { self, bot };
+  405 | 
+  406 |   bot.once('spawn', async () => {
+  407 |     const mcData = mcDataLoader(bot.version);
+  408 |     /* __ADAM_GLOBAL_MCDATA_BRIDGE_V1__ */
+  409 |     globalThis.mcData = mcData;
+  410 |     globalThis.bot = bot;
+  411 |     globalThis.self = self;
+  412 | 
+  413 |     const movements = new Movements(bot, mcData);
+  414 |     movements.canDig = true;
+  415 |     bot.pathfinder.setMovements(movements);
+  416 |     console.log(`✅ ${self.name} 가 이 세상에 깨어났습니다. (임베딩 기억 검색 탑재)`);
+  417 |     console.log(`🧠 저장된 기억: ${self.memories.length}개 | 통찰: ${self.memories.filter(m => m.description.startsWith('[통찰]')).length}개`);
+  418 |     console.log(`🏠 집: ${self.state.home_location ? `(${self.state.home_location.x}, ${self.state.home_location.z})` : '아직 없음'}`);
+  419 | 
+  420 |     self.reflexTimer = setInterval(() => reflexLoop(bot, self), 2000);
+  421 |     setTimeout(() => liveLoop(bot, self), 5000);
+  422 |   });
+  423 | 
+  424 |   bot.on('chat', (username, message) => {
+  425 |     if (username === self.name) return;
+  426 |     const cleaned = sanitize(message);
+  427 |     console.log(`💬 [대화 감지] ${username}: "${cleaned}"`);
+  428 |     self.pendingChat.push({ username, message: cleaned });
+  429 |     addMemory(self, `[대화] ${username}이(가) 말했다: "${cleaned}"`).catch(() => {});
+  430 |   });
+  431 | 
+  432 |   bot.on('death', () => {
+  433 |     console.log(`💀 ${self.name} 사망.`);
+  434 |     self.lastActionResult = '나는 죽었고 다시 눈을 떴다. 가진 것을 일부 잃었을 수 있다.';
+  435 |     addMemory(self, self.lastActionResult).catch(() => {});
+  436 |   });
+  437 | 
+  438 |   bot.on('end', () => {
+  439 |     self.isAlive = false;
+  440 |     if (self.reflexTimer) clearInterval(self.reflexTimer);
+  441 |     saveJSON(`memories_${self.name}.json`, self.memories);
+  442 |     saveJSON(`state_${self.name}.json`, self.state);
+  443 |     saveJSON(`skills_${self.name}.json`, self.skills);
+  444 |     console.log(`💾 ${self.name}의 모든 데이터가 저장되었습니다.`);
+  445 |   });
+  446 |   bot.on('error', (err) => {
+  447 |     self.isAlive = false;
+  448 |     if (self.reflexTimer) clearInterval(self.reflexTimer);
+  449 |     console.error(`❌ ${self.name} 연결 에러:`, err.message);
+  450 |   });
+  451 | 
+  452 |   return bot;
+  453 | }
+  454 | 
+
+===== piano v36 markers around line 1 =====
+    1 | /* __ADAM_PIANO_V36_DEPS_HELPER__ */
+    2 | function __adamPianoGetDepsV36() {
+    3 |   const __get = (name) => {
+    4 |     try { return eval(name); } catch (_) { return null; }
+    5 |   };
+    6 |   const __isFn = (v) => typeof v === 'function';
+    7 |   const __isOpenAI = (v) => !!(
+    8 |     v &&
+    9 |     typeof v === 'object' &&
+   10 |     (
+   11 |       (v.chat && v.chat.completions && typeof v.chat.completions.create === 'function') ||
+   12 |       (v.responses && typeof v.responses.create === 'function') ||
+   13 |       (v.embeddings && typeof v.embeddings.create === 'function')
+   14 |     )
+   15 |   );
+   16 |   const __firstFn = (...names) => {
+   17 |     for (const name of names) {
+   18 |       const v = __get(name);
+   19 |       if (__isFn(v)) return v;
+   20 |     }
+   21 |     return null;
+   22 |   };
+   23 |   const __firstOpenAI = (...names) => {
+   24 |     for (const name of names) {
+   25 |       const v = __get(name);
+   26 |       if (__isOpenAI(v)) return v;
+
+===== piano v36 markers around line 2 =====
+    1 | /* __ADAM_PIANO_V36_DEPS_HELPER__ */
+    2 | function __adamPianoGetDepsV36() {
+    3 |   const __get = (name) => {
+    4 |     try { return eval(name); } catch (_) { return null; }
+    5 |   };
+    6 |   const __isFn = (v) => typeof v === 'function';
+    7 |   const __isOpenAI = (v) => !!(
+    8 |     v &&
+    9 |     typeof v === 'object' &&
+   10 |     (
+   11 |       (v.chat && v.chat.completions && typeof v.chat.completions.create === 'function') ||
+   12 |       (v.responses && typeof v.responses.create === 'function') ||
+   13 |       (v.embeddings && typeof v.embeddings.create === 'function')
+   14 |     )
+   15 |   );
+   16 |   const __firstFn = (...names) => {
+   17 |     for (const name of names) {
+   18 |       const v = __get(name);
+   19 |       if (__isFn(v)) return v;
+   20 |     }
+   21 |     return null;
+   22 |   };
+   23 |   const __firstOpenAI = (...names) => {
+   24 |     for (const name of names) {
+   25 |       const v = __get(name);
+   26 |       if (__isOpenAI(v)) return v;
+   27 |     }
+
+===== piano v36 markers around line 472 =====
+  447 |     self.isAlive = false;
+  448 |     if (self.reflexTimer) clearInterval(self.reflexTimer);
+  449 |     console.error(`❌ ${self.name} 연결 에러:`, err.message);
+  450 |   });
+  451 | 
+  452 |   return bot;
+  453 | }
+  454 | 
+  455 | async function reflexLoop(bot, self) {
+  456 |   if (!bot.entity || !self.isAlive) return;
+  457 |   try {
+  458 |     if (bot.food < 14) {
+  459 |       const food = bot.inventory.items().find(i => ['bread','apple','beef','porkchop','chicken','carrot','potato','cooked'].some(f => i.name.includes(f)));
+  460 |       if (food) { await bot.equip(food, 'hand'); await bot.consume(); console.log(`🍖 [반사신경] ${food.name} 섭취`); }
+  461 |     }
+  462 |     const danger = bot.nearestEntity(e => e.type === 'mob' && ['zombie','skeleton','creeper','spider'].includes(e.name) && bot.entity.position.distanceTo(e.position) < 6);
+  463 |     if (danger) {
+  464 |       console.log(`⚠️ [반사신경] ${danger.name} 발견! 즉시 대응`);
+  465 |       await equipBestTool(bot, 'combat');
+  466 |       try { bot.attack(danger); } catch {}
+  467 |     }
+  468 |   } catch {}
+  469 | }
+  470 | 
+  471 | async function liveLoop(bot, self) {
+  472 |   /* __ADAM_PIANO_V36_LIVELOOP_HOOK__ */
+  473 |   try {
+  474 |     const __pianoBridge = require('./piano_v3/bridge.cjs');
+  475 |     const __pianoModule = require('./piano_v3/index.cjs');
+  476 | 
+  477 |     const __pianoDeps = (() => {
+  478 |       const __get = (name) => {
+  479 |         try { return eval(name); } catch (_) { return null; }
+  480 |       };
+  481 |       const __isFn = (v) => typeof v === 'function';
+  482 |       const __isOpenAI = (v) => !!(
+  483 |         v &&
+  484 |         typeof v === 'object' &&
+  485 |         (
+  486 |           (v.chat && v.chat.completions && typeof v.chat.completions.create === 'function') ||
+  487 |           (v.responses && typeof v.responses.create === 'function') ||
+  488 |           (v.embeddings && typeof v.embeddings.create === 'function')
+  489 |         )
+  490 |       );
+  491 |       const __first = (...names) => {
+  492 |         for (const name of names) {
+  493 |           const v = __get(name);
+  494 |           if (v !== null && v !== undefined) return v;
+  495 |         }
+  496 |         return null;
+  497 |       };
+
+===== piano v36 markers around line 588 =====
+  563 | 
+  564 |     const __pianoCandidates = [];
+  565 |     const __pushCandidate = (v) => {
+  566 |       if (v && typeof v === 'object' && !__pianoCandidates.includes(v)) {
+  567 |         __pianoCandidates.push(v);
+  568 |       }
+  569 |     };
+  570 | 
+  571 |     try { if (typeof bot !== 'undefined') __pushCandidate(bot); } catch (_) {}
+  572 |     try { if (typeof self !== 'undefined') __pushCandidate(self); } catch (_) {}
+  573 |     try { if (typeof citizen !== 'undefined') __pushCandidate(citizen); } catch (_) {}
+  574 |     try { if (typeof agent !== 'undefined') __pushCandidate(agent); } catch (_) {}
+  575 |     try { if (typeof ctx !== 'undefined') __pushCandidate(ctx); } catch (_) {}
+  576 | 
+  577 |     try { __pushCandidate(bot); } catch (_) {}
+  578 |     try { __pushCandidate(self); } catch (_) {}
+  579 | 
+  580 |     try { __pushCandidate(this); } catch (_) {}
+  581 |     try { if (this && this.bot) __pushCandidate(this.bot); } catch (_) {}
+  582 |     try { if (this && this.self) __pushCandidate(this.self); } catch (_) {}
+  583 | 
+  584 |     const __pianoRt = __pianoBridge.attachPianoRuntime({
+  585 |       result: null,
+  586 |       args: __pianoCandidates,
+  587 |       piano: __pianoModule,
+  588 |       source: 'liveLoop-hook-v36',
+  589 |       logger: console,
+  590 |       allowSyntheticSelf: true,
+  591 |       requireDeps: true,
+  592 |       deferIfDepsMissing: false,
+  593 |       deps: __pianoDeps
+  594 |     });
+  595 | 
+  596 |     if (__pianoRt && typeof __pianoRt.tick === 'function') {
+  597 |       const __pianoTick = Promise.resolve(__pianoRt.tick('liveLoop_hook_v36')).catch((e) => {
+  598 |         console.warn('[PIANO V3.6] liveLoop tick failed:', e && e.message ? e.message : e);
+  599 |       });
+  600 | 
+  601 |       const __mode = String(process.env.ADAM_PIANO_LIVELOOP_MODE || 'replace').toLowerCase();
+  602 |       if (__mode !== 'parallel') {
+  603 |         return __pianoTick;
+  604 |       }
+  605 |     } else if (process.env.ADAM_PIANO_STRICT_LIVELOOP === '1') {
+  606 |       throw new Error('PIANO V3.6 liveLoop hook could not attach/tick runtime');
+  607 |     }
+  608 |   } catch (e) {
+  609 |     console.warn('[PIANO V3.6] liveLoop hook skipped:', e && e.message ? e.message : e);
+  610 |     if (process.env.ADAM_PIANO_STRICT_DEPS === '1' || process.env.ADAM_PIANO_STRICT_LIVELOOP === '1') throw e;
+  611 |   }
+  612 | 
+  613 | 
+
+===== piano v36 markers around line 10134 =====
+10109 |   if (
+10110 |     module.exports &&
+10111 |     typeof module.exports.createCitizen === 'function' &&
+10112 |     !module.exports.createCitizen.__pianoV33Wrapped
+10113 |   ) {
+10114 |     const originalCreateCitizen = module.exports.createCitizen;
+10115 | 
+10116 |     const wrappedCreateCitizen = function pianoV33CreateCitizenWrapper(opts) {
+10117 |       const bot = originalCreateCitizen.apply(this, arguments);
+10118 |       attachWhenReady(bot, opts || {}, 'module.exports.createCitizen');
+10119 |       return bot;
+10120 |     };
+10121 | 
+10122 |     wrappedCreateCitizen.__pianoV33Wrapped = true;
+10123 |     module.exports.createCitizen = wrappedCreateCitizen;
+10124 | 
+10125 |     console.log('🎼 [PIANO V3.3] createCitizen export wrapper installed');
+10126 |   } else {
+10127 |     console.warn('⚠️ [PIANO V3.3] module.exports.createCitizen missing. Export keys:', Object.keys(module.exports || {}));
+10128 |   }
+10129 | })();
+10130 | 
+10131 | 
+10132 | 
+10133 | 
+10134 | /* __ADAM_PIANO_V36_EXPORT_BRIDGE__ */
+10135 | ;(() => {
+10136 |   try {
+10137 |     const { wrapCreateCitizenExport } = require('./piano_v3/bridge.cjs');
+10138 |     const piano = require('./piano_v3/index.cjs');
+10139 | 
+10140 |     if (module.exports && typeof module.exports.createCitizen === 'function') {
+10141 |       module.exports.createCitizen = wrapCreateCitizenExport(module.exports.createCitizen, {
+10142 |         piano,
+10143 |         source: 'citizen-export-v36',
+10144 |         logger: console,
+10145 |         deferIfDepsMissing: true,
+10146 |         getDeps: () => {
+10147 |           try {
+10148 |             return typeof __adamPianoGetDepsV36 === 'function' ? __adamPianoGetDepsV36() : {};
+10149 |           } catch (_) {
+10150 |             return {};
+10151 |           }
+10152 |         }
+10153 |       });
+10154 |       console.log('[PIANO V3.6] createCitizen export bridge installed');
+10155 |     } else {
+10156 |       console.warn('[PIANO V3.6] module.exports.createCitizen not found at bridge install time');
+10157 |     }
+10158 | 
+10159 |     if (process.env.ADAM_ENABLE_LEGACY_GLOBAL !== '1') {
+
+===== piano v36 markers around line 10143 =====
+10118 |       attachWhenReady(bot, opts || {}, 'module.exports.createCitizen');
+10119 |       return bot;
+10120 |     };
+10121 | 
+10122 |     wrappedCreateCitizen.__pianoV33Wrapped = true;
+10123 |     module.exports.createCitizen = wrappedCreateCitizen;
+10124 | 
+10125 |     console.log('🎼 [PIANO V3.3] createCitizen export wrapper installed');
+10126 |   } else {
+10127 |     console.warn('⚠️ [PIANO V3.3] module.exports.createCitizen missing. Export keys:', Object.keys(module.exports || {}));
+10128 |   }
+10129 | })();
+10130 | 
+10131 | 
+10132 | 
+10133 | 
+10134 | /* __ADAM_PIANO_V36_EXPORT_BRIDGE__ */
+10135 | ;(() => {
+10136 |   try {
+10137 |     const { wrapCreateCitizenExport } = require('./piano_v3/bridge.cjs');
+10138 |     const piano = require('./piano_v3/index.cjs');
+10139 | 
+10140 |     if (module.exports && typeof module.exports.createCitizen === 'function') {
+10141 |       module.exports.createCitizen = wrapCreateCitizenExport(module.exports.createCitizen, {
+10142 |         piano,
+10143 |         source: 'citizen-export-v36',
+10144 |         logger: console,
+10145 |         deferIfDepsMissing: true,
+10146 |         getDeps: () => {
+10147 |           try {
+10148 |             return typeof __adamPianoGetDepsV36 === 'function' ? __adamPianoGetDepsV36() : {};
+10149 |           } catch (_) {
+10150 |             return {};
+10151 |           }
+10152 |         }
+10153 |       });
+10154 |       console.log('[PIANO V3.6] createCitizen export bridge installed');
+10155 |     } else {
+10156 |       console.warn('[PIANO V3.6] module.exports.createCitizen not found at bridge install time');
+10157 |     }
+10158 | 
+10159 |     if (process.env.ADAM_ENABLE_LEGACY_GLOBAL !== '1') {
+10160 |       try { delete globalThis.AdamPiano; } catch (_) { try { globalThis.AdamPiano = undefined; } catch (_) {} }
+10161 |     }
+10162 |   } catch (e) {
+10163 |     console.error('[PIANO V3.6] createCitizen export bridge failed:', e && e.stack ? e.stack : e);
+10164 |   }
+10165 | })();
+10166 | 
+
+===== piano v36 markers around line 10148 =====
+10123 |     module.exports.createCitizen = wrappedCreateCitizen;
+10124 | 
+10125 |     console.log('🎼 [PIANO V3.3] createCitizen export wrapper installed');
+10126 |   } else {
+10127 |     console.warn('⚠️ [PIANO V3.3] module.exports.createCitizen missing. Export keys:', Object.keys(module.exports || {}));
+10128 |   }
+10129 | })();
+10130 | 
+10131 | 
+10132 | 
+10133 | 
+10134 | /* __ADAM_PIANO_V36_EXPORT_BRIDGE__ */
+10135 | ;(() => {
+10136 |   try {
+10137 |     const { wrapCreateCitizenExport } = require('./piano_v3/bridge.cjs');
+10138 |     const piano = require('./piano_v3/index.cjs');
+10139 | 
+10140 |     if (module.exports && typeof module.exports.createCitizen === 'function') {
+10141 |       module.exports.createCitizen = wrapCreateCitizenExport(module.exports.createCitizen, {
+10142 |         piano,
+10143 |         source: 'citizen-export-v36',
+10144 |         logger: console,
+10145 |         deferIfDepsMissing: true,
+10146 |         getDeps: () => {
+10147 |           try {
+10148 |             return typeof __adamPianoGetDepsV36 === 'function' ? __adamPianoGetDepsV36() : {};
+10149 |           } catch (_) {
+10150 |             return {};
+10151 |           }
+10152 |         }
+10153 |       });
+10154 |       console.log('[PIANO V3.6] createCitizen export bridge installed');
+10155 |     } else {
+10156 |       console.warn('[PIANO V3.6] module.exports.createCitizen not found at bridge install time');
+10157 |     }
+10158 | 
+10159 |     if (process.env.ADAM_ENABLE_LEGACY_GLOBAL !== '1') {
+10160 |       try { delete globalThis.AdamPiano; } catch (_) { try { globalThis.AdamPiano = undefined; } catch (_) {} }
+10161 |     }
+10162 |   } catch (e) {
+10163 |     console.error('[PIANO V3.6] createCitizen export bridge failed:', e && e.stack ? e.stack : e);
+10164 |   }
+10165 | })();
+10166 | 

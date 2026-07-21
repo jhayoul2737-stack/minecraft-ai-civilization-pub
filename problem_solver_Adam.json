@@ -1,0 +1,3082 @@
+{
+  "version": "problem-solving-core-v1",
+  "updatedAt": "2026-07-21T05:32:18.152Z",
+  "loop": {
+    "failures": {
+      "mine:adam|generic_failure": {
+        "key": "mine:adam",
+        "reason": "generic_failure",
+        "count": 59,
+        "examples": [
+          "[문제해결 실패] mine(stone) 직접 반복 대신 대체 전략을 시도했지만 실패: bot not ready",
+          "[문제해결 실패] mine(stone) 직접 반복 대신 대체 전략을 시도했지만 실패: bot not ready",
+          "[문제해결 실패] mine(stone) 직접 반복 대신 대체 전략을 시도했지만 실패: bot not ready",
+          "[문제해결 실패] mine(stone) 직접 반복 대신 대체 전략을 시도했지만 실패: bot not ready",
+          "[문제해결 실패] mine(stone) 직접 반복 대신 대체 전략을 시도했지만 실패: bot not ready"
+        ],
+        "firstAt": "2026-07-16T22:44:28.726Z",
+        "lastAt": "2026-07-17T00:10:30.086Z"
+      },
+      "unknown:adam|missing_tool": {
+        "key": "unknown:adam",
+        "reason": "missing_tool",
+        "count": 3,
+        "examples": [
+          "'wooden_pickaxe' 제작 실패: Error: Event windowOpen did not fire within timeout of 20000ms",
+          "'wooden_pickaxe' 제작 실패: Error: Event windowOpen did not fire within timeout of 20000ms",
+          "'wooden_pickaxe' 제작 실패: Error: Event windowOpen did not fire within timeout of 20000ms"
+        ],
+        "firstAt": "2026-07-17T01:34:15.709Z",
+        "lastAt": "2026-07-17T01:36:38.288Z"
+      },
+      "unknown:adam|aborted": {
+        "key": "unknown:adam",
+        "reason": "aborted",
+        "count": 1,
+        "examples": [
+          "spruce_log 등 나무를 4개 베어냈지만 중단했다: 채굴 중단: Digging aborted\n[자동회수] 떨어진 아이템 회수: spruce_sapling×1"
+        ],
+        "firstAt": "2026-07-17T01:42:24.234Z",
+        "lastAt": "2026-07-17T01:42:24.234Z"
+      },
+      "go_to_poi:x:-7, z:-8|generic_failure": {
+        "key": "go_to_poi:x:-7, z:-8",
+        "reason": "generic_failure",
+        "count": 2,
+        "examples": [
+          "'X:-7, Z:-8'이라는 장소를 기억하지 못한다.",
+          "'X:-7, Z:-8'이라는 장소를 기억하지 못한다."
+        ],
+        "firstAt": "2026-07-17T06:57:48.237Z",
+        "lastAt": "2026-07-17T06:57:48.242Z"
+      },
+      "gather_wood:gather wood for crafting|danger": {
+        "key": "gather_wood:gather wood for crafting",
+        "reason": "danger",
+        "count": 2,
+        "examples": [
+          "위험 때문에 나무 채집을 중단했다. 지금까지 1개. ",
+          "위험 때문에 나무 채집을 중단했다. 지금까지 1개. "
+        ],
+        "firstAt": "2026-07-21T05:18:27.583Z",
+        "lastAt": "2026-07-21T05:18:27.585Z"
+      },
+      "collect_drops:none|generic_failure": {
+        "key": "collect_drops:none",
+        "reason": "generic_failure",
+        "count": 8,
+        "examples": [
+          "근처에 회수할 드랍이 없다.",
+          "근처에 회수할 드랍이 없다.",
+          "근처에 회수할 드랍이 없다.",
+          "근처에 회수할 드랍이 없다.",
+          "근처에 회수할 드랍이 없다."
+        ],
+        "firstAt": "2026-07-21T05:20:00.009Z",
+        "lastAt": "2026-07-21T05:20:00.523Z"
+      }
+    },
+    "cooldowns": {
+      "mine:adam": {
+        "until": 1784247330086,
+        "reason": "generic_failure",
+        "at": "2026-07-17T00:10:30.086Z"
+      },
+      "unknown:adam": {
+        "until": 1784252498289,
+        "reason": "missing_tool",
+        "at": "2026-07-17T01:36:38.289Z"
+      },
+      "gather_wood:none": {
+        "until": 1784254742829,
+        "reason": "aborted",
+        "at": "2026-07-17T02:14:02.829Z"
+      },
+      "collect_drops:none": {
+        "until": 1784611500523,
+        "reason": "generic_failure",
+        "at": "2026-07-21T05:20:00.523Z"
+      }
+    },
+    "goalCooldowns": {
+      "obtain_stone": {
+        "until": 1784304627915,
+        "reason": "all_strategies_failed",
+        "at": "2026-07-17T16:09:57.915Z"
+      }
+    }
+  },
+  "strategies": {
+    "obtain_stone": {
+      "local_exposed_stone": {
+        "attempts": 1,
+        "successes": 0,
+        "failures": 1,
+        "consecutiveFailures": 1,
+        "cooldownUntil": 0,
+        "examples": [
+          "local exposed stone not found"
+        ],
+        "lastAt": "2026-07-17T16:07:31.408Z"
+      },
+      "known_stone_poi": {
+        "attempts": 1,
+        "successes": 0,
+        "failures": 1,
+        "consecutiveFailures": 1,
+        "cooldownUntil": 0,
+        "examples": [
+          "no known exposed stone POI"
+        ],
+        "lastAt": "2026-07-17T16:07:31.454Z"
+      },
+      "safe_staircase_mine": {
+        "attempts": 1,
+        "successes": 0,
+        "failures": 1,
+        "consecutiveFailures": 1,
+        "cooldownUntil": 0,
+        "examples": [
+          "unsafe during staircase mine"
+        ],
+        "lastAt": "2026-07-17T16:09:00.380Z"
+      },
+      "explore_surface_stone": {
+        "attempts": 1,
+        "successes": 0,
+        "failures": 1,
+        "consecutiveFailures": 1,
+        "cooldownUntil": 0,
+        "examples": [
+          "unsafe during surface exploration"
+        ],
+        "lastAt": "2026-07-17T16:09:57.868Z"
+      }
+    }
+  },
+  "pois": {
+    "resources": [
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": -22,
+        "y": 66,
+        "z": -16,
+        "firstSeen": "2026-07-17T16:07:30.078Z",
+        "lastSeen": "2026-07-17T16:09:45.513Z",
+        "count": 1524,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "obtain_stone_smart_start"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": -35,
+        "y": 65,
+        "z": -16,
+        "firstSeen": "2026-07-17T16:07:30.081Z",
+        "lastSeen": "2026-07-17T16:09:10.515Z",
+        "count": 304,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": -39,
+        "y": 67,
+        "z": -14,
+        "firstSeen": "2026-07-17T16:07:30.081Z",
+        "lastSeen": "2026-07-17T16:09:10.515Z",
+        "count": 13,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": -21,
+        "y": 67,
+        "z": -12,
+        "firstSeen": "2026-07-17T16:07:30.082Z",
+        "lastSeen": "2026-07-17T16:09:45.513Z",
+        "count": 152,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "obtain_stone_smart_start"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": -35,
+        "y": 77,
+        "z": -18,
+        "firstSeen": "2026-07-17T16:07:30.131Z",
+        "lastSeen": "2026-07-17T16:09:10.539Z",
+        "count": 224,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": -27,
+        "y": 75,
+        "z": -18,
+        "firstSeen": "2026-07-17T16:07:30.132Z",
+        "lastSeen": "2026-07-17T16:09:57.889Z",
+        "count": 243,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "after_strategy_explore_surface_stone"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": -39,
+        "y": 75,
+        "z": -21,
+        "firstSeen": "2026-07-17T16:07:30.132Z",
+        "lastSeen": "2026-07-17T16:09:10.539Z",
+        "count": 217,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": -26,
+        "y": 81,
+        "z": -12,
+        "firstSeen": "2026-07-17T16:07:30.132Z",
+        "lastSeen": "2026-07-17T16:09:57.889Z",
+        "count": 157,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "after_strategy_explore_surface_stone"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": -28,
+        "y": 81,
+        "z": -7,
+        "firstSeen": "2026-07-17T16:07:30.132Z",
+        "lastSeen": "2026-07-17T16:09:57.889Z",
+        "count": 139,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "after_strategy_explore_surface_stone"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": -22,
+        "y": 75,
+        "z": -19,
+        "firstSeen": "2026-07-17T16:07:30.132Z",
+        "lastSeen": "2026-07-17T16:09:57.889Z",
+        "count": 179,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "after_strategy_explore_surface_stone"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": -22,
+        "y": 66,
+        "z": -15,
+        "firstSeen": "2026-07-17T16:07:31.306Z",
+        "lastSeen": "2026-07-17T16:09:20.526Z",
+        "count": 35,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": -39,
+        "y": 73,
+        "z": -21,
+        "firstSeen": "2026-07-17T16:07:31.325Z",
+        "lastSeen": "2026-07-17T16:09:00.310Z",
+        "count": 104,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "staircase_step"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": -39,
+        "y": 72,
+        "z": -21,
+        "firstSeen": "2026-07-17T16:09:00.310Z",
+        "lastSeen": "2026-07-17T16:09:00.310Z",
+        "count": 3,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "staircase_step"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": -32,
+        "y": 76,
+        "z": -14,
+        "firstSeen": "2026-07-17T16:09:00.310Z",
+        "lastSeen": "2026-07-17T16:09:57.889Z",
+        "count": 55,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "after_strategy_explore_surface_stone"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": -39,
+        "y": 77,
+        "z": -12,
+        "firstSeen": "2026-07-17T16:09:00.310Z",
+        "lastSeen": "2026-07-17T16:09:10.539Z",
+        "count": 12,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": -32,
+        "y": 73,
+        "z": -14,
+        "firstSeen": "2026-07-17T16:09:00.310Z",
+        "lastSeen": "2026-07-17T16:09:20.556Z",
+        "count": 8,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": -32,
+        "y": 73,
+        "z": -14,
+        "firstSeen": "2026-07-17T16:09:00.402Z",
+        "lastSeen": "2026-07-17T16:09:00.402Z",
+        "count": 3,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "after_strategy_safe_staircase_mine"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": -35,
+        "y": 66,
+        "z": -11,
+        "firstSeen": "2026-07-17T16:09:10.515Z",
+        "lastSeen": "2026-07-17T16:09:10.515Z",
+        "count": 4,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": -35,
+        "y": 71,
+        "z": -18,
+        "firstSeen": "2026-07-17T16:09:10.539Z",
+        "lastSeen": "2026-07-17T16:09:10.539Z",
+        "count": 1,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": -42,
+        "y": 76,
+        "z": -8,
+        "firstSeen": "2026-07-17T16:09:10.539Z",
+        "lastSeen": "2026-07-17T16:09:10.539Z",
+        "count": 3,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": -28,
+        "y": 66,
+        "z": -15,
+        "firstSeen": "2026-07-17T16:09:20.526Z",
+        "lastSeen": "2026-07-17T16:09:45.513Z",
+        "count": 18,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "obtain_stone_smart_start"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": -11,
+        "y": 66,
+        "z": -12,
+        "firstSeen": "2026-07-17T16:09:47.576Z",
+        "lastSeen": "2026-07-17T16:09:47.663Z",
+        "count": 94,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "strategy_local_exposed"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": -14,
+        "y": 65,
+        "z": -16,
+        "firstSeen": "2026-07-17T16:09:47.578Z",
+        "lastSeen": "2026-07-17T16:09:47.663Z",
+        "count": 4,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "strategy_local_exposed"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": -16,
+        "y": 66,
+        "z": -11,
+        "firstSeen": "2026-07-17T16:09:47.578Z",
+        "lastSeen": "2026-07-17T16:09:47.663Z",
+        "count": 2,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "strategy_local_exposed"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": -14,
+        "y": 75,
+        "z": -23,
+        "firstSeen": "2026-07-17T16:09:47.632Z",
+        "lastSeen": "2026-07-17T16:09:47.710Z",
+        "count": 8,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "strategy_local_exposed"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": -8,
+        "y": 74,
+        "z": -22,
+        "firstSeen": "2026-07-17T16:09:47.633Z",
+        "lastSeen": "2026-07-17T16:10:20.646Z",
+        "count": 6,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": -15,
+        "y": 81,
+        "z": -8,
+        "firstSeen": "2026-07-17T16:09:47.633Z",
+        "lastSeen": "2026-07-17T16:09:47.710Z",
+        "count": 2,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "strategy_local_exposed"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": -23,
+        "y": 73,
+        "z": -25,
+        "firstSeen": "2026-07-17T16:09:47.633Z",
+        "lastSeen": "2026-07-17T16:09:47.710Z",
+        "count": 8,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "strategy_local_exposed"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": -6,
+        "y": 70,
+        "z": -26,
+        "firstSeen": "2026-07-17T16:09:47.633Z",
+        "lastSeen": "2026-07-17T16:09:47.710Z",
+        "count": 4,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "strategy_local_exposed"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": -19,
+        "y": 66,
+        "z": -4,
+        "firstSeen": "2026-07-17T16:09:57.770Z",
+        "lastSeen": "2026-07-17T16:09:57.873Z",
+        "count": 123,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "after_strategy_explore_surface_stone"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": -23,
+        "y": 67,
+        "z": -2,
+        "firstSeen": "2026-07-17T16:09:57.771Z",
+        "lastSeen": "2026-07-17T16:09:57.872Z",
+        "count": 21,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "after_strategy_explore_surface_stone"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": -17,
+        "y": 67,
+        "z": -2,
+        "firstSeen": "2026-07-17T16:09:57.771Z",
+        "lastSeen": "2026-07-17T16:09:57.872Z",
+        "count": 6,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "after_strategy_explore_surface_stone"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": -28,
+        "y": 75,
+        "z": -7,
+        "firstSeen": "2026-07-17T16:09:57.838Z",
+        "lastSeen": "2026-07-17T16:09:57.889Z",
+        "count": 6,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "after_strategy_explore_surface_stone"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 15,
+        "y": 64,
+        "z": -5,
+        "firstSeen": "2026-07-17T16:10:10.581Z",
+        "lastSeen": "2026-07-17T16:10:30.585Z",
+        "count": 118,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 9,
+        "y": 66,
+        "z": 6,
+        "firstSeen": "2026-07-17T16:10:10.582Z",
+        "lastSeen": "2026-07-21T05:18:22.748Z",
+        "count": 4759,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 11,
+        "y": 66,
+        "z": 1,
+        "firstSeen": "2026-07-17T16:10:10.582Z",
+        "lastSeen": "2026-07-21T05:18:22.748Z",
+        "count": 737,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 14,
+        "y": 66,
+        "z": -9,
+        "firstSeen": "2026-07-17T16:10:10.582Z",
+        "lastSeen": "2026-07-17T16:10:30.585Z",
+        "count": 11,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 20,
+        "y": 78,
+        "z": 7,
+        "firstSeen": "2026-07-17T16:10:10.632Z",
+        "lastSeen": "2026-07-21T05:18:22.813Z",
+        "count": 421,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 19,
+        "y": 75,
+        "z": -20,
+        "firstSeen": "2026-07-17T16:10:10.632Z",
+        "lastSeen": "2026-07-17T16:10:40.606Z",
+        "count": 12,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 29,
+        "y": 75,
+        "z": 3,
+        "firstSeen": "2026-07-17T16:10:10.632Z",
+        "lastSeen": "2026-07-21T05:18:22.813Z",
+        "count": 874,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 29,
+        "y": 77,
+        "z": -7,
+        "firstSeen": "2026-07-17T16:10:10.632Z",
+        "lastSeen": "2026-07-17T16:10:40.606Z",
+        "count": 8,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 1,
+        "y": 76,
+        "z": -25,
+        "firstSeen": "2026-07-17T16:10:10.632Z",
+        "lastSeen": "2026-07-17T16:10:20.646Z",
+        "count": 8,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 1,
+        "y": 73,
+        "z": -25,
+        "firstSeen": "2026-07-17T16:10:10.632Z",
+        "lastSeen": "2026-07-17T16:10:20.646Z",
+        "count": 8,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 25,
+        "y": 75,
+        "z": 3,
+        "firstSeen": "2026-07-17T16:10:20.646Z",
+        "lastSeen": "2026-07-21T05:18:06.459Z",
+        "count": 114,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 15,
+        "y": 66,
+        "z": -9,
+        "firstSeen": "2026-07-17T16:10:30.585Z",
+        "lastSeen": "2026-07-17T16:10:30.585Z",
+        "count": 2,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 30,
+        "y": 74,
+        "z": 9,
+        "firstSeen": "2026-07-17T16:10:30.647Z",
+        "lastSeen": "2026-07-21T05:32:09.063Z",
+        "count": 399,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 38,
+        "y": 75,
+        "z": -10,
+        "firstSeen": "2026-07-17T16:10:30.647Z",
+        "lastSeen": "2026-07-17T16:10:30.647Z",
+        "count": 3,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 25,
+        "y": 66,
+        "z": -20,
+        "firstSeen": "2026-07-17T16:10:40.584Z",
+        "lastSeen": "2026-07-17T16:10:40.584Z",
+        "count": 45,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 28,
+        "y": 66,
+        "z": -17,
+        "firstSeen": "2026-07-17T16:10:40.584Z",
+        "lastSeen": "2026-07-17T16:10:40.584Z",
+        "count": 3,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 21,
+        "y": 67,
+        "z": -19,
+        "firstSeen": "2026-07-17T16:10:40.584Z",
+        "lastSeen": "2026-07-17T16:10:40.584Z",
+        "count": 2,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 36,
+        "y": 77,
+        "z": -23,
+        "firstSeen": "2026-07-17T16:10:40.606Z",
+        "lastSeen": "2026-07-21T04:46:03.137Z",
+        "count": 87,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 28,
+        "y": 75,
+        "z": -31,
+        "firstSeen": "2026-07-17T16:10:40.606Z",
+        "lastSeen": "2026-07-21T04:46:13.133Z",
+        "count": 705,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 13,
+        "y": 75,
+        "z": -30,
+        "firstSeen": "2026-07-17T16:10:40.606Z",
+        "lastSeen": "2026-07-17T16:10:40.606Z",
+        "count": 6,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 44,
+        "y": 71,
+        "z": -22,
+        "firstSeen": "2026-07-17T16:10:40.606Z",
+        "lastSeen": "2026-07-21T04:46:03.137Z",
+        "count": 182,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 41,
+        "y": 75,
+        "z": -29,
+        "firstSeen": "2026-07-17T16:10:40.606Z",
+        "lastSeen": "2026-07-21T04:46:03.137Z",
+        "count": 522,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 45,
+        "y": 65,
+        "z": -36,
+        "firstSeen": "2026-07-17T16:10:50.587Z",
+        "lastSeen": "2026-07-17T16:13:15.881Z",
+        "count": 124,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 47,
+        "y": 65,
+        "z": -49,
+        "firstSeen": "2026-07-17T16:10:50.588Z",
+        "lastSeen": "2026-07-17T16:12:36.591Z",
+        "count": 44,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 42,
+        "y": 67,
+        "z": -39,
+        "firstSeen": "2026-07-17T16:10:50.588Z",
+        "lastSeen": "2026-07-17T16:13:15.880Z",
+        "count": 7,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 40,
+        "y": 77,
+        "z": -38,
+        "firstSeen": "2026-07-17T16:10:50.615Z",
+        "lastSeen": "2026-07-17T16:13:15.908Z",
+        "count": 37,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 45,
+        "y": 77,
+        "z": -44,
+        "firstSeen": "2026-07-17T16:10:50.615Z",
+        "lastSeen": "2026-07-17T16:13:15.908Z",
+        "count": 31,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 34,
+        "y": 75,
+        "z": -47,
+        "firstSeen": "2026-07-17T16:10:50.615Z",
+        "lastSeen": "2026-07-17T16:10:50.616Z",
+        "count": 5,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 42,
+        "y": 67,
+        "z": -50,
+        "firstSeen": "2026-07-17T16:11:00.589Z",
+        "lastSeen": "2026-07-17T16:12:36.591Z",
+        "count": 59,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 47,
+        "y": 66,
+        "z": -53,
+        "firstSeen": "2026-07-17T16:11:00.590Z",
+        "lastSeen": "2026-07-17T16:12:36.591Z",
+        "count": 2,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 56,
+        "y": 66,
+        "z": -52,
+        "firstSeen": "2026-07-17T16:11:00.590Z",
+        "lastSeen": "2026-07-17T16:11:00.590Z",
+        "count": 3,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 58,
+        "y": 74,
+        "z": -45,
+        "firstSeen": "2026-07-17T16:11:00.620Z",
+        "lastSeen": "2026-07-17T16:12:56.627Z",
+        "count": 16,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 53,
+        "y": 79,
+        "z": -55,
+        "firstSeen": "2026-07-17T16:11:00.620Z",
+        "lastSeen": "2026-07-17T16:12:36.613Z",
+        "count": 22,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 60,
+        "y": 72,
+        "z": -50,
+        "firstSeen": "2026-07-17T16:11:00.620Z",
+        "lastSeen": "2026-07-17T16:11:10.611Z",
+        "count": 10,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 57,
+        "y": 72,
+        "z": -56,
+        "firstSeen": "2026-07-17T16:11:00.620Z",
+        "lastSeen": "2026-07-17T16:12:36.613Z",
+        "count": 6,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 53,
+        "y": 77,
+        "z": -55,
+        "firstSeen": "2026-07-17T16:11:00.620Z",
+        "lastSeen": "2026-07-17T16:11:00.620Z",
+        "count": 1,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 63,
+        "y": 67,
+        "z": -57,
+        "firstSeen": "2026-07-17T16:11:10.590Z",
+        "lastSeen": "2026-07-17T16:12:26.591Z",
+        "count": 252,
+        "confidence": 0.9,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 70,
+        "y": 65,
+        "z": -61,
+        "firstSeen": "2026-07-17T16:11:10.592Z",
+        "lastSeen": "2026-07-17T16:12:16.586Z",
+        "count": 75,
+        "confidence": 0.9,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 69,
+        "y": 66,
+        "z": -59,
+        "firstSeen": "2026-07-17T16:11:10.592Z",
+        "lastSeen": "2026-07-17T16:12:16.586Z",
+        "count": 3,
+        "confidence": 0.9,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 63,
+        "y": 77,
+        "z": -56,
+        "firstSeen": "2026-07-17T16:11:10.611Z",
+        "lastSeen": "2026-07-17T16:12:26.622Z",
+        "count": 36,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 68,
+        "y": 71,
+        "z": -56,
+        "firstSeen": "2026-07-17T16:11:10.611Z",
+        "lastSeen": "2026-07-17T16:12:26.622Z",
+        "count": 31,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 70,
+        "y": 73,
+        "z": -50,
+        "firstSeen": "2026-07-17T16:11:10.611Z",
+        "lastSeen": "2026-07-17T16:12:06.584Z",
+        "count": 14,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 60,
+        "y": 71,
+        "z": -50,
+        "firstSeen": "2026-07-17T16:11:10.611Z",
+        "lastSeen": "2026-07-17T16:11:10.611Z",
+        "count": 3,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 73,
+        "y": 76,
+        "z": -67,
+        "firstSeen": "2026-07-17T16:11:10.611Z",
+        "lastSeen": "2026-07-17T16:12:16.604Z",
+        "count": 48,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 63,
+        "y": 77,
+        "z": -67,
+        "firstSeen": "2026-07-17T16:11:10.611Z",
+        "lastSeen": "2026-07-17T16:12:26.622Z",
+        "count": 39,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 77,
+        "y": 69,
+        "z": -52,
+        "firstSeen": "2026-07-17T16:11:10.611Z",
+        "lastSeen": "2026-07-17T16:12:06.584Z",
+        "count": 4,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 67,
+        "y": 76,
+        "z": -39,
+        "firstSeen": "2026-07-17T16:11:10.611Z",
+        "lastSeen": "2026-07-17T16:12:56.627Z",
+        "count": 11,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 68,
+        "y": 73,
+        "z": -56,
+        "firstSeen": "2026-07-17T16:11:20.615Z",
+        "lastSeen": "2026-07-17T16:12:16.604Z",
+        "count": 11,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 78,
+        "y": 71,
+        "z": -62,
+        "firstSeen": "2026-07-17T16:11:20.615Z",
+        "lastSeen": "2026-07-17T16:11:56.581Z",
+        "count": 15,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 72,
+        "y": 73,
+        "z": -70,
+        "firstSeen": "2026-07-17T16:11:20.615Z",
+        "lastSeen": "2026-07-17T16:11:20.615Z",
+        "count": 1,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 70,
+        "y": 66,
+        "z": -62,
+        "firstSeen": "2026-07-17T16:11:36.461Z",
+        "lastSeen": "2026-07-17T16:11:56.564Z",
+        "count": 11,
+        "confidence": 0.9,
+        "meta": {
+          "block": "stone",
+          "exposed": true,
+          "confidence": 0.9,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 63,
+        "y": 72,
+        "z": -56,
+        "firstSeen": "2026-07-17T16:11:36.497Z",
+        "lastSeen": "2026-07-17T16:11:36.497Z",
+        "count": 1,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 78,
+        "y": 69,
+        "z": -62,
+        "firstSeen": "2026-07-17T16:11:46.584Z",
+        "lastSeen": "2026-07-17T16:11:46.584Z",
+        "count": 1,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 68,
+        "y": 76,
+        "z": -56,
+        "firstSeen": "2026-07-17T16:11:56.581Z",
+        "lastSeen": "2026-07-17T16:11:56.581Z",
+        "count": 1,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 66,
+        "y": 61,
+        "z": -47,
+        "firstSeen": "2026-07-17T16:12:06.565Z",
+        "lastSeen": "2026-07-17T16:12:06.568Z",
+        "count": 40,
+        "confidence": 0.9,
+        "meta": {
+          "block": "stone",
+          "exposed": true,
+          "confidence": 0.9,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 69,
+        "y": 57,
+        "z": -46,
+        "firstSeen": "2026-07-17T16:12:06.568Z",
+        "lastSeen": "2026-07-17T16:12:06.568Z",
+        "count": 10,
+        "confidence": 0.9,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 69,
+        "y": 71,
+        "z": -35,
+        "firstSeen": "2026-07-17T16:12:06.584Z",
+        "lastSeen": "2026-07-17T16:12:56.627Z",
+        "count": 14,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 58,
+        "y": 70,
+        "z": -45,
+        "firstSeen": "2026-07-17T16:12:06.584Z",
+        "lastSeen": "2026-07-17T16:12:06.584Z",
+        "count": 2,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 69,
+        "y": 69,
+        "z": -35,
+        "firstSeen": "2026-07-17T16:12:06.584Z",
+        "lastSeen": "2026-07-17T16:12:56.627Z",
+        "count": 10,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 73,
+        "y": 70,
+        "z": -39,
+        "firstSeen": "2026-07-17T16:12:06.584Z",
+        "lastSeen": "2026-07-17T16:12:06.584Z",
+        "count": 2,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 59,
+        "y": 74,
+        "z": -38,
+        "firstSeen": "2026-07-17T16:12:06.584Z",
+        "lastSeen": "2026-07-17T16:12:56.627Z",
+        "count": 7,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 74,
+        "y": 76,
+        "z": -63,
+        "firstSeen": "2026-07-17T16:12:16.604Z",
+        "lastSeen": "2026-07-17T16:12:16.604Z",
+        "count": 1,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 58,
+        "y": 67,
+        "z": -60,
+        "firstSeen": "2026-07-17T16:12:26.591Z",
+        "lastSeen": "2026-07-17T16:12:26.591Z",
+        "count": 7,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 58,
+        "y": 68,
+        "z": -62,
+        "firstSeen": "2026-07-17T16:12:26.591Z",
+        "lastSeen": "2026-07-17T16:12:26.591Z",
+        "count": 1,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 63,
+        "y": 67,
+        "z": -63,
+        "firstSeen": "2026-07-17T16:12:26.591Z",
+        "lastSeen": "2026-07-17T16:12:26.591Z",
+        "count": 1,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 63,
+        "y": 72,
+        "z": -67,
+        "firstSeen": "2026-07-17T16:12:26.622Z",
+        "lastSeen": "2026-07-17T16:12:26.622Z",
+        "count": 2,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 45,
+        "y": 72,
+        "z": -44,
+        "firstSeen": "2026-07-17T16:12:36.613Z",
+        "lastSeen": "2026-07-17T16:13:15.908Z",
+        "count": 7,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 42,
+        "y": 79,
+        "z": -58,
+        "firstSeen": "2026-07-17T16:12:36.613Z",
+        "lastSeen": "2026-07-17T16:12:36.613Z",
+        "count": 8,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 41,
+        "y": 65,
+        "z": -29,
+        "firstSeen": "2026-07-17T16:12:46.596Z",
+        "lastSeen": "2026-07-17T16:12:46.598Z",
+        "count": 44,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 47,
+        "y": 65,
+        "z": -38,
+        "firstSeen": "2026-07-17T16:12:46.598Z",
+        "lastSeen": "2026-07-17T16:13:15.881Z",
+        "count": 12,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 42,
+        "y": 66,
+        "z": -27,
+        "firstSeen": "2026-07-17T16:12:46.598Z",
+        "lastSeen": "2026-07-17T16:12:46.598Z",
+        "count": 1,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 40,
+        "y": 70,
+        "z": -38,
+        "firstSeen": "2026-07-17T16:12:46.643Z",
+        "lastSeen": "2026-07-17T16:13:15.908Z",
+        "count": 8,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 54,
+        "y": 66,
+        "z": -40,
+        "firstSeen": "2026-07-17T16:12:56.592Z",
+        "lastSeen": "2026-07-17T16:12:56.594Z",
+        "count": 37,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 56,
+        "y": 64,
+        "z": -36,
+        "firstSeen": "2026-07-17T16:12:56.593Z",
+        "lastSeen": "2026-07-17T16:12:56.594Z",
+        "count": 12,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 61,
+        "y": 64,
+        "z": -45,
+        "firstSeen": "2026-07-17T16:12:56.594Z",
+        "lastSeen": "2026-07-17T16:12:56.594Z",
+        "count": 1,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 47,
+        "y": 65,
+        "z": -35,
+        "firstSeen": "2026-07-17T16:13:06.591Z",
+        "lastSeen": "2026-07-17T16:13:06.594Z",
+        "count": 4,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 52,
+        "y": 75,
+        "z": -35,
+        "firstSeen": "2026-07-17T16:13:06.620Z",
+        "lastSeen": "2026-07-17T16:13:15.908Z",
+        "count": 14,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 52,
+        "y": 73,
+        "z": -35,
+        "firstSeen": "2026-07-17T16:13:06.620Z",
+        "lastSeen": "2026-07-17T16:13:15.908Z",
+        "count": 10,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 31,
+        "y": 65,
+        "z": -24,
+        "firstSeen": "2026-07-17T16:13:25.963Z",
+        "lastSeen": "2026-07-21T04:46:03.116Z",
+        "count": 3572,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 27,
+        "y": 65,
+        "z": -34,
+        "firstSeen": "2026-07-17T16:13:25.964Z",
+        "lastSeen": "2026-07-21T04:46:13.114Z",
+        "count": 520,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 27,
+        "y": 66,
+        "z": -27,
+        "firstSeen": "2026-07-17T16:13:25.964Z",
+        "lastSeen": "2026-07-21T04:46:03.116Z",
+        "count": 170,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 24,
+        "y": 71,
+        "z": -31,
+        "firstSeen": "2026-07-17T16:13:25.999Z",
+        "lastSeen": "2026-07-21T04:46:03.137Z",
+        "count": 254,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 24,
+        "y": 73,
+        "z": -44,
+        "firstSeen": "2026-07-17T16:13:25.999Z",
+        "lastSeen": "2026-07-21T04:46:25.444Z",
+        "count": 435,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 22,
+        "y": 75,
+        "z": -37,
+        "firstSeen": "2026-07-17T16:13:25.999Z",
+        "lastSeen": "2026-07-21T04:46:25.442Z",
+        "count": 354,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 44,
+        "y": 70,
+        "z": -22,
+        "firstSeen": "2026-07-17T16:13:25.999Z",
+        "lastSeen": "2026-07-17T16:13:25.999Z",
+        "count": 1,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 30,
+        "y": 70,
+        "z": -40,
+        "firstSeen": "2026-07-17T16:13:25.999Z",
+        "lastSeen": "2026-07-21T04:46:13.133Z",
+        "count": 87,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 26,
+        "y": 65,
+        "z": -33,
+        "firstSeen": "2026-07-21T04:46:13.112Z",
+        "lastSeen": "2026-07-21T04:46:13.114Z",
+        "count": 37,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 17,
+        "y": 65,
+        "z": -41,
+        "firstSeen": "2026-07-21T04:46:13.114Z",
+        "lastSeen": "2026-07-21T04:46:25.234Z",
+        "count": 44,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 26,
+        "y": 75,
+        "z": -40,
+        "firstSeen": "2026-07-21T04:46:13.133Z",
+        "lastSeen": "2026-07-21T04:46:13.133Z",
+        "count": 1,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 22,
+        "y": 71,
+        "z": -37,
+        "firstSeen": "2026-07-21T04:46:13.133Z",
+        "lastSeen": "2026-07-21T04:46:25.441Z",
+        "count": 6,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 22,
+        "y": 66,
+        "z": -38,
+        "firstSeen": "2026-07-21T04:46:25.212Z",
+        "lastSeen": "2026-07-21T04:46:25.233Z",
+        "count": 6,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 17,
+        "y": 65,
+        "z": -40,
+        "firstSeen": "2026-07-21T04:46:25.233Z",
+        "lastSeen": "2026-07-21T04:46:25.234Z",
+        "count": 3,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 22,
+        "y": 70,
+        "z": -37,
+        "firstSeen": "2026-07-21T04:46:25.441Z",
+        "lastSeen": "2026-07-21T04:46:25.441Z",
+        "count": 1,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 18,
+        "y": 74,
+        "z": -45,
+        "firstSeen": "2026-07-21T04:46:25.441Z",
+        "lastSeen": "2026-07-21T04:46:25.444Z",
+        "count": 4,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 18,
+        "y": 71,
+        "z": -45,
+        "firstSeen": "2026-07-21T04:46:25.441Z",
+        "lastSeen": "2026-07-21T04:46:25.441Z",
+        "count": 3,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 24,
+        "y": 72,
+        "z": -44,
+        "firstSeen": "2026-07-21T04:46:25.442Z",
+        "lastSeen": "2026-07-21T04:46:25.444Z",
+        "count": 3,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 13,
+        "y": 73,
+        "z": -42,
+        "firstSeen": "2026-07-21T04:46:25.442Z",
+        "lastSeen": "2026-07-21T04:46:25.444Z",
+        "count": 5,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 6,
+        "y": 65,
+        "z": 2,
+        "firstSeen": "2026-07-21T04:46:35.282Z",
+        "lastSeen": "2026-07-21T05:18:22.748Z",
+        "count": 611,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 6,
+        "y": 66,
+        "z": 0,
+        "firstSeen": "2026-07-21T04:46:35.284Z",
+        "lastSeen": "2026-07-21T05:05:09.080Z",
+        "count": 2,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 15,
+        "y": 80,
+        "z": 19,
+        "firstSeen": "2026-07-21T04:46:35.348Z",
+        "lastSeen": "2026-07-21T05:18:22.813Z",
+        "count": 745,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 1,
+        "y": 85,
+        "z": 15,
+        "firstSeen": "2026-07-21T04:46:35.348Z",
+        "lastSeen": "2026-07-21T05:18:22.813Z",
+        "count": 492,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 18,
+        "y": 72,
+        "z": 16,
+        "firstSeen": "2026-07-21T04:46:35.348Z",
+        "lastSeen": "2026-07-21T05:32:09.063Z",
+        "count": 924,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 16,
+        "y": 77,
+        "z": 23,
+        "firstSeen": "2026-07-21T04:46:45.347Z",
+        "lastSeen": "2026-07-21T05:07:19.247Z",
+        "count": 97,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 4,
+        "y": 67,
+        "z": 6,
+        "firstSeen": "2026-07-21T05:05:20.451Z",
+        "lastSeen": "2026-07-21T05:18:05.776Z",
+        "count": 62,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 16,
+        "y": 71,
+        "z": 23,
+        "firstSeen": "2026-07-21T05:05:49.245Z",
+        "lastSeen": "2026-07-21T05:15:00.029Z",
+        "count": 56,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 18,
+        "y": 71,
+        "z": 16,
+        "firstSeen": "2026-07-21T05:06:39.257Z",
+        "lastSeen": "2026-07-21T05:19:51.335Z",
+        "count": 17,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 15,
+        "y": 74,
+        "z": 19,
+        "firstSeen": "2026-07-21T05:07:09.250Z",
+        "lastSeen": "2026-07-21T05:18:22.813Z",
+        "count": 50,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 25,
+        "y": 76,
+        "z": 22,
+        "firstSeen": "2026-07-21T05:07:29.255Z",
+        "lastSeen": "2026-07-21T05:32:09.063Z",
+        "count": 994,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 18,
+        "y": 77,
+        "z": 16,
+        "firstSeen": "2026-07-21T05:07:39.305Z",
+        "lastSeen": "2026-07-21T05:15:00.029Z",
+        "count": 45,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 30,
+        "y": 62,
+        "z": 19,
+        "firstSeen": "2026-07-21T05:18:32.927Z",
+        "lastSeen": "2026-07-21T05:32:18.152Z",
+        "count": 3497,
+        "confidence": 0.9,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 29,
+        "y": 59,
+        "z": 20,
+        "firstSeen": "2026-07-21T05:18:32.927Z",
+        "lastSeen": "2026-07-21T05:32:08.967Z",
+        "count": 1223,
+        "confidence": 0.9,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 31,
+        "y": 63,
+        "z": 22,
+        "firstSeen": "2026-07-21T05:18:32.927Z",
+        "lastSeen": "2026-07-21T05:19:35.464Z",
+        "count": 44,
+        "confidence": 0.35,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 31,
+        "y": 74,
+        "z": 14,
+        "firstSeen": "2026-07-21T05:18:32.955Z",
+        "lastSeen": "2026-07-21T05:32:09.063Z",
+        "count": 495,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 29,
+        "y": 74,
+        "z": 27,
+        "firstSeen": "2026-07-21T05:18:32.955Z",
+        "lastSeen": "2026-07-21T05:32:09.063Z",
+        "count": 500,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 22,
+        "y": 73,
+        "z": 25,
+        "firstSeen": "2026-07-21T05:18:32.955Z",
+        "lastSeen": "2026-07-21T05:32:09.063Z",
+        "count": 295,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 25,
+        "y": 76,
+        "z": 22,
+        "firstSeen": "2026-07-21T05:18:41.498Z",
+        "lastSeen": "2026-07-21T05:19:10.413Z",
+        "count": 7,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 28,
+        "y": 65,
+        "z": 16,
+        "firstSeen": "2026-07-21T05:18:53.290Z",
+        "lastSeen": "2026-07-21T05:18:53.290Z",
+        "count": 4,
+        "confidence": 0.9,
+        "meta": {
+          "block": "stone",
+          "exposed": true,
+          "confidence": 0.9,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "wood",
+        "x": 25,
+        "y": 72,
+        "z": 18,
+        "firstSeen": "2026-07-21T05:19:10.413Z",
+        "lastSeen": "2026-07-21T05:32:09.063Z",
+        "count": 189,
+        "confidence": 0.85,
+        "meta": {
+          "block": "spruce_log",
+          "confidence": 0.85,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "resource",
+        "name": "stone",
+        "x": 31,
+        "y": 59,
+        "z": 17,
+        "firstSeen": "2026-07-21T05:19:35.464Z",
+        "lastSeen": "2026-07-21T05:32:08.966Z",
+        "count": 183,
+        "confidence": 0.9,
+        "meta": {
+          "block": "stone",
+          "exposed": false,
+          "confidence": 0.35,
+          "source": "periodic"
+        }
+      }
+    ],
+    "craftingTables": [
+      {
+        "kind": "crafting_table",
+        "name": "crafting_table",
+        "x": -31,
+        "y": 71,
+        "z": -15,
+        "firstSeen": "2026-07-17T16:07:30.173Z",
+        "lastSeen": "2026-07-17T16:07:35.408Z",
+        "count": 19,
+        "confidence": 0.95,
+        "meta": {
+          "confidence": 0.95,
+          "source": "staircase_step"
+        }
+      },
+      {
+        "kind": "crafting_table",
+        "name": "crafting_table",
+        "x": -7,
+        "y": 70,
+        "z": -22,
+        "firstSeen": "2026-07-17T16:07:30.173Z",
+        "lastSeen": "2026-07-21T05:18:22.842Z",
+        "count": 174,
+        "confidence": 0.95,
+        "meta": {
+          "confidence": 0.95,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "crafting_table",
+        "name": "crafting_table",
+        "x": 3,
+        "y": 71,
+        "z": -7,
+        "firstSeen": "2026-07-17T16:09:20.592Z",
+        "lastSeen": "2026-07-21T05:18:22.842Z",
+        "count": 136,
+        "confidence": 0.95,
+        "meta": {
+          "confidence": 0.95,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "crafting_table",
+        "name": "crafting_table",
+        "x": 12,
+        "y": 71,
+        "z": -7,
+        "firstSeen": "2026-07-17T16:09:47.659Z",
+        "lastSeen": "2026-07-21T05:18:53.368Z",
+        "count": 218,
+        "confidence": 0.95,
+        "meta": {
+          "confidence": 0.95,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "crafting_table",
+        "name": "crafting_table",
+        "x": 53,
+        "y": 73,
+        "z": -3,
+        "firstSeen": "2026-07-17T16:12:46.696Z",
+        "lastSeen": "2026-07-17T16:12:46.696Z",
+        "count": 1,
+        "confidence": 0.95,
+        "meta": {
+          "confidence": 0.95,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "crafting_table",
+        "name": "crafting_table",
+        "x": 44,
+        "y": 69,
+        "z": 29,
+        "firstSeen": "2026-07-21T05:18:32.983Z",
+        "lastSeen": "2026-07-21T05:32:09.076Z",
+        "count": 99,
+        "confidence": 0.95,
+        "meta": {
+          "confidence": 0.95,
+          "source": "periodic"
+        }
+      }
+    ],
+    "deaths": [
+      {
+        "kind": "death",
+        "name": "death_location",
+        "x": -31,
+        "y": 75,
+        "z": -1,
+        "firstSeen": "2026-07-17T16:10:09.003Z",
+        "lastSeen": "2026-07-17T16:10:09.003Z",
+        "count": 1,
+        "confidence": 1,
+        "meta": {
+          "confidence": 1,
+          "source": "death_event"
+        }
+      },
+      {
+        "kind": "death",
+        "name": "death_location",
+        "x": 19,
+        "y": 70,
+        "z": -40,
+        "firstSeen": "2026-07-21T04:46:26.056Z",
+        "lastSeen": "2026-07-21T04:46:26.057Z",
+        "count": 1,
+        "confidence": 1,
+        "meta": {
+          "confidence": 1,
+          "source": "death_event"
+        }
+      },
+      {
+        "kind": "death",
+        "name": "death_location",
+        "x": 29,
+        "y": 61,
+        "z": 17,
+        "firstSeen": "2026-07-21T05:19:59.623Z",
+        "lastSeen": "2026-07-21T05:19:59.623Z",
+        "count": 1,
+        "confidence": 1,
+        "meta": {
+          "confidence": 1,
+          "source": "death_event"
+        }
+      }
+    ],
+    "dangerZones": [
+      {
+        "kind": "danger",
+        "name": "zombie",
+        "x": -34,
+        "y": 71,
+        "z": -16,
+        "firstSeen": "2026-07-17T16:08:37.313Z",
+        "lastSeen": "2026-07-17T16:09:06.887Z",
+        "count": 11,
+        "confidence": 0.95,
+        "meta": {
+          "confidence": 0.95,
+          "source": "hurt_event"
+        }
+      },
+      {
+        "kind": "danger",
+        "name": "skeleton",
+        "x": -28,
+        "y": 71,
+        "z": -16,
+        "firstSeen": "2026-07-17T16:09:00.376Z",
+        "lastSeen": "2026-07-17T16:09:57.915Z",
+        "count": 11,
+        "confidence": 0.95,
+        "meta": {
+          "confidence": 0.8,
+          "source": "after_strategy_explore_surface_stone"
+        }
+      },
+      {
+        "kind": "danger",
+        "name": "skeleton",
+        "x": -22,
+        "y": 72,
+        "z": -3,
+        "firstSeen": "2026-07-17T16:10:08.937Z",
+        "lastSeen": "2026-07-17T16:10:08.937Z",
+        "count": 1,
+        "confidence": 0.95,
+        "meta": {
+          "confidence": 0.95,
+          "source": "hurt_event"
+        }
+      },
+      {
+        "kind": "danger",
+        "name": "zombie",
+        "x": 25,
+        "y": 71,
+        "z": -14,
+        "firstSeen": "2026-07-17T16:10:25.739Z",
+        "lastSeen": "2026-07-17T16:10:42.839Z",
+        "count": 10,
+        "confidence": 0.95,
+        "meta": {
+          "confidence": 0.95,
+          "source": "hurt_event"
+        }
+      },
+      {
+        "kind": "danger",
+        "name": "zombie",
+        "x": 39,
+        "y": 71,
+        "z": -42,
+        "firstSeen": "2026-07-17T16:11:00.645Z",
+        "lastSeen": "2026-07-17T16:11:00.645Z",
+        "count": 1,
+        "confidence": 0.8,
+        "meta": {
+          "confidence": 0.8,
+          "source": "periodic"
+        }
+      },
+      {
+        "kind": "danger",
+        "name": "spider",
+        "x": 19,
+        "y": 70,
+        "z": -39,
+        "firstSeen": "2026-07-21T04:44:04.221Z",
+        "lastSeen": "2026-07-21T04:46:25.690Z",
+        "count": 9,
+        "confidence": 0.95,
+        "meta": {
+          "confidence": 0.95,
+          "source": "hurt_event"
+        }
+      },
+      {
+        "kind": "danger",
+        "name": "spider",
+        "x": 31,
+        "y": 70,
+        "z": -33,
+        "firstSeen": "2026-07-21T04:46:11.632Z",
+        "lastSeen": "2026-07-21T04:46:11.632Z",
+        "count": 1,
+        "confidence": 0.95,
+        "meta": {
+          "confidence": 0.95,
+          "source": "hurt_event"
+        }
+      },
+      {
+        "kind": "danger",
+        "name": "skeleton",
+        "x": 27,
+        "y": 54,
+        "z": 19,
+        "firstSeen": "2026-07-21T05:18:27.602Z",
+        "lastSeen": "2026-07-21T05:19:59.593Z",
+        "count": 17,
+        "confidence": 0.95,
+        "meta": {
+          "confidence": 0.95,
+          "source": "hurt_event"
+        }
+      }
+    ],
+    "bases": [
+      {
+        "kind": "base",
+        "name": "temporary_mine_entrance",
+        "x": -30,
+        "y": 71,
+        "z": -15,
+        "firstSeen": "2026-07-17T16:07:31.501Z",
+        "lastSeen": "2026-07-17T16:07:31.501Z",
+        "count": 1,
+        "confidence": 0.6,
+        "meta": {
+          "confidence": 0.6,
+          "source": "safe_staircase_mine"
+        }
+      }
+    ]
+  },
+  "events": [],
+  "proposals": [
+    {
+      "file": "patch_proposals/2026-07-16T22-46-26-514Z_Adam_psc_loop_mine_adam_generic_failure.md",
+      "problem": "loop_mine_adam_generic_failure",
+      "at": "2026-07-16T22:46:26.515Z"
+    },
+    {
+      "file": "patch_proposals/2026-07-16T22-56-46-392Z_Adam_psc_loop_mine_adam_generic_failure.md",
+      "problem": "loop_mine_adam_generic_failure",
+      "at": "2026-07-16T22:56:46.393Z"
+    },
+    {
+      "file": "patch_proposals/2026-07-16T23-00-51-115Z_Adam_psc_loop_mine_adam_generic_failure.md",
+      "problem": "loop_mine_adam_generic_failure",
+      "at": "2026-07-16T23:00:51.116Z"
+    },
+    {
+      "file": "patch_proposals/2026-07-16T23-04-59-047Z_Adam_psc_loop_mine_adam_generic_failure.md",
+      "problem": "loop_mine_adam_generic_failure",
+      "at": "2026-07-16T23:04:59.048Z"
+    },
+    {
+      "file": "patch_proposals/2026-07-16T23-09-06-458Z_Adam_psc_loop_mine_adam_generic_failure.md",
+      "problem": "loop_mine_adam_generic_failure",
+      "at": "2026-07-16T23:09:06.458Z"
+    },
+    {
+      "file": "patch_proposals/2026-07-16T23-18-47-339Z_Adam_psc_loop_unknown_adam_aborted.md",
+      "problem": "loop_unknown_adam_aborted",
+      "at": "2026-07-16T23:18:47.340Z"
+    },
+    {
+      "file": "patch_proposals/2026-07-16T23-42-02-685Z_Adam_psc_loop_mine_adam_generic_failure.md",
+      "problem": "loop_mine_adam_generic_failure",
+      "at": "2026-07-16T23:42:02.685Z"
+    },
+    {
+      "file": "patch_proposals/2026-07-16T23-46-33-302Z_Adam_psc_loop_mine_adam_generic_failure.md",
+      "problem": "loop_mine_adam_generic_failure",
+      "at": "2026-07-16T23:46:33.304Z"
+    },
+    {
+      "file": "patch_proposals/2026-07-16T23-50-38-920Z_Adam_psc_loop_mine_adam_generic_failure.md",
+      "problem": "loop_mine_adam_generic_failure",
+      "at": "2026-07-16T23:50:38.920Z"
+    },
+    {
+      "file": "patch_proposals/2026-07-16T23-54-48-858Z_Adam_psc_loop_mine_adam_generic_failure.md",
+      "problem": "loop_mine_adam_generic_failure",
+      "at": "2026-07-16T23:54:48.861Z"
+    },
+    {
+      "file": "patch_proposals/2026-07-16T23-58-58-795Z_Adam_psc_loop_mine_adam_generic_failure.md",
+      "problem": "loop_mine_adam_generic_failure",
+      "at": "2026-07-16T23:58:58.796Z"
+    },
+    {
+      "file": "patch_proposals/2026-07-17T00-03-09-952Z_Adam_psc_loop_mine_adam_generic_failure.md",
+      "problem": "loop_mine_adam_generic_failure",
+      "at": "2026-07-17T00:03:09.952Z"
+    },
+    {
+      "file": "patch_proposals/2026-07-17T00-07-14-749Z_Adam_psc_loop_mine_adam_generic_failure.md",
+      "problem": "loop_mine_adam_generic_failure",
+      "at": "2026-07-17T00:07:14.751Z"
+    },
+    {
+      "file": "patch_proposals/2026-07-17T00-16-30-959Z_Adam_psc_loop_unknown_adam_aborted.md",
+      "problem": "loop_unknown_adam_aborted",
+      "at": "2026-07-17T00:16:30.959Z"
+    },
+    {
+      "file": "patch_proposals/2026-07-17T00-41-58-348Z_Adam_psc_loop_unknown_adam_missing_tool.md",
+      "problem": "loop_unknown_adam_missing_tool",
+      "at": "2026-07-17T00:41:58.348Z"
+    },
+    {
+      "file": "patch_proposals/2026-07-17T00-56-36-416Z_Adam_psc_loop_unknown_adam_aborted.md",
+      "problem": "loop_unknown_adam_aborted",
+      "at": "2026-07-17T00:56:36.417Z"
+    },
+    {
+      "file": "patch_proposals/2026-07-17T01-13-06-469Z_Adam_psc_loop_unknown_adam_aborted.md",
+      "problem": "loop_unknown_adam_aborted",
+      "at": "2026-07-17T01:13:06.471Z"
+    },
+    {
+      "file": "patch_proposals/2026-07-17T01-36-38-321Z_Adam_psc_loop_unknown_adam_missing_tool.md",
+      "problem": "loop_unknown_adam_missing_tool",
+      "at": "2026-07-17T01:36:38.323Z"
+    },
+    {
+      "file": "patch_proposals/2026-07-17T02-08-08-250Z_Adam_psc_loop_gather_wood_none_aborted.md",
+      "problem": "loop_gather_wood_none_aborted",
+      "at": "2026-07-17T02:08:08.251Z"
+    },
+    {
+      "file": "patch_proposals/2026-07-17T02-24-32-140Z_Adam_psc_loop_mine_stone_generic_failure.md",
+      "problem": "loop_mine_stone_generic_failure",
+      "at": "2026-07-17T02:24:32.141Z"
+    },
+    {
+      "file": "patch_proposals/2026-07-17T02-26-04-138Z_Adam_psc_loop_mine_stone_generic_failure.md",
+      "problem": "loop_mine_stone_generic_failure",
+      "at": "2026-07-17T02:26:04.138Z"
+    },
+    {
+      "file": "patch_proposals/2026-07-17T02-29-53-489Z_Adam_psc_loop_mine_stone_generic_failure.md",
+      "problem": "loop_mine_stone_generic_failure",
+      "at": "2026-07-17T02:29:53.490Z"
+    },
+    {
+      "file": "patch_proposals/2026-07-17T02-33-44-088Z_Adam_psc_loop_mine_stone_generic_failure.md",
+      "problem": "loop_mine_stone_generic_failure",
+      "at": "2026-07-17T02:33:44.089Z"
+    },
+    {
+      "file": "patch_proposals/2026-07-17T08-31-32-156Z_Adam_psc_loop_mine_stone_generic_failure.md",
+      "problem": "loop_mine_stone_generic_failure",
+      "at": "2026-07-17T08:31:32.157Z"
+    },
+    {
+      "file": "patch_proposals/2026-07-17T08-48-31-603Z_Adam_psc_loop_mine_stone_generic_failure.md",
+      "problem": "loop_mine_stone_generic_failure",
+      "at": "2026-07-17T08:48:31.606Z"
+    },
+    {
+      "file": "patch_proposals/2026-07-17T08-52-17-102Z_Adam_psc_loop_mine_stone_generic_failure.md",
+      "problem": "loop_mine_stone_generic_failure",
+      "at": "2026-07-17T08:52:17.105Z"
+    },
+    {
+      "file": "patch_proposals/2026-07-17T16-09-00-497Z_Adam_psc_obtain_stone_all_strategies_failed.md",
+      "problem": "obtain_stone_all_strategies_failed",
+      "at": "2026-07-17T16:09:00.499Z"
+    },
+    {
+      "file": "patch_proposals/2026-07-17T16-09-57-917Z_Adam_psc_obtain_stone_all_strategies_failed.md",
+      "problem": "obtain_stone_all_strategies_failed",
+      "at": "2026-07-17T16:09:57.918Z"
+    },
+    {
+      "file": "patch_proposals/2026-07-21T05-20-00-131Z_Adam_psc_loop_collect_drops_none_generic_failure.md",
+      "problem": "loop_collect_drops_none_generic_failure",
+      "at": "2026-07-21T05:20:00.148Z"
+    },
+    {
+      "file": "patch_proposals/2026-07-21T05-20-00-280Z_Adam_psc_loop_collect_drops_none_generic_failure.md",
+      "problem": "loop_collect_drops_none_generic_failure",
+      "at": "2026-07-21T05:20:00.281Z"
+    }
+  ]
+}

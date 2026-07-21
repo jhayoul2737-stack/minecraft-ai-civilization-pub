@@ -1,0 +1,81 @@
+{
+  "version": 3,
+  "intervals": {
+    "schedulerMs": 1000,
+    "perceptionMs": 2000,
+    "needsMs": 3000,
+    "affordanceMs": 9000,
+    "memoryMs": 45000,
+    "statusWriteMs": 3000
+  },
+  "executive": {
+    "minIntervalMs": 18000,
+    "highPressureIntervalMs": 12000,
+    "normalIntervalMs": 35000,
+    "lowPressureIntervalMs": 80000,
+    "maxIntervalMs": 120000,
+    "maxActions": 2,
+    "maxPromptChars": 5200,
+    "maxTokens": 420,
+    "temperature": 0.45,
+    "apiRetries": 2,
+    "apiInitialBackoffMs": 1200,
+    "jsonRepair": true,
+    "fallbackOldThink": false
+  },
+  "modelPolicy": {
+    "cheapModel": "gpt-4o-mini",
+    "smartModel": "gpt-4o",
+    "forceCheap": false,
+    "allowSmart": false,
+    "smartWhenSurvivalAbove": 0.75,
+    "smartWhenSocialAbove": 0.8,
+    "smartWhenFailureAbove": 0.55
+  },
+  "pressure": {
+    "survival": {
+      "healthStart": 12,
+      "hungerStart": 14,
+      "threatBase": 0.25
+    },
+    "queue": {
+      "baseWhenQueued": 0.38,
+      "diligence": 0.034,
+      "pragmatism": 0.018,
+      "failurePenalty": 0.45,
+      "surprisePenalty": 0.12,
+      "survivalPenalty": 0.28
+    },
+    "selfDirection": {
+      "base": 0.18,
+      "idle": 0.24,
+      "observation": 0.09,
+      "surprise": 0.18,
+      "curiosity": 0.035,
+      "creativity": 0.025,
+      "survivalPenalty": 0.52,
+      "failurePenalty": 0.1
+    },
+    "social": {
+      "recentSocial": 0.2,
+      "observation": 0.08,
+      "sociability": 0.035
+    },
+    "exploration": {
+      "idle": 0.3,
+      "curiosity": 0.04,
+      "survivalPenalty": 0.55,
+      "cautionPenalty": 0.015
+    },
+    "craft": {
+      "pragmatism": 0.05,
+      "shortage": 0.12,
+      "survivalPenalty": 0.25
+    }
+  },
+  "logging": {
+    "level": "info",
+    "console": true,
+    "dir": "logs"
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "version": 3,
+  "updatedAt": "2026-07-21T05:32:18.916Z",
+  "working": {
+    "perception": {
+      "at": "2026-07-21T05:32:18.902Z",
+      "t": 1784611938902,
+      "pos": {
+        "x": 29,
+        "y": 62,
+        "z": 18
+      },
+      "health": 0,
+      "food": 17,
+      "isNight": true,
+      "moving": false,
+      "digging": false,
+      "nearestHostile": null,
+      "closeHostile": null,
+      "nearestAnimal": null,
+      "players": []
+    },
+    "needs": {
+      "at": "2026-07-21T05:32:18.906Z",
+      "health": 0,
+      "food": 17,
+      "closeHostileDistance": null,
+      "queueLen": 0,
+      "failRatio": 0,
+      "recentSocial": 0,
+      "recentObservation": 0,
+      "recentSurprise": 0,
+      "idleMs": 487,
+      "shortages": [
+        "food",
+        "wood",
+        "stone",
+        "fuel"
+      ],
+      "personality": {
+        "curiosity": 7,
+        "caution": 4,
+        "diligence": 8,
+        "sociability": 3,
+        "creativity": 6,
+        "pragmatism": 9
+      }
+    },
+    "pressures": {
+      "survival": 1,
+      "queue": 0.15,
+      "selfDirection": 0,
+      "social": 0.11,
+      "exploration": 0,
+      "craft": 0.68,
+      "idle": 0,
+      "failRatio": 0,
+      "reason": "survival pressure high"
+    },
+    "queue": [],
+    "affordances": [
+      {
+        "action": "gather_wood",
+        "target": null,
+        "why": "wood enables crafting table and tools",
+        "priority": 7
+      },
+      {
+        "action": "check_status",
+        "target": null,
+        "why": "refresh status",
+        "priority": 4
+      }
+    ],
+    "future": [
+      {
+        "item": "stone_pickaxe",
+        "why": "철광석을 캘 수 있게 된다",
+        "missing": [
+          "cobblestone",
+          "stick"
+        ]
+      },
+      {
+        "item": "iron_pickaxe",
+        "why": "다이아몬드를 캘 수 있게 된다",
+        "missing": [
+          "iron_ingot",
+          "stick"
+        ]
+      },
+      {
+        "item": "diamond_pickaxe",
+        "why": "가장 단단한 광물까지 캘 수 있다",
+        "missing": [
+          "diamond",
+          "stick"
+        ]
+      },
+      {
+        "item": "iron_chestplate",
+        "why": "전투 생존율이 크게 오른다",
+        "missing": [
+          "iron_ingot"
+        ]
+      },
+      {
+        "item": "iron_sword",
+        "why": "전투력이 크게 오른다",
+        "missing": [
+          "iron_ingot",
+          "stick"
+        ]
+      },
+      {
+        "item": "shield",
+        "why": "공격을 막을 수 있다",
+        "missing": [
+          "oak_planks",
+          "iron_ingot"
+        ]
+      }
+    ],
+    "memories": [],
+    "social": [],
+    "observations": [],
+    "surprises": [
+      {
+        "at": "2026-07-21T04:46:25.923Z",
+        "t": 1784609185923,
+        "text": "Adam died. Future decisions should avoid repeating the same risk.",
+        "meta": {
+          "pos": {
+            "x": 19,
+            "y": 70,
+            "z": -40
+          }
+        }
+      },
+      {
+        "at": "2026-07-21T05:19:59.602Z",
+        "t": 1784611199602,
+        "text": "Adam died. Future decisions should avoid repeating the same risk.",
+        "meta": {
+          "pos": {
+            "x": 29,
+            "y": 62,
+            "z": 18
+          }
+        }
+      }
+    ]
+  },
+  "self": {
+    "mood": "calm",
+    "desire": "gather wood",
+    "attention": "body and surroundings",
+    "thought": "Gathering wood will help in crafting tools and improve survival chances.",
+    "confidence": 0.7
+  },
+  "timing": {
+    "lastPerceptionAt": 1784611938902,
+    "lastNeedsAt": 1784611938903,
+    "lastAffordanceAt": 1784611935882,
+    "lastMemoryAt": 1784611133373,
+    "lastExecutiveAt": 1784611183398,
+    "nextExecutiveAt": 1784611950916,
+    "lastActionAt": 1784611938915,
+    "forcedExecutiveUntil": 1784611259602,
+    "lastStatusAt": 1784611938419
+  },
+  "stats": {
+    "executiveCalls": 26,
+    "localFallbacks": 1062,
+    "actionsTaken": 26,
+    "apiFailures": 10,
+    "jsonRepairs": 0,
+    "queueFollowed": 26,
+    "queueAdapted": 0,
+    "queueDeferred": 0
+  }
+}

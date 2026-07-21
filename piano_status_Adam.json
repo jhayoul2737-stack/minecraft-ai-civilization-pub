@@ -1,0 +1,58 @@
+{
+  "at": "2026-07-21T05:32:18.917Z",
+  "self": {
+    "mood": "calm",
+    "desire": "gather wood",
+    "attention": "body and surroundings",
+    "thought": "Gathering wood will help in crafting tools and improve survival chances.",
+    "confidence": 0.7
+  },
+  "pressures": {
+    "survival": 1,
+    "queue": 0.15,
+    "selfDirection": 0,
+    "social": 0.11,
+    "exploration": 0,
+    "craft": 0.68,
+    "idle": 0,
+    "failRatio": 0,
+    "reason": "survival pressure high"
+  },
+  "needs": {
+    "at": "2026-07-21T05:32:18.906Z",
+    "health": 0,
+    "food": 17,
+    "closeHostileDistance": null,
+    "queueLen": 0,
+    "failRatio": 0,
+    "recentSocial": 0,
+    "recentObservation": 0,
+    "recentSurprise": 0,
+    "idleMs": 487,
+    "shortages": [
+      "food",
+      "wood",
+      "stone",
+      "fuel"
+    ],
+    "personality": {
+      "curiosity": 7,
+      "caution": 4,
+      "diligence": 8,
+      "sociability": 3,
+      "creativity": 6,
+      "pragmatism": 9
+    }
+  },
+  "nextExecutiveInMs": 11999,
+  "stats": {
+    "executiveCalls": 26,
+    "localFallbacks": 1062,
+    "actionsTaken": 26,
+    "apiFailures": 10,
+    "jsonRepairs": 0,
+    "queueFollowed": 26,
+    "queueAdapted": 0,
+    "queueDeferred": 0
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "actions": {
+    "gather_wood": {
+      "history": [
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "lastAlertAt": 0,
+      "lastResult": "위험 때문에 나무 채집을 미뤘다. "
+    },
+    "craft_item:crafting_table": {
+      "history": [
+        1
+      ],
+      "lastAlertAt": 0,
+      "lastResult": "'crafting_table'을 성공적으로 만들었다."
+    },
+    "craft_item:wooden_pickaxe": {
+      "history": [
+        1
+      ],
+      "lastAlertAt": 0,
+      "lastResult": "'wooden_pickaxe'을 성공적으로 만들었다."
+    },
+    "collect_drops": {
+      "history": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "lastAlertAt": 0,
+      "lastResult": "근처에 회수할 드랍이 없다."
+    },
+    "eat": {
+      "history": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "lastAlertAt": 0,
+      "lastResult": "먹을 수 있는 음식이 없거나 이미 충분히 배부르다."
+    }
+  },
+  "lastDigestAt": 1784610566275
+}

@@ -1,0 +1,92 @@
+{
+  "timestamp": "2026-07-20T15:02:29.171Z",
+  "target": "citizen.cjs",
+  "git": {
+    "isRepo": true,
+    "head": "b97f2ac",
+    "dirty": "?? repair_adam_v34_git_safe.cjs"
+  },
+  "warnings": [],
+  "backup": "backups/citizen.before-v34.2026-07-20T15-02-30-156Z.cjs",
+  "restore": {
+    "mode": "git",
+    "commit": "b97f2ac"
+  },
+  "files": {
+    "bridge": true,
+    "bridgeTest": true,
+    "pressureTest": false,
+    "initConfig": false,
+    "packageJson": true
+  },
+  "index": {
+    "legacyAdamPianoAssignments": 1,
+    "hasV32Markers": false,
+    "guardInstalled": true
+  },
+  "citizenBefore": {
+    "hasCreateExport": true,
+    "hasMineflayer": true,
+    "hasLiveLoop": true,
+    "hasThinkAndAct": true,
+    "hasReactToChat": true,
+    "hasV32": false,
+    "hasV33": true,
+    "hasV34": false,
+    "size": 334931,
+    "score": 330
+  },
+  "patch": {
+    "createCitizenExportFound": true,
+    "exportBridgeInstalled": true,
+    "liveLoopFound": true,
+    "liveLoopHooked": true,
+    "alreadyExportBridge": false,
+    "alreadyLiveHook": false,
+    "alreadyDisable": false
+  },
+  "citizenAfter": {
+    "hasCreateExport": true,
+    "hasMineflayer": true,
+    "hasLiveLoop": true,
+    "hasThinkAndAct": true,
+    "hasReactToChat": true,
+    "hasV32": false,
+    "hasV33": true,
+    "hasV34": true,
+    "size": 336949,
+    "score": 310
+  },
+  "checks": [
+    {
+      "file": "citizen.cjs",
+      "ok": true,
+      "output": ""
+    },
+    {
+      "file": "piano_v3/index.cjs",
+      "ok": true,
+      "output": ""
+    },
+    {
+      "file": "piano_v3/bridge.cjs",
+      "ok": true,
+      "output": ""
+    },
+    {
+      "file": "piano_v3/init-config.cjs",
+      "ok": true,
+      "output": ""
+    },
+    {
+      "file": "piano_v3/tests/pressure_test.cjs",
+      "ok": true,
+      "output": ""
+    },
+    {
+      "file": "piano_v3/tests/bridge_test.cjs",
+      "ok": true,
+      "output": ""
+    }
+  ]
+}

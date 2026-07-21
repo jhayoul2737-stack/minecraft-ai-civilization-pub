@@ -1,0 +1,82 @@
+FILE: citizen.cjs
+SIZE: 49434 chars
+
+=== NAMED DECLARATIONS / VARIABLES ===
+(none)
+
+=== ASSIGNMENTS TOUCHING TARGET NAMES ===
+module.exports.createCitizen @ 1464:4 = wrappedCreateCitizen
+thinkAndAct @ 1474:4 = async function pianoV32ThinkBridge(botArg, selfArg) { const rt = (selfArg && selfArg.__pianoRuntime) || (botArg && botArg.__pianoRuntime) || attachPia
+thinkAndAct.__pianoV32Bridge @ 1487:4 = true
+reactToChat @ 1494:4 = async function pianoV32ReactBridge(botArg, selfArg) { const rt = (selfArg && selfArg.__pianoRuntime) || (botArg && botArg.__pianoRuntime) || attachPia
+reactToChat.__pianoV32Bridge @ 1507:4 = true
+
+=== MODULE EXPORTS ===
+module.exports.createCitizen @ 1464:4 = wrappedCreateCitizen
+
+=== MINEFLAYER CREATE BOT CALLS ===
+(none)
+
+=== ADAM CITIZEN REGISTRY ===
+(none)
+
+=== LOOP / THINK / PIANO ROUTE CALLS ===
+Call @ 1478:8 :: attachPianoRuntime(botArg, { name: selfArg && selfArg.name }, 'thinkAndAct-bridge')
+Call @ 1481:21 :: rt.tick('thinkAndAct_bridge')
+Call @ 1488:4 :: console.log('🎼 [PIANO V3.2] thinkAndAct bridge installed')
+Call @ 1498:8 :: attachPianoRuntime(botArg, { name: selfArg && selfArg.name }, 'reactToChat-bridge')
+Call @ 1508:4 :: console.log('🎼 [PIANO V3.2] reactToChat bridge installed')
+
+=== RAW GREP HINT ===
+ 1239:     if (typeof reactToChat === 'function' && !reactToChat.__pianoWrapped) {
+ 1240:       const prevReactToChat = reactToChat;
+ 1242:       reactToChat = async function pianoReactToChat(bot, self) {
+ 1259:       reactToChat.__pianoWrapped = true;
+ 1260:       P_log('reactToChat를 PIANO 사회인지로 교체');
+ 1263:     console.warn('⚠️ [PIANO V2] reactToChat wrapper 실패:', e.message);
+ 1267:     if (typeof thinkAndAct === 'function' && !thinkAndAct.__pianoWrapped) {
+ 1268:       const prevThinkAndAct = thinkAndAct;
+ 1270:       thinkAndAct = async function pianoThinkAndAct(bot, self) {
+ 1284:       thinkAndAct.__pianoWrapped = true;
+ 1285:       P_log('thinkAndAct를 PIANO 중앙 집행부로 교체');
+ 1288:     console.warn('⚠️ [PIANO V2] thinkAndAct wrapper 실패:', e.message);
+ 1292:     if (typeof liveLoop === 'function' && !liveLoop.__pianoWrapped) {
+ 1293:       const prevLiveLoop = liveLoop;
+ 1295:       liveLoop = async function pianoLiveLoop(bot, self) {
+ 1301:       liveLoop.__pianoWrapped = true;
+ 1302:       P_log('liveLoop 시작 시 PIANO 병렬 루프 부착');
+ 1305:     console.warn('⚠️ [PIANO V2] liveLoop wrapper 실패:', e.message);
+ 1308:   globalThis.AdamPiano = {
+ 1393:         globalThis.__ADAM_CITIZENS__ &&
+ 1394:         globalThis.__ADAM_CITIZENS__[name] &&
+ 1395:         globalThis.__ADAM_CITIZENS__[name].self
+ 1397:         return globalThis.__ADAM_CITIZENS__[name].self;
+ 1410:     if (self.__pianoRuntime && bot.__pianoRuntime) {
+ 1411:       return self.__pianoRuntime;
+ 1421:       self.__pianoRuntime = rt;
+ 1422:       bot.__pianoRuntime = rt;
+ 1451:     module.exports &&
+ 1452:     typeof module.exports.createCitizen === 'function' &&
+ 1453:     !module.exports.createCitizen.__pianoV32Wrapped
+ 1455:     const originalCreateCitizen = module.exports.createCitizen;
+ 1459:       scheduleAttach(bot, opts || {}, 'createCitizen-export-wrapper');
+ 1464:     module.exports.createCitizen = wrappedCreateCitizen;
+ 1466:     console.log('🎼 [PIANO V3.2] module.exports.createCitizen wrapper installed');
+ 1468:     console.warn('⚠️ [PIANO V3.2] module.exports.createCitizen not found. Export keys:', Object.keys(module.exports || {}));
+ 1471:   if (typeof thinkAndAct === 'function' && !thinkAndAct.__pianoV32Bridge) {
+ 1472:     const oldThinkAndAct = thinkAndAct;
+ 1474:     thinkAndAct = async function pianoV32ThinkBridge(botArg, selfArg) {
+ 1476:         (selfArg && selfArg.__pianoRuntime) ||
+ 1477:         (botArg && botArg.__pianoRuntime) ||
+ 1478:         attachPianoRuntime(botArg, { name: selfArg && selfArg.name }, 'thinkAndAct-bridge');
+ 1481:         return await rt.tick('thinkAndAct_bridge');
+ 1487:     thinkAndAct.__pianoV32Bridge = true;
+ 1488:     console.log('🎼 [PIANO V3.2] thinkAndAct bridge installed');
+ 1491:   if (typeof reactToChat === 'function' && !reactToChat.__pianoV32Bridge) {
+ 1492:     const oldReactToChat = reactToChat;
+ 1494:     reactToChat = async function pianoV32ReactBridge(botArg, selfArg) {
+ 1496:         (selfArg && selfArg.__pianoRuntime) ||
+ 1497:         (botArg && botArg.__pianoRuntime) ||
+ 1498:         attachPianoRuntime(botArg, { name: selfArg && selfArg.name }, 'reactToChat-bridge');
+ 1507:     reactToChat.__pianoV32Bridge = true;
+ 1508:     console.log('🎼 [PIANO V3.2] reactToChat bridge installed');

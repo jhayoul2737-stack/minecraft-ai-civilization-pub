@@ -1,0 +1,22 @@
+{
+  "name": "ai-civilization",
+  "version": "1.0.0",
+  "main": "index.cjs",
+  "scripts": {
+    "start": "node index.cjs",
+    "civilization": "node civilization.cjs",
+    "check": "node --check citizen.cjs && node --check agent.js && node --check index.cjs && node --check civilization.cjs && node --check survival-hotfix.js",
+    "test:piano": "node piano_v3/tests/pressure_test.cjs && node piano_v3/tests/bridge_test.cjs",
+    "test": "npm run test:piano"
+  },
+  "devDependencies": {
+    "acorn": "^8.17.0"
+  },
+  "dependencies": {
+    "axios": "^1.18.1",
+    "dotenv": "^17.4.2",
+    "mineflayer": "^4.37.1",
+    "mineflayer-pathfinder": "^2.4.5",
+    "openai": "^6.48.0"
+  }
+}
